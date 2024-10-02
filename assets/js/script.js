@@ -74,5 +74,5 @@ window.onscroll = function () {
         document.querySelector('.go-top-container').classList.remove('show');
     }
 
-}
+} 
 

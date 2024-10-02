@@ -33,7 +33,8 @@ img {
 
 .header {
     background-image: url(images/background.gif);
-    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: #12121c;
     display: flex;
     align-items: center;
@@ -508,7 +509,7 @@ h2 {
 
 .redes-background {
     background-color: #12121c;
-    background-image: url(images/background-redes.gif);
+    background-image: url(/assets/css/images/background-redes.gif);
     background-size: 100%;
 }
 
@@ -523,7 +524,7 @@ h2 {
 .tiktok {
     border-radius: 15px;
     background-position: center;
-    background-image: url(images/tiktok.jpeg);
+    background-image: url(/assets/css/images/tiktok.jpeg);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     padding: 35px;
     display: flex;
@@ -545,7 +546,7 @@ h2 {
 .whatsapp {
     border-radius: 15px;
     background-position: center;
-    background-image: url(images/whatsapp.jpeg);
+    background-image: url(/assets/css/images/whatsapp.jpeg);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     padding: 35px;
     display: flex;
@@ -567,7 +568,7 @@ h2 {
 .telegram {
     border-radius: 15px;
     background-position: center;
-    background-image: url(images/telegram.jpeg);
+    background-image: url(/assets/css/images/telegram.jpeg);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     padding: 35px;
     display: flex;
@@ -589,7 +590,7 @@ h2 {
 .instagram {
     border-radius: 15px;
     background-position: center;
-    background-image: url(images/instagram.jpeg);
+    background-image: url(/assets/css/images/instagram.jpeg);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     padding: 35px;
     display: flex;
@@ -611,7 +612,7 @@ h2 {
 .facebook {
     border-radius: 15px;
     background-position: center;
-    background-image: url(images/facebook.jpeg);
+    background-image: url(/assets/css/images/facebook.jpeg);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     padding: 35px;
     display: flex;
@@ -633,7 +634,7 @@ h2 {
 .x {
     border-radius: 15px;
     background-position: center;
-    background-image: url(images/x.jpeg);
+    background-image: url(/assets/css/images/x.jpeg);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     padding: 35px;
     display: flex;
