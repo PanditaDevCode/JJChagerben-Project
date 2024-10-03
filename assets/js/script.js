@@ -1,4 +1,4 @@
-/* countdown */
+// countdown 
 
 let days = document.getElementById('days');
 let hours = document.getElementById('hours');
@@ -24,12 +24,14 @@ let x = setInterval(function () {
     let distance = now - countDown;
 
     //time calculation for day, hours minutes and seconds
+
     let d = Math.floor(distance / (1000 * 60 * 60 * 24));
     let h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     let s = Math.floor((distance % (1000 * 60)) / (1000));
 
     //output the result in element with id
+
     days.innerHTML = d + "<br><span>Dias</span>";
     hours.innerHTML = h + "<br><span>Horas</span>";
     minutes.innerHTML = m + "<br><span>Minutos</span>";
@@ -56,6 +58,7 @@ let x = setInterval(function () {
     // 360deg / 60seconds = 6
 
     //if the countdown is over, write some text
+
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("time").style.display = 'none';
@@ -64,7 +67,9 @@ let x = setInterval(function () {
 
 
 
-/* go top */
+
+
+// go top 
 
 window.onscroll = function () {
     if (document.documentElement.scrollTop > 100) {
@@ -75,3 +80,60 @@ window.onscroll = function () {
     }
 
 }
+
+
+
+
+
+// Efecto del Puntero
+
+let lastMouseX = 0; // Última posición X del mouse
+let lastMouseY = 0; // Última posición Y del mouse
+const separation = 8; // Separación de los numeros por pixeles
+
+// Función para crear un número binario (0 o 1)
+
+function crearBinario(x, y) {
+    const binario = document.createElement('div');
+
+    // Asignar aleatoriamente un 0 o 1
+
+    binario.textContent = Math.random() > 0.5 ? '1' : '0';
+    binario.classList.add('binario');
+    document.body.appendChild(binario);
+
+    console.log("Se ha creado un número binario en:", x, y); // Para verificar si los números se están creando
+
+    // Posición inicial del número binario
+
+    binario.style.position = 'absolute';
+    binario.style.left = `${x}px`;
+    binario.style.top = `${y}px`;
+
+    // Animación para desvanecer el número binario
+
+    setTimeout(() => {
+        binario.remove();
+    }, 3000); // Eliminar el número después de 3 segundos
+}
+
+// Mover el ratón y crear números binarios en su camino
+
+document.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX + window.scrollX;
+    const mouseY = e.clientY + window.scrollY;
+
+    // Calcular la distancia entre la posición actual y la última donde se creó un número
+
+    const distX = Math.abs(mouseX - lastMouseX);
+    const distY = Math.abs(mouseY - lastMouseY);
+
+    // Solo crear un número si el ratón se ha movido más de la separación deseada
+
+    if (distX >= separation || distY >= separation) {
+        crearBinario(mouseX, mouseY);
+        lastMouseX = mouseX; // Actualizar la última posición X
+        lastMouseY = mouseY; // Actualizar la última posición Y
+    }
+});
+
