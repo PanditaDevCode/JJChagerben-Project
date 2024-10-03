@@ -69,17 +69,17 @@ let x = setInterval(function () {
 
 
 
-// go top 
+const goTopBtn = document.getElementById('goTop');
 
-window.onscroll = function () {
-    if (document.documentElement.scrollTop > 100) {
-        document.querySelector('.go-top-container').classList.add('show');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 250) {
+        goTopBtn.classList.add('show');
+    } else {
+        goTopBtn.classList.remove('show');
     }
-    else {
-        document.querySelector('.go-top-container').classList.remove('show');
-    }
+});
 
-}
+
 
 
 
@@ -137,3 +137,48 @@ document.addEventListener('mousemove', (e) => {
     }
 });
 
+
+
+
+
+// Efecto Scroll
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[href^="#"], button').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            let targetId = anchor.getAttribute('href') || anchor.dataset.target; // Si es un botón, usar data-target
+            let targetElement = document.getElementById(targetId.substring(1));
+
+            if (targetElement) {
+                smoothScroll(targetElement, 1000); // 1000ms = 1 segundo
+            }
+        });
+    });
+});
+
+// Función de scroll suave
+function smoothScroll(target, duration) {
+    let targetPosition = target.getBoundingClientRect().top + window.scrollY;
+    let startPosition = window.scrollY;
+    let distance = targetPosition - startPosition;
+    let startTime = null;
+
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        let timeElapsed = currentTime - startTime;
+        let run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    function ease(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+}
