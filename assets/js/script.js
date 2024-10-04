@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         anchor.addEventListener('click', (e) => {
             e.preventDefault();
 
-            let targetId = anchor.getAttribute('href') || anchor.dataset.target; // Si es un botón, usar data-target
+            let targetId = anchor.getAttribute('href') || anchor.dataset.target; 
             let targetElement = document.getElementById(targetId.substring(1));
 
             if (targetElement) {
@@ -148,6 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Función de scroll suave
+
 function smoothScroll(target, duration) {
     let targetPosition = target.getBoundingClientRect().top + window.scrollY;
     let startPosition = window.scrollY;
@@ -171,3 +172,20 @@ function smoothScroll(target, duration) {
 
     requestAnimationFrame(animation);
 }
+
+
+
+
+
+// Blur Menu Nav
+
+window.addEventListener('scroll', () => {
+    const menu = document.querySelector('.menu'); // Asegúrate de que sea '.menu'
+    const headerHeight = document.querySelector('#menu').offsetHeight;
+
+    if (window.scrollY > headerHeight) {
+        menu.classList.add('blur');
+    } else {
+        menu.classList.remove('blur');
+    }
+});
