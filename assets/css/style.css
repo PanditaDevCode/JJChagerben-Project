@@ -31,6 +31,10 @@ img {
     margin: 0 auto;
 }
 
+
+
+
+
 /* Efecto de Puntero */
 
 .binario {
@@ -64,6 +68,7 @@ img {
 
 
 
+
 /* header content */
 
 .header {
@@ -91,6 +96,11 @@ img {
 
 .header h1,
 .header p {
+    text-shadow:
+        0 0 5px rgba(190, 190, 190, 0.8),
+        0 0 10px rgba(131, 131, 131, 0.6),
+        0 0 15px rgba(102, 102, 102, 0.4),
+        0 0 20px rgba(94, 94, 94, 0.4);
     position: relative;
     z-index: 2;
 }
@@ -102,19 +112,25 @@ img {
 }
 
 .header-txt h1 {
+    text-shadow:
+        0 0 5px rgba(190, 190, 190, 0.8),
+        0 0 10px rgba(131, 131, 131, 0.6),
+        0 0 15px rgba(102, 102, 102, 0.4),
+        0 0 20px rgba(94, 94, 94, 0.4);
     font-size: 55px;
     line-height: 1;
     color: #FFFFFF;
     margin-top: 100px;
     margin-bottom: 25px;
-    text-shadow: 0.5px 0.5px 0 #000,
-        -0.5px -0.5px 0 #000,
-        0.5px -0.5px 0 #000,
-        -0.5px 0.5px 0 #000;
 }
 
 span {
-    color: #687cef;
+    text-shadow:
+        0 0 5px rgba(173, 206, 255, 0.8),
+        0 0 10px rgba(103, 163, 253, 0.6),
+        0 0 15px rgba(81, 139, 247, 0.4),
+        0 0 20px rgba(48, 120, 255, 0.4);
+    color: #a8b5ff;
 }
 
 p {
@@ -122,6 +138,8 @@ p {
     color: #D2d2d2;
     margin-bottom: 35px;
 }
+
+
 
 
 
@@ -170,7 +188,7 @@ p {
 }
 
 .menu .navbar ul li a:hover {
-    color: #a9b6ff;
+    color: #7287ff;
     transform: scale(1.1);
 }
 
@@ -187,6 +205,8 @@ p {
     cursor: pointer;
     display: none;
 }
+
+
 
 
 
@@ -240,18 +260,24 @@ p {
 }
 
 .time div {
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.8),
+        0 0 10px rgba(216, 216, 216, 0.6),
+        0 0 15px rgba(145, 145, 145, 0.4),
+        0 0 20px rgba(126, 126, 126, 0.4);
     position: absolute;
     text-align: center;
     font-weight: 500;
     color: #ffffff;
     font-size: 1.5em;
-    text-shadow: 0.6px 0.6px 0 #000,
-        -0.6px -0.6px 0 #000,
-        0.6px -0.6px 0 #000,
-        -0.6px 0.6px 0 #000;
 }
 
 .time div span {
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.8),
+        0 0 10px rgba(216, 216, 216, 0.6),
+        0 0 15px rgba(145, 145, 145, 0.4),
+        0 0 20px rgba(126, 126, 126, 0.4);
     position: absolute;
     transform: translateX(-50%) translateY(-10px);
     font-size: 0.35em;
@@ -280,6 +306,128 @@ p {
     border-radius: 50%;
     box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
 }
+
+.red-circle {
+    box-shadow:
+        0 0 5px rgba(255, 117, 117, 0.8),
+        0 0 10px rgba(255, 78, 78, 0.6),
+        0 0 15px rgba(255, 47, 47, 0.4),
+        0 0 20px rgba(255, 25, 25, 0.4);
+    animation: red-img 1.5s infinite alternate;
+}
+
+.blue-circle {
+    box-shadow:
+        0 0 5px rgba(161, 168, 255, 0.8),
+        0 0 10px rgba(130, 138, 255, 0.6),
+        0 0 15px rgba(95, 92, 255, 0.4),
+        0 0 20px rgba(72, 68, 252, 0.4);
+    animation: blue-img 1.5s infinite alternate;
+}
+
+.orange-circle {
+    box-shadow:
+        0 0 5px rgba(255, 146, 82, 0.8),
+        0 0 10px rgba(255, 139, 45, 0.6),
+        0 0 15px rgba(255, 114, 20, 0.4),
+        0 0 20px rgba(255, 102, 0, 0.4);
+    animation: orange-img 1.5s infinite alternate;
+}
+
+.green-circle {
+    box-shadow:
+        0 0 5px rgba(111, 255, 82, 0.8),
+        0 0 10px rgba(45, 255, 45, 0.6),
+        0 0 15px rgba(20, 255, 20, 0.4),
+        0 0 20px rgba(30, 255, 0, 0.4);
+    animation: greem-img 1.5s infinite alternate;
+}
+
+/* Img Animation */
+
+@keyframes red-img {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 117, 117, 0.8),
+            0 0 20px rgba(255, 47, 47, 0.4),
+            0 0 40px rgba(255, 25, 25, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(255, 69, 69, 0.8),
+            0 0 40px rgba(255, 47, 47, 0.4),
+            0 0 70px rgba(255, 25, 25, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.8),
+            0 0 20px rgba(211, 0, 0, 0.4),
+            0 0 40px rgba(201, 0, 0, 0.4);
+    }
+}
+
+@keyframes blue-img {
+    0% {
+        box-shadow: 0 0 10px rgba(161, 168, 255, 0.8),
+            0 0 20px rgba(95, 92, 255, 0.4),
+            0 0 40px rgba(72, 68, 252, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(114, 124, 255, 0.8),
+            0 0 40px rgba(77, 74, 255, 0.4),
+            0 0 70px rgba(53, 49, 255, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(23, 39, 255, 0.8),
+            0 0 20px rgba(15, 10, 255, 0.4),
+            0 0 40px rgba(4, 0, 255, 0.4);
+    }
+}
+
+@keyframes orange-img {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 139, 45, 0.6),
+            0 0 20px rgba(255, 114, 20, 0.4),
+            0 0 40px rgba(255, 102, 0, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(255, 130, 29, 0.6),
+            0 0 40px rgba(255, 102, 0, 0.4),
+            0 0 70px rgba(219, 88, 0, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(182, 82, 0, 0.6),
+            0 0 20px rgba(190, 76, 0, 0.4),
+            0 0 40px rgba(138, 55, 0, 0.4);
+    }
+}
+
+@keyframes greem-img {
+    0% {
+        box-shadow: 0 0 10px rgba(45, 255, 45, 0.6),
+            0 0 20px rgba(20, 255, 20, 0.4),
+            0 0 40px rgba(30, 255, 0, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(21, 255, 21, 0.6),
+            0 0 40px rgba(11, 255, 11, 0.4),
+            0 0 70px rgba(0, 255, 0, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(0, 199, 0, 0.4),
+            0 0 20px rgba(8, 184, 8, 0.4),
+            0 0 40px rgba(15, 190, 15, 0.4);
+    }
+}
+
+
+
+
 
 /*butons content*/
 
@@ -1097,27 +1245,36 @@ h2 {
 /* Estilos del botón Go Top */
 
 #goTop {
+    box-shadow:
+        0 0 10px rgba(173, 206, 255, 0.8),
+        0 0 15px rgba(103, 163, 253, 0.6),
+        0 0 20px rgba(81, 139, 247, 0.4),
+        0 0 25px rgba(48, 120, 255, 0.4);
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 60px; 
+    width: 60px;
     height: 60px;
-    background-color: #3498db; 
+    background-color: #3498db;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white; 
+    color: white;
     font-size: 24px;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 1000;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 #goTop i {
-    color: white; 
+    text-shadow:
+        0 0 10px rgba(0, 17, 255, 0.8),
+        0 0 15px rgba(0, 17, 255, 0.6),
+        0 0 20px rgba(25, 0, 255, 0.4),
+        0 0 25px rgba(0, 4, 255, 0.4);
+    color: white;
 }
 
 #goTop.show {
@@ -1133,13 +1290,16 @@ h2 {
         transform: translateY(100%);
         opacity: 0;
     }
+
     60% {
         transform: translateY(-10%);
         opacity: 1;
     }
+
     80% {
         transform: translateY(5%);
     }
+
     100% {
         transform: translateY(0);
     }
