@@ -75,6 +75,12 @@ img {
 /* header content */
 
 .header {
+    animation: border-img 1.5s infinite alternate;
+    box-shadow:
+        0 0 30px rgba(190, 190, 190, 0.8),
+        0 0 40px rgba(131, 131, 131, 0.6),
+        0 0 50px rgba(102, 102, 102, 0.4),
+        0 0 60px rgba(94, 94, 94, 0.4);
     background-image: url(/assets/css/images/background.gif);
     background-repeat: no-repeat;
     background-size: cover;
@@ -161,7 +167,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 9999;
+    z-index: 10000;
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
     background-color: transparent;
     width: 100%;
@@ -422,9 +428,9 @@ p {
 
     100% {
         box-shadow:
-            0 0 10px rgba(23, 39, 255, 0.8),
-            0 0 20px rgba(22, 18, 228, 0.4),
-            0 0 40px rgba(21, 18, 206, 0.4);
+            0 0 10px rgba(29, 44, 255, 0.8),
+            0 0 20px rgba(34, 31, 235, 0.4),
+            0 0 40px rgba(31, 28, 207, 0.4);
     }
 }
 
@@ -524,6 +530,7 @@ p {
         0 0 20px rgba(94, 94, 94, 0.4);
     transform: scale(1.08);
     color: #000;
+    font-weight: 800;
 }
 
 
@@ -544,7 +551,7 @@ p {
         0 0 25px rgba(102, 102, 102, 0.4),
         0 0 30px rgba(94, 94, 94, 0.4);
     margin: 0 15px;
-    background: #12121ce3;
+    background: #22222e;
     padding: 15px;
     border-radius: 15px;
     z-index: 2;
@@ -571,7 +578,7 @@ p {
 
 .information-1:hover {
     cursor: pointer;
-    background: #262635e7;
+    background: #12121c;
     transform: scale(1.08);
 }
 
@@ -736,6 +743,12 @@ h2 {
     font-weight: 500;
 }
 
+.about-me a:hover {
+    color: #000;
+    font-weight: 800;
+    background: #3b3b46;
+}
+
 
 
 
@@ -803,6 +816,12 @@ h2 {
     color: #ffff;
 }
 
+.live-txt1 a:hover {
+    color: #000;
+    font-weight: 700;
+    background: #3b3b46;
+}
+
 
 
 /*work with me content*/
@@ -826,6 +845,12 @@ h2 {
 }
 
 .work-with-me-img img {
+    box-shadow:
+        0 0 30px rgba(190, 190, 190, 0.8),
+        0 0 40px rgba(131, 131, 131, 0.6),
+        0 0 50px rgba(102, 102, 102, 0.4),
+        0 0 60px rgba(94, 94, 94, 0.4);
+    animation: border-img 1.5s infinite alternate;
     width: 500px;
     border-radius: 20px;
 }
@@ -841,12 +866,40 @@ h2 {
 }
 
 .work-with-me-txt {
+    text-shadow:
+        0 0 5px rgba(190, 190, 190, 0.8),
+        0 0 10px rgba(131, 131, 131, 0.6),
+        0 0 15px rgba(102, 102, 102, 0.4),
+        0 0 20px rgba(94, 94, 94, 0.4);
     margin: 0;
 }
 
-.intro {
-    color: #687cef;
-    font-size: 15px;
+.work-with-me span {
+    text-shadow:
+        0 0 5px rgb(190, 190, 190),
+        0 0 10px rgb(131, 131, 131),
+        0 0 15px rgb(102, 102, 102),
+        0 0 20px rgb(94, 94, 94);
+    color: #000;
+    font-weight: 700;
+}
+
+.work-with-me a {
+    margin-top: 20px;
+}
+
+.work-with-me a:hover {
+    color: #000;
+    font-weight: 800;
+}
+
+.work-with-me li {
+    text-shadow:
+        0 0 8px rgba(190, 190, 190, 0.8),
+        0 0 12px rgba(131, 131, 131, 0.6),
+        0 0 17px rgba(255, 255, 255, 0.4),
+        0 0 22px rgba(94, 94, 94, 0.4);
+    color: #fdfeff;
 }
 
 
@@ -856,6 +909,18 @@ h2 {
 #redes {
     background-color: #12121c;
     margin-top: -50px;
+    position: relative;
+}
+
+#redes::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.623);
+    z-index: 1;
 }
 
 .redes {
@@ -865,24 +930,62 @@ h2 {
     margin-top: 20px;
 }
 
+.redes-sociales {
+    box-shadow:
+        0 0 10px rgba(190, 190, 190, 0.8),
+        0 0 20px rgba(131, 131, 131, 0.6),
+        0 0 30px rgba(102, 102, 102, 0.4),
+        0 0 40px rgba(94, 94, 94, 0.4);
+    border-radius: 15px;
+    animation: border-img 1.5s infinite alternate;
+    transition: transform .5s;
+}
+
+.redes-sociales:hover {
+    transform: scale(1.03);
+}
+
 .redes h2 {
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.795),
+        0 0 20px rgba(204, 204, 204, 0.685),
+        0 0 30px rgba(173, 173, 173, 0.671),
+        0 0 40px rgba(117, 117, 117, 0.562);
+    z-index: 9999;
     margin-top: 150px;
+    margin-bottom: 50px;
+    border-radius: 5px;
     background: linear-gradient(90deg,
             rgba(84, 105, 210, 1) 0%,
             rgba(35, 43, 88, 1) 68%);
+    z-index: 9999;
+    position: relative;
+    box-shadow:
+        0 0 30px rgba(190, 190, 190, 0.8),
+        0 0 40px rgba(131, 131, 131, 0.6),
+        0 0 50px rgba(102, 102, 102, 0.4),
+        0 0 60px rgba(94, 94, 94, 0.4);
+    position: relative;
+    animation: border-img 1.5s infinite alternate;
 }
 
-.redes h2:hover {
-    cursor: pointer;
-    background: linear-gradient(90deg,
-            rgba(37, 118, 250, 1) 0%,
-            rgba(84, 115, 237, 1) 100%)
+.redes h2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.603);
+    z-index: -1;
+    border-radius: 5px;
 }
 
 .redes-background {
     background-color: #12121c;
     background-image: url(/assets/css/images/background-redes.gif);
-    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .redes-content {
@@ -891,6 +994,43 @@ h2 {
     gap: 30px;
     margin-bottom: -50px;
     margin-top: 20px;
+    z-index: 9999;
+}
+
+.redes-content a {
+    z-index: 9999;
+}
+
+.redes-sociales h3 {
+    position: relative;
+    text-shadow:
+        0 0 5px rgb(190, 190, 190),
+        0 0 10px rgb(131, 131, 131),
+        0 0 15px rgb(102, 102, 102),
+        0 0 20px rgb(94, 94, 94);
+    z-index: 9999;
+}
+
+.redes img {
+    width: 0 0 20px;
+    margin-bottom: 10px;
+}
+
+.redes h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-shadow:
+        0 0 10px rgb(255, 255, 255),
+        0 0 20px rgb(204, 204, 204),
+        0 0 30px rgb(173, 173, 173),
+        0 0 40px rgb(117, 117, 117);
+    font-weight: 700;
+}
+
+.redes-sociales:hover h3 {
+    color: #000000;
+    transition: color 0.3s ease;
+    font-weight: 800;
 }
 
 .tiktok {
@@ -904,16 +1044,48 @@ h2 {
     justify-content: center;
     align-items: center;
     background-size: 500px;
+    z-index: 9999;
+    transition: transform 0.5s;
+    position: relative;
+}
+
+.tiktok::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.459);
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.tiktok::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.308);
+    border-radius: 15px;
+    z-index: -1;
+    backdrop-filter: blur(0);
+    transition: backdrop-filter 0.5s, opacity 0.5s;
+    opacity: 0;
 }
 
 .tiktok:hover {
-    background: linear-gradient(90deg,
-            rgba(84, 105, 210, 1) 0%,
-            rgba(35, 43, 88, 1) 68%);
     cursor: pointer;
-    transform: scale(1.1);
-    transition: all .5s;
+    transform: scale(1.01);
 }
+
+.tiktok:hover::after {
+    backdrop-filter: blur(5px);
+    opacity: 1;
+}
+
 
 .whatsapp {
     border-radius: 15px;
@@ -926,15 +1098,46 @@ h2 {
     justify-content: center;
     align-items: center;
     background-size: 500px;
+    z-index: 9999;
+    transition: transform 0.5s;
+    position: relative;
+}
+
+.whatsapp::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.486);
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.whatsapp::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.308);
+    border-radius: 15px;
+    z-index: -1;
+    backdrop-filter: blur(0);
+    transition: backdrop-filter 0.5s, opacity 0.5s;
+    opacity: 0;
 }
 
 .whatsapp:hover {
-    background: linear-gradient(90deg,
-            rgba(84, 105, 210, 1) 0%,
-            rgba(35, 43, 88, 1) 68%);
     cursor: pointer;
-    transform: scale(1.1);
-    transition: all .5s;
+    transform: scale(1.01);
+}
+
+.whatsapp:hover::after {
+    backdrop-filter: blur(5px);
+    opacity: 1;
 }
 
 .telegram {
@@ -948,15 +1151,46 @@ h2 {
     justify-content: center;
     align-items: center;
     background-size: 500px;
+    z-index: 9999;
+    transition: transform 0.5s;
+    position: relative;
+}
+
+.telegram::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.479);
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.telegram::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.308);
+    border-radius: 15px;
+    z-index: -1;
+    backdrop-filter: blur(0);
+    transition: backdrop-filter 0.5s, opacity 0.5s;
+    opacity: 0;
 }
 
 .telegram:hover {
-    background: linear-gradient(90deg,
-            rgba(84, 105, 210, 1) 0%,
-            rgba(35, 43, 88, 1) 68%);
     cursor: pointer;
-    transform: scale(1.1);
-    transition: all .5s;
+    transform: scale(1.01);
+}
+
+.telegram:hover::after {
+    backdrop-filter: blur(5px);
+    opacity: 1;
 }
 
 .instagram {
@@ -970,15 +1204,46 @@ h2 {
     justify-content: center;
     align-items: center;
     background-size: 500px;
+    z-index: 9999;
+    transition: transform 0.5s;
+    position: relative;
+}
+
+.instagram::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.473);
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.instagram::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.308);
+    border-radius: 15px;
+    z-index: -1;
+    backdrop-filter: blur(0);
+    transition: backdrop-filter 0.5s, opacity 0.5s;
+    opacity: 0;
 }
 
 .instagram:hover {
-    background: linear-gradient(90deg,
-            rgba(84, 105, 210, 1) 0%,
-            rgba(35, 43, 88, 1) 68%);
     cursor: pointer;
-    transform: scale(1.1);
-    transition: all .5s;
+    transform: scale(1.01);
+}
+
+.instagram:hover::after {
+    backdrop-filter: blur(5px);
+    opacity: 1;
 }
 
 .facebook {
@@ -992,15 +1257,46 @@ h2 {
     justify-content: center;
     align-items: center;
     background-size: 500px;
+    z-index: 9999;
+    transition: transform 0.5s;
+    position: relative;
+}
+
+.facebook::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.459);
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.facebook::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.308);
+    border-radius: 15px;
+    z-index: -1;
+    backdrop-filter: blur(0);
+    transition: backdrop-filter 0.5s, opacity 0.5s;
+    opacity: 0;
 }
 
 .facebook:hover {
-    background: linear-gradient(90deg,
-            rgba(84, 105, 210, 1) 0%,
-            rgba(35, 43, 88, 1) 68%);
     cursor: pointer;
-    transform: scale(1.1);
-    transition: all .5s;
+    transform: scale(1.01);
+}
+
+.facebook:hover::after {
+    backdrop-filter: blur(5px);
+    opacity: 1;
 }
 
 .x {
@@ -1014,29 +1310,46 @@ h2 {
     justify-content: center;
     align-items: center;
     background-size: 500px;
+    z-index: 9999;
+    transition: transform 0.5s;
+    position: relative;
+}
+
+.x::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.452);
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.x::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.308);
+    border-radius: 15px;
+    z-index: -1;
+    backdrop-filter: blur(0);
+    transition: backdrop-filter 0.5s, opacity 0.5s;
+    opacity: 0;
 }
 
 .x:hover {
-    background: linear-gradient(90deg,
-            rgba(84, 105, 210, 1) 0%,
-            rgba(35, 43, 88, 1) 68%);
     cursor: pointer;
-    transform: scale(1.1);
-    transition: all .5s;
+    transform: scale(1.01);
 }
 
-.redes img {
-    width: 0 0 20px;
-    margin-bottom: 10px;
-}
-
-.redes h3 {
-    color: #fdfeff;
-    margin-bottom: 15px;
-    text-shadow: 0.5px 0.5px 0 #000,
-        -0.5px -0.5px 0 #000,
-        0.5px -0.5px 0 #000,
-        -0.5px 0.5px 0 #000;
+.x:hover::after {
+    backdrop-filter: blur(5px);
+    opacity: 1;
 }
 
 
