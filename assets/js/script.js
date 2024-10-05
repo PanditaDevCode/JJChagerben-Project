@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         anchor.addEventListener('click', (e) => {
             e.preventDefault();
 
-            let targetId = anchor.getAttribute('href') || anchor.dataset.target; 
+            let targetId = anchor.getAttribute('href') || anchor.dataset.target;
             let targetElement = document.getElementById(targetId.substring(1));
 
             if (targetElement) {
