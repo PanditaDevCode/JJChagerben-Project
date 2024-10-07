@@ -518,11 +518,17 @@ p {
         0 0 25px rgba(102, 102, 102, 0.4),
         0 0 30px rgba(94, 94, 94, 0.4);
     margin: 0 15px;
-    background: #22222e;
+    background: #141418;
     padding: 15px;
     border-radius: 15px;
     z-index: 2;
     transition: all .5s;
+}
+
+.information-1:hover {
+    cursor: pointer;
+    background: #2a2a2e;
+    transform: scale(1.08);
 }
 
 .information-1 h3 {
@@ -541,12 +547,6 @@ p {
 
 .information-1 a {
     color: #fdfeff;
-}
-
-.information-1:hover {
-    cursor: pointer;
-    background: #12121c;
-    transform: scale(1.08);
 }
 
 
