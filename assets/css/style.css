@@ -15,6 +15,7 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    box-sizing: border-box;
     width: 100%;
 }
 
@@ -22,7 +23,8 @@ body {
     width: 100%;
     overflow-x: hidden;
     font-family: "Poppins", sans-serif;
-    background-color: #191c25;
+    box-sizing: border-box;
+    background-color: #141418;
 }
 
 img {
@@ -100,7 +102,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.801);
+    background-color: rgba(0, 0, 0, 0.863);
     z-index: 1;
 }
 
@@ -283,6 +285,7 @@ p {
     position: relative;
     width: 150px;
     height: 150px;
+    animation: border-circle 1.5s infinite alternate;
     transform: rotate(270deg);
 }
 
@@ -350,64 +353,28 @@ p {
     box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
 }
 
-.red-circle {
-    box-shadow:
-        0 0 20px rgba(255, 117, 117, 0.8),
-        0 0 30px rgba(255, 78, 78, 0.6),
-        0 0 40px rgba(255, 47, 47, 0.4),
-        0 0 50px rgba(255, 25, 25, 0.4);
-    animation: red-img 1.5s infinite alternate;
-}
-
-.blue-circle {
-    box-shadow:
-        0 0 20px rgba(161, 168, 255, 0.8),
-        0 0 30px rgba(130, 138, 255, 0.6),
-        0 0 40px rgba(95, 92, 255, 0.4),
-        0 0 50px rgba(72, 68, 252, 0.4);
-    animation: blue-img 1.5s infinite alternate;
-}
-
-.orange-circle {
-    box-shadow:
-        0 0 20px rgba(255, 146, 82, 0.8),
-        0 0 30px rgba(255, 139, 45, 0.6),
-        0 0 40px rgba(255, 114, 20, 0.4),
-        0 0 50px rgba(255, 102, 0, 0.4);
-    animation: orange-img 1.5s infinite alternate;
-}
-
-.green-circle {
-    box-shadow:
-        0 0 20px rgba(111, 255, 82, 0.8),
-        0 0 30px rgba(45, 255, 45, 0.6),
-        0 0 45px rgba(20, 255, 20, 0.4),
-        0 0 50px rgba(30, 255, 0, 0.4);
-    animation: greem-img 1.5s infinite alternate;
-}
-
 /* Circle Animation */
 
-@keyframes red-img {
+@keyframes border-circle {
     0% {
         box-shadow:
-            0 0 10px rgba(255, 117, 117, 0.8),
-            0 0 20px rgba(255, 47, 47, 0.4),
-            0 0 40px rgba(255, 25, 25, 0.4);
+            0 0 10px rgb(131, 131, 131),
+            0 0 20px rgb(102, 102, 102),
+            0 0 40px rgb(94, 94, 94);
     }
 
     50% {
         box-shadow:
-            0 0 20px rgba(255, 69, 69, 0.8),
-            0 0 40px rgba(255, 47, 47, 0.4),
-            0 0 70px rgba(255, 25, 25, 0.4);
+            0 0 20px rgb(131, 131, 131),
+            0 0 30px rgb(102, 102, 102),
+            0 0 50px rgb(94, 94, 94);
     }
 
     100% {
         box-shadow:
-            0 0 10px rgba(255, 18, 18, 0.8),
-            0 0 20px rgba(224, 17, 17, 0.4),
-            0 0 40px rgba(216, 16, 16, 0.4);
+            0 0 10px rgb(131, 131, 131),
+            0 0 20px rgb(102, 102, 102),
+            0 0 40px rgb(94, 94, 94);
     }
 }
 
@@ -591,7 +558,7 @@ p {
     max-width: 100vw;
     display: flex;
     align-items: center;
-    background-color: #12121c;
+    background-color: #1b1b20;
     margin-top: -85px;
 }
 
@@ -760,7 +727,7 @@ h2 {
     max-width: 100vw;
     display: flex;
     align-items: center;
-    background-color: #12121c;
+    background-color: #1b1b20;
     margin-top: -5px;
 }
 
@@ -831,7 +798,6 @@ h2 {
     max-width: 100vw;
     display: flex;
     align-items: center;
-    background-color: #1e202d;
 }
 
 .work-with-me {
@@ -919,14 +885,13 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.623);
+    background-color: rgba(0, 0, 0, 0.856);
     z-index: 1;
 }
 
 .redes {
-    padding: 30px 0 330px 0;
+    padding: 30px 0 300px 0;
     text-align: center;
-    margin-bottom: -20px;
     margin-top: 20px;
 }
 
@@ -937,7 +902,7 @@ h2 {
         0 0 30px rgba(102, 102, 102, 0.4),
         0 0 40px rgba(94, 94, 94, 0.4);
     border-radius: 15px;
-    animation: border-img 1.5s infinite alternate;
+    animation: border-redes 1.5s infinite alternate;
     transition: transform .5s;
 }
 
@@ -966,7 +931,7 @@ h2 {
         0 0 50px rgba(102, 102, 102, 0.4),
         0 0 60px rgba(94, 94, 94, 0.4);
     position: relative;
-    animation: border-img 1.5s infinite alternate;
+    animation: border-redes 1.5s infinite alternate;
 }
 
 .redes h2::before {
@@ -976,7 +941,7 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.603);
+    background-color: rgba(0, 0, 0, 0.747);
     z-index: -1;
     border-radius: 5px;
 }
@@ -1033,6 +998,29 @@ h2 {
     font-weight: 800;
 }
 
+@keyframes border-redes {
+    0% {
+        box-shadow:
+            0 0 10px rgb(131, 131, 131),
+            0 0 20px rgba(102, 102, 102, 0.61),
+            0 0 30px rgb(94, 94, 94);
+    }
+
+    50% {
+        box-shadow:
+            0 0 20px rgb(131, 131, 131),
+            0 0 30px rgba(102, 102, 102, 0.61),
+            0 0 50px rgb(94, 94, 94);
+    }
+
+    100% {
+        box-shadow:
+            0 0 10px rgb(131, 131, 131),
+            0 0 20px rgba(102, 102, 102, 0.61),
+            0 0 30px rgb(94, 94, 94);
+    }
+}
+
 .tiktok {
     border-radius: 15px;
     background-position: center;
@@ -1056,7 +1044,7 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.459);
+    background-color: rgba(0, 0, 0, 0.603);
     z-index: 1;
     border-radius: 15px;
 }
@@ -1110,7 +1098,7 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.486);
+    background-color: rgba(0, 0, 0, 0.575);
     z-index: 1;
     border-radius: 15px;
 }
@@ -1163,7 +1151,7 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.479);
+    background-color: rgba(0, 0, 0, 0.582);
     z-index: 1;
     border-radius: 15px;
 }
@@ -1216,7 +1204,7 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.473);
+    background-color: rgba(0, 0, 0, 0.582);
     z-index: 1;
     border-radius: 15px;
 }
@@ -1269,7 +1257,7 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.459);
+    background-color: rgba(0, 0, 0, 0.575);
     z-index: 1;
     border-radius: 15px;
 }
@@ -1322,7 +1310,7 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.452);
+    background-color: rgba(0, 0, 0, 0.582);
     z-index: 1;
     border-radius: 15px;
 }
@@ -1354,15 +1342,64 @@ h2 {
 
 
 
-/*price content*/
+
+
+/* price content */
 
 .price {
-    padding: 200px 0 120px 0;
+    padding: 130px 0 120px 0;
     text-align: center;
 }
 
 .price h2 {
+    text-shadow:
+        0 0 5px rgb(255, 255, 255),
+        0 0 10px rgb(207, 207, 207),
+        0 0 15px rgb(163, 163, 163),
+        0 0 20px rgb(131, 131, 131);
     margin-bottom: 100px;
+    color: #141414;
+}
+
+.price-1 h3 {
+    text-shadow:
+        0 0 5px rgb(175, 175, 175),
+        0 0 10px rgb(138, 138, 138),
+        0 0 15px rgb(95, 95, 95),
+        0 0 20px rgb(71, 71, 71);
+    color: #ffffff;
+    font-size: 70px;
+}
+
+.price-1 li {
+    text-shadow:
+        0 0 5px rgb(255, 255, 255),
+        0 0 10px rgb(207, 207, 207),
+        0 0 15px rgb(163, 163, 163),
+        0 0 20px rgb(131, 131, 131);
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.price span {
+    text-shadow:
+        0 0 5px rgb(255, 255, 255),
+        0 0 10px rgb(207, 207, 207),
+        0 0 15px rgb(163, 163, 163),
+        0 0 20px rgb(131, 131, 131);
+    color: #000;
+    font-weight: 800;
+}
+
+.price strong {
+    text-shadow:
+        0 0 5px rgb(255, 255, 255),
+        0 0 10px rgb(207, 207, 207),
+        0 0 15px rgb(163, 163, 163),
+        0 0 20px rgb(131, 131, 131);
+        color: #000;
+        font-weight: 800;
 }
 
 .price-content {
@@ -1372,45 +1409,56 @@ h2 {
 }
 
 .price-1 {
-    flex-basis: calc(33.3% - 20px);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    flex-basis: calc(33% - 20px);
     padding: 40px;
+    box-shadow:
+        0 0 30px rgba(190, 190, 190, 0.8),
+        0 0 40px rgba(131, 131, 131, 0.6),
+        0 0 50px rgba(102, 102, 102, 0.4),
+        0 0 60px rgba(94, 94, 94, 0.4);
+    animation: border-price 1.5s infinite alternate;
     border-radius: 15px;
+    background-color: #222222;
+    transition: all .3s;
 }
 
 .price-1:hover {
     cursor: pointer;
     background: linear-gradient(90deg,
-            rgb(67, 83, 167) 0%,
-            rgb(29, 36, 80) 68%);
-    transform: scale(1.1);
-    transition: all .3s;
+            rgb(32, 32, 32) 0%,
+            rgb(15, 15, 15) 68%);
+    transform: scale(1.03);
 }
 
-.pack {
-    color: #fdfeff;
-    font-weight: 600;
-    margin-bottom: 10px;
-    font-size: 30px;
+.bg-pack li {
+    color: #000;
+    font-weight: 700;
 }
 
-.price-1 h3 {
-    color: #fdfeff;
-    font-size: 70px;
+.bg-pack {
+    background: linear-gradient(90deg,
+            rgb(131, 131, 131) 0%,
+            rgb(49, 49, 49) 100%);
+    margin-top: -50px;
 }
 
 .bg-pack:hover {
     cursor: pointer;
     background: linear-gradient(90deg,
-            rgba(84, 105, 210, 1) 0%,
-            rgba(35, 43, 88, 1) 68%);
+            rgb(22, 22, 22) 0%,
+            rgb(41, 41, 41) 68%);
 }
 
-.bg-pack {
-    background: linear-gradient(90deg,
-            rgb(33, 102, 212) 0%,
-            rgb(58, 88, 209) 100%);
-    margin-top: -50px;
+.pack {
+    text-shadow:
+        0 0 5px rgb(255, 255, 255),
+        0 0 10px rgb(207, 207, 207),
+        0 0 15px rgb(163, 163, 163),
+        0 0 20px rgb(131, 131, 131);
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 30px;
 }
 
 .unpago {
@@ -1421,11 +1469,6 @@ h2 {
     color: #fdfeff;
 }
 
-.price-1 li {
-    color: #fdfeff;
-    margin-bottom: 15px;
-}
-
 .paquetes {
     font-size: 20px;
     color: #4a63f3;
@@ -1434,12 +1477,30 @@ h2 {
 .pack-center {
     color: #000000;
     font-size: 20px;
-    font-style: bold;
+    font-weight: bold;
 }
 
-.price-1 li {
-    color: #fdfeff;
-    margin-bottom: 15px;
+@keyframes border-price {
+    0% {
+        box-shadow:
+            0 0 10px rgb(131, 131, 131),
+            0 0 20px rgba(102, 102, 102, 0.61),
+            0 0 30px rgb(94, 94, 94);
+    }
+
+    50% {
+        box-shadow:
+            0 0 20px rgb(131, 131, 131),
+            0 0 30px rgba(102, 102, 102, 0.61),
+            0 0 50px rgb(94, 94, 94);
+    }
+
+    100% {
+        box-shadow:
+            0 0 10px rgb(131, 131, 131),
+            0 0 20px rgba(102, 102, 102, 0.61),
+            0 0 30px rgb(94, 94, 94);
+    }
 }
 
 
@@ -1447,7 +1508,7 @@ h2 {
 /*merch content*/
 
 .merch-container {
-    background-color: #12121c;
+    background-color: #1b1b20;
     padding: 100px 0;
     align-items: center;
     justify-content: center;
@@ -1733,7 +1794,7 @@ h2 {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 1000;
+    z-index: 10000;
 }
 
 #goTop i {
