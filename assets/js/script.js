@@ -23,36 +23,52 @@ let x = setInterval(function () {
     let distance = now - countDown;
 
     // Cálculo de días, horas, minutos y segundos
+
     let d = Math.floor(distance / (1000 * 60 * 60 * 24));
     let h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     let s = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Mostrar el tiempo en los elementos correspondientes
-    days.innerHTML = d + "<br><span>Dias</span>";
-    hours.innerHTML = h + "<br><span>Horas</span>";
-    minutes.innerHTML = m + "<br><span>Minutos</span>";
-    seconds.innerHTML = s + "<br><span>Segundos</span>";
+    // Si el tiempo ha terminado, mostrar "00:00:00"
 
-    // Animar las líneas de la cuenta regresiva (barras circulares)
-    dd.style.strokeDashoffset = 440 - (440 * d) / 365; // 365 días al año
-    hh.style.strokeDashoffset = 440 - (440 * h) / 24; // 24 horas al día
-    mm.style.strokeDashoffset = 440 - (440 * m) / 60; // 60 minutos por hora
-    ss.style.strokeDashoffset = 440 - (440 * s) / 60; // 60 segundos por minuto
-
-    // Animar los dots (puntos circulares)
-    day_dot.style.transform = `rotateZ(${d * 0.986}deg)`; // 360° / 365 días = 0.986° por día
-    hr_dot.style.transform = `rotateZ(${h * 15}deg)`; // 360° / 24 horas = 15° por hora
-    min_dot.style.transform = `rotateZ(${m * 6}deg)`; // 360° / 60 minutos = 6° por minuto
-    sec_dot.style.transform = `rotateZ(${s * 6}deg)`; // 360° / 60 segundos = 6° por segundo
-
-    // Si el tiempo ha terminado
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("time").style.display = 'none';
+        days.innerHTML = "0<br><span>Dias</span>";
+        hours.innerHTML = "00<br><span>Horas</span>";
+        minutes.innerHTML = "00<br><span>Minutos</span>";
+        seconds.innerHTML = "00<br><span>Segundos</span>";
+        dd.style.strokeDashoffset = 440;  // Barra vacía para los días
+        hh.style.strokeDashoffset = 440;  // Barra vacía para las horas
+        mm.style.strokeDashoffset = 440;  // Barra vacía para los minutos
+        ss.style.strokeDashoffset = 440;  // Barra vacía para los segundos
+        day_dot.style.transform = `rotateZ(0deg)`; // Resetear los dots
+        hr_dot.style.transform = `rotateZ(0deg)`;
+        min_dot.style.transform = `rotateZ(0deg)`;
+        sec_dot.style.transform = `rotateZ(0deg)`;
+    } else {
+
+        // Mostrar el tiempo restante en los elementos correspondientes
+
+        days.innerHTML = d + "<br><span>Dias</span>";
+        hours.innerHTML = h + "<br><span>Horas</span>";
+        minutes.innerHTML = m + "<br><span>Minutos</span>";
+        seconds.innerHTML = s + "<br><span>Segundos</span>";
+
+        // Animar las líneas de la cuenta regresiva (barras circulares)
+
+        dd.style.strokeDashoffset = 440 - (440 * d) / 365; // 365 días al año
+        hh.style.strokeDashoffset = 440 - (440 * h) / 24; // 24 horas al día
+        mm.style.strokeDashoffset = 440 - (440 * m) / 60; // 60 minutos por hora
+        ss.style.strokeDashoffset = 440 - (440 * s) / 60; // 60 segundos por minuto
+
+        // Animar los dots (puntos circulares)
+
+        day_dot.style.transform = `rotateZ(${d * 0.986}deg)`; // 360° / 365 días = 0.986° por día
+        hr_dot.style.transform = `rotateZ(${h * 15}deg)`; // 360° / 24 horas = 15° por hora
+        min_dot.style.transform = `rotateZ(${m * 6}deg)`; // 360° / 60 minutos = 6° por minuto
+        sec_dot.style.transform = `rotateZ(${s * 6}deg)`; // 360° / 60 segundos = 6° por segundo
     }
 }, 1000); // Intervalo de 1 segundo
-
 
 
 
@@ -91,7 +107,7 @@ function crearBinario(x, y) {
     binario.classList.add('binario');
     document.body.appendChild(binario);
 
-    console.log("Se ha creado un número binario en:", x, y); // Para verificar si los números se están creando
+    // console.log("Se ha creado un número binario en:", x, y); Para verificar si los números se están creando
 
     // Posición inicial del número binario
 

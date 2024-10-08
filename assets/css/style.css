@@ -55,7 +55,7 @@ img {
     animation: desaparecer 4s forwards;
     transform: translate(-50%, -50%);
     font-family: 'Courier New', Courier, monospace;
-    z-index: 9999;
+    z-index: 99999;
 }
 
 @keyframes desaparecer {
@@ -129,7 +129,7 @@ img {
         0 0 15px rgb(131, 131, 131),
         0 0 20px rgba(102, 102, 102, 0.61),
         0 0 25px rgb(94, 94, 94);
-    color: rgb(61, 61, 61);
+    color: rgb(34, 34, 34);
 }
 
 .header-txt h1 {
@@ -145,9 +145,6 @@ img {
     margin-bottom: 25px;
 }
 
-span {
-    color: #a8b5ff;
-}
 
 p {
     font-size: 17px;
@@ -184,7 +181,7 @@ p {
 
 .menu.blur {
     backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.562);
+    background-color: rgba(0, 0, 0, 0.61);
     width: 100vw;
 }
 
@@ -204,8 +201,8 @@ p {
 }
 
 .logo:hover {
-    transform: scale(1.05);
-    color: #cccccc;
+    transform: scale(1.08);
+    color: #ffffff;
 }
 
 .menu .navbar ul {
@@ -226,7 +223,7 @@ p {
 }
 
 .menu .navbar ul li a {
-    font-size: 18px;
+    font-size: 19px;
     padding: 20px;
     color: #000000;
     display: block;
@@ -235,8 +232,8 @@ p {
 }
 
 .menu .navbar ul li a:hover {
-    color: #cccccc;
-    transform: scale(1.1);
+    color: #ffffff;
+    transform: scale(1.08);
 }
 
 #menu {
@@ -375,75 +372,6 @@ p {
             0 0 10px rgb(131, 131, 131),
             0 0 20px rgb(102, 102, 102),
             0 0 40px rgb(94, 94, 94);
-    }
-}
-
-@keyframes blue-img {
-    0% {
-        box-shadow:
-            0 0 10px rgba(161, 168, 255, 0.8),
-            0 0 20px rgba(95, 92, 255, 0.4),
-            0 0 40px rgba(72, 68, 252, 0.4);
-    }
-
-    50% {
-        box-shadow:
-            0 0 20px rgba(114, 124, 255, 0.8),
-            0 0 40px rgba(77, 74, 255, 0.4),
-            0 0 70px rgba(53, 49, 255, 0.4);
-    }
-
-    100% {
-        box-shadow:
-            0 0 10px rgba(29, 44, 255, 0.8),
-            0 0 20px rgba(34, 31, 235, 0.4),
-            0 0 40px rgba(31, 28, 207, 0.4);
-    }
-}
-
-@keyframes orange-img {
-    0% {
-        box-shadow:
-            0 0 10px rgba(255, 139, 45, 0.6),
-            0 0 20px rgba(255, 114, 20, 0.4),
-            0 0 40px rgba(255, 102, 0, 0.4);
-    }
-
-    50% {
-        box-shadow:
-            0 0 20px rgba(255, 130, 29, 0.6),
-            0 0 40px rgba(255, 102, 0, 0.4),
-            0 0 70px rgba(219, 88, 0, 0.4);
-    }
-
-    100% {
-        box-shadow:
-            0 0 10px rgba(182, 82, 0, 0.6),
-            0 0 20px rgba(190, 76, 0, 0.4),
-            0 0 40px rgba(138, 55, 0, 0.4);
-    }
-}
-
-@keyframes greem-img {
-    0% {
-        box-shadow:
-            0 0 10px rgba(45, 255, 45, 0.6),
-            0 0 20px rgba(20, 255, 20, 0.4),
-            0 0 40px rgba(30, 255, 0, 0.4);
-    }
-
-    50% {
-        box-shadow:
-            0 0 20px rgba(21, 255, 21, 0.6),
-            0 0 40px rgba(11, 255, 11, 0.4),
-            0 0 70px rgba(0, 255, 0, 0.4);
-    }
-
-    100% {
-        box-shadow:
-            0 0 10px rgba(0, 199, 0, 0.4),
-            0 0 20px rgba(8, 184, 8, 0.4),
-            0 0 40px rgba(15, 190, 15, 0.4);
     }
 }
 
@@ -587,7 +515,7 @@ p {
     flex-basis: 50%;
 }
 
-h2 {
+.crypto-txt h2 {
     font-size: 40px;
     color: #fdfeff;
     line-height: 1.4;
@@ -825,7 +753,7 @@ h2 {
     flex-basis: 50%;
 }
 
-h2 {
+.work-with-me-txt h2 {
     font-size: 40px;
     color: #fdfeff;
     line-height: 1.4;
@@ -886,7 +814,6 @@ h2 {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.856);
-    z-index: 1;
 }
 
 .redes {
@@ -896,6 +823,7 @@ h2 {
 }
 
 .redes-sociales {
+    position: relative;
     box-shadow:
         0 0 10px rgba(190, 190, 190, 0.8),
         0 0 20px rgba(131, 131, 131, 0.6),
@@ -911,6 +839,8 @@ h2 {
 }
 
 .redes h2 {
+    font-weight: 800;
+    padding: 10px;
     text-shadow:
         0 0 10px rgba(255, 255, 255, 0.795),
         0 0 20px rgba(204, 204, 204, 0.685),
@@ -923,15 +853,14 @@ h2 {
     background: linear-gradient(90deg,
             rgba(84, 105, 210, 1) 0%,
             rgba(35, 43, 88, 1) 68%);
-    z-index: 9999;
     position: relative;
     box-shadow:
         0 0 30px rgba(190, 190, 190, 0.8),
         0 0 40px rgba(131, 131, 131, 0.6),
         0 0 50px rgba(102, 102, 102, 0.4),
         0 0 60px rgba(94, 94, 94, 0.4);
-    position: relative;
     animation: border-redes 1.5s infinite alternate;
+    transition: all .5s;
 }
 
 .redes h2::before {
@@ -944,6 +873,11 @@ h2 {
     background-color: rgba(0, 0, 0, 0.747);
     z-index: -1;
     border-radius: 5px;
+}
+
+.redes h2:hover {
+    transform: scale(1.02);
+    cursor: pointer;
 }
 
 .redes-background {
@@ -1347,11 +1281,16 @@ h2 {
 /* price content */
 
 .price {
-    padding: 130px 0 120px 0;
+    padding: 130px 0 100px 0;
     text-align: center;
 }
 
+.price-text {
+    margin-top: -60px;
+}
+
 .price h2 {
+    font-size: 50px;
     text-shadow:
         0 0 5px rgb(255, 255, 255),
         0 0 10px rgb(207, 207, 207),
@@ -1390,6 +1329,7 @@ h2 {
         0 0 20px rgb(131, 131, 131);
     color: #000;
     font-weight: 800;
+    font-size: 20px;
 }
 
 .price strong {
@@ -1398,8 +1338,8 @@ h2 {
         0 0 10px rgb(207, 207, 207),
         0 0 15px rgb(163, 163, 163),
         0 0 20px rgb(131, 131, 131);
-        color: #000;
-        font-weight: 800;
+    color: #000;
+    font-weight: 800;
 }
 
 .price-content {
@@ -1437,7 +1377,7 @@ h2 {
 
 .bg-pack {
     background: linear-gradient(90deg,
-            rgb(131, 131, 131) 0%,
+            rgb(92, 91, 91) 0%,
             rgb(49, 49, 49) 100%);
     margin-top: -50px;
 }
@@ -1520,14 +1460,17 @@ h2 {
 .merch {
     position: relative;
     width: 350px;
-    height: 515px;
+    height: 500px;
     background: #232323;
     overflow: hidden;
     border-radius: 20px;
+    transition: all .5s;
 }
 
 .merch:hover {
     box-shadow: 0 1px 20px #969696;
+    animation: border-price 1.5s infinite alternate;
+    transform: scale(1.05);
 }
 
 .merch::before {
@@ -1537,9 +1480,11 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #1bbfe9;
+    background: #3a3a3a;
     clip-path: circle(150px at 80% 20%);
     transform: .5s ease-in-out;
+    transition: all .5s;
+    z-index: 1;
 }
 
 .merch:hover::before {
@@ -1576,11 +1521,25 @@ h2 {
     position: absolute;
     align-items: center;
     justify-content: center;
-    top: 25%;
-    left: 10%;
+    top: 27%;
+    left: 15%;
     transform: translateY(-50%, -50%) rotate(20deg);
-    width: 260px;
+    width: 240px;
+    animation: merch-neon 3s infinite;
 }
+
+@keyframes merch-neon {
+    0%, 100% {
+      filter: drop-shadow(0 0 5px rgba(131, 131, 131,)) 
+              drop-shadow(0 0 10px rgba(102, 102, 102, 0.61)) 
+              drop-shadow(0 0 15px rgba(94, 94, 94));
+    }
+    50% {
+      filter: drop-shadow(0 0 10px rgba(131, 131, 131)) 
+              drop-shadow(0 0 20px rgba(102, 102, 102, 0.61)) 
+              drop-shadow(0 0 10px rgba(94, 94, 94));
+    }
+  }
 
 .merch .merch-content {
     position: absolute;
@@ -1593,7 +1552,7 @@ h2 {
 }
 
 .merch:hover .merch-content {
-    height: 280px;
+    height: 240px;
 }
 
 .merch-content button {
@@ -1629,9 +1588,39 @@ h2 {
 
 .merch-content h2 {
     position: relative;
-    font-weight: 600;
+    text-shadow:
+        0 0 10px rgb(190, 190, 190),
+        0 0 15px rgb(131, 131, 131),
+        0 0 20px rgba(102, 102, 102, 0.61),
+        0 0 25px rgb(94, 94, 94);
+    font-weight: 800;
     letter-spacing: 1px;
-    color: #ffffff;
+    color: #111111;
+    font-size: 30px;
+    animation: border-text 1.5s infinite alternate;
+}
+
+@keyframes border-text {
+    0% {
+        text-shadow:
+            0 0 10px rgb(131, 131, 131),
+            0 0 20px rgb(102, 102, 102),
+            0 0 40px rgb(94, 94, 94);
+    }
+
+    50% {
+        text-shadow:
+            0 0 20px rgb(131, 131, 131),
+            0 0 30px rgb(102, 102, 102),
+            0 0 50px rgb(94, 94, 94);
+    }
+
+    100% {
+        text-shadow:
+            0 0 10px rgb(131, 131, 131),
+            0 0 20px rgb(102, 102, 102),
+            0 0 40px rgb(94, 94, 94);
+    }
 }
 
 .merch-content .size {
@@ -1752,12 +1741,34 @@ h2 {
     margin: 0 5px;
     font-size: 14px;
     border-radius: 4px;
+    z-index: 10;
     cursor: pointer;
 }
 
-.size h3 {
-    color: #ffffff;
+.size-list li span:hover{
+    cursor: pointer;
+    transform: scale(1.05);
 }
+
+.size h3 {
+    text-shadow:
+        0 0 10px rgb(190, 190, 190),
+        0 0 15px rgb(131, 131, 131),
+        0 0 20px rgba(102, 102, 102, 0.61),
+        0 0 25px rgb(94, 94, 94);
+    color: #0c0c0c;
+    font-weight: 800;
+}
+
+.size-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin-left: 10px;
+}
+
+
 
 .info-merch h3 {
     color: #ffffff;
