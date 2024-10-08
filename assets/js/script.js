@@ -193,7 +193,7 @@ function smoothScroll(target, duration) {
 
 
 
-// Blur Menu Nav
+/* Blur Menu Nav
 
 window.addEventListener('scroll', () => {
     const menu = document.querySelector('.menu'); 
@@ -204,4 +204,4 @@ window.addEventListener('scroll', () => {
     } else {
         menu.classList.remove('blur');
     }
-});
+}); */
