@@ -167,11 +167,75 @@ p {
     align-items: center;
     justify-content: space-between;
     z-index: 10000;
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
     background-color: transparent;
-    width: 100%;
-    overflow: hidden;
 }
+
+.menu-toggle {
+    display: none; /* Oculta el checkbox */
+}
+
+.menu-label {
+    cursor: pointer; /* Cambia el cursor al pasar sobre el ícono */
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #000; /* Color de las barras */
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 0, 0.5)); /* Efecto neon */
+}
+
+.menu-toggle:checked + .menu-label .menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px); /* Efecto de transformación */
+}
+
+.menu-toggle:checked + .menu-label .menu-icon span:nth-child(2) {
+    opacity: 0; /* Oculta la barra del medio */
+}
+
+.menu-toggle:checked + .menu-label .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px); /* Efecto de transformación */
+}
+
+.navbar {
+    display: none; /* Oculto por defecto */
+    flex-direction: column; /* Asegúrate de que el menú sea vertical */
+    position: absolute; /* Asegúrate de que se superponga sobre otros elementos */
+    top: 100%; /* Coloca el menú debajo del icono */
+    left: 0; /* Alinea a la izquierda */
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro para el menú */
+    width: 100%; /* Asegúrate de que ocupe todo el ancho */
+    padding: 10px 0; /* Espaciado alrededor */
+}
+
+.navbar ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el padding */
+}
+
+.navbar ul li {
+    margin: 5px 0; /* Espacio entre los elementos */
+}
+
+.navbar ul li a {
+    color: #ffffff; /* Color del texto del menú */
+    padding: 10px 20px; /* Espaciado alrededor de los enlaces */
+    text-decoration: none; /* Elimina el subrayado */
+    display: block; /* Asegúrate de que el enlace ocupe todo el área */
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efecto hover para los enlaces */
+}
+
+.menu-toggle:checked ~ .navbar {
+    display: flex; /* Muestra el menú cuando se activa el checkbox */
+}
+
 
 .menu.container {
     max-width: 100%;
@@ -240,14 +304,9 @@ p {
     display: none;
 }
 
-.menu-icono {
-    width: 25px;
-}
 
-.menu label {
-    cursor: pointer;
-    display: none;
-}
+
+
 
 
 
@@ -1529,17 +1588,16 @@ p {
 }
 
 @keyframes merch-neon {
-    0%, 100% {
-      filter: drop-shadow(0 0 5px rgba(131, 131, 131,)) 
-              drop-shadow(0 0 10px rgba(102, 102, 102, 0.61)) 
-              drop-shadow(0 0 15px rgba(94, 94, 94));
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 5px rgba(131, 131, 131, )) drop-shadow(0 0 10px rgba(102, 102, 102, 0.61)) drop-shadow(0 0 15px rgba(94, 94, 94));
     }
+
     50% {
-      filter: drop-shadow(0 0 10px rgba(131, 131, 131)) 
-              drop-shadow(0 0 20px rgba(102, 102, 102, 0.61)) 
-              drop-shadow(0 0 10px rgba(94, 94, 94));
+        filter: drop-shadow(0 0 10px rgba(131, 131, 131)) drop-shadow(0 0 20px rgba(102, 102, 102, 0.61)) drop-shadow(0 0 10px rgba(94, 94, 94));
     }
-  }
+}
 
 .merch .merch-content {
     position: absolute;
@@ -1553,25 +1611,6 @@ p {
 
 .merch:hover .merch-content {
     height: 240px;
-}
-
-.merch-content button {
-    color: #fdfeff;
-    display: inline-block;
-    padding: 11px 35px;
-    background: linear-gradient(90deg,
-            rgba(37, 118, 250, 1) 0%,
-            rgba(84, 115, 237, 1) 100%);
-    margin: 0 15px;
-}
-
-.merch-content button:hover {
-    cursor: pointer;
-    background: linear-gradient(90deg,
-            rgba(84, 105, 210, 1) 0%,
-            rgba(35, 43, 88, 1) 68%);
-    transform: scale(1.08);
-    transition: all .5s;
 }
 
 .merch-content .info-merch {
@@ -1639,99 +1678,18 @@ p {
     transition-delay: .5s;
 }
 
-.merch2 {
-    position: relative;
-    width: 350px;
-    height: 515px;
-    background: #232323;
-    overflow: hidden;
-    border-radius: 20px;
-}
-
-.merch2:hover {
-    box-shadow: 0 1px 20px #969696;
-}
-
-.merch2::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: hsl(0, 100%, 62%);
-    clip-path: circle(150px at 80% 20%);
-    transform: .5s ease-in-out;
-}
-
-.merch2:hover::before {
-    clip-path: circle(300px at 80% -20%);
-}
-
-.merch2:after {
-    content: "BTC";
-    position: absolute;
-    top: 30%;
-    left: -20%;
-    font-size: 12em;
-    font-weight: 800;
-    font-style: italic;
-    color: rgba(225, 225, 225, 0.04);
-}
-
-.merch2 .merch-img {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1000;
-    width: 100%;
-    height: 100%;
-    transition: .5s;
-}
-
-.merch2:hover .merch-img {
-    top: 0%;
-    transform: translateY(-25%);
-}
-
-.merch2 .merch-img img {
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    top: 25%;
-    left: 10%;
-    transform: translateY(-50%, -50%) rotate(20deg);
-    width: 260px;
-}
-
-.merch2 .merch-content {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    text-align: center;
-    transition: 1s;
-    z-index: 90;
-}
-
-.merch2:hover .merch-content {
-    height: 280px;
-}
-
-.merch2:hover .merch-content .size {
-    opacity: 1;
-    visibility: visible;
-    transition-delay: .5s;
-}
-
-.merch2:hover .merch-content .info-merch {
-    opacity: 1;
-    visibility: visible;
-    transition-delay: .5s;
-}
-
 .size span {
-    width: 30px;
+    text-shadow:
+        0 0 10px rgb(190, 190, 190),
+        0 0 15px rgb(131, 131, 131),
+        0 0 20px rgba(102, 102, 102, 0.61),
+        0 0 25px rgb(94, 94, 94);
+    box-shadow:
+        0 0 10px rgb(190, 190, 190),
+        0 0 15px rgb(131, 131, 131),
+        0 0 20px rgba(102, 102, 102, 0.61),
+        0 0 25px rgb(94, 94, 94);
+    width: 35px;
     height: 25px;
     text-align: center;
     display: grid;
@@ -1740,12 +1698,13 @@ p {
     color: #ffffff;
     margin: 0 5px;
     font-size: 14px;
+    font-weight: 600;
     border-radius: 4px;
     z-index: 10;
     cursor: pointer;
 }
 
-.size-list li span:hover{
+.size-list li span:hover {
     cursor: pointer;
     transform: scale(1.05);
 }
@@ -1768,17 +1727,62 @@ p {
     margin-left: 10px;
 }
 
-
-
 .info-merch h3 {
-    color: #ffffff;
+    text-shadow:
+        0 0 10px rgb(190, 190, 190),
+        0 0 15px rgb(131, 131, 131),
+        0 0 20px rgba(102, 102, 102, 0.61),
+        0 0 25px rgb(94, 94, 94);
+    color: #0c0c0c;
+    font-weight: 800;
+    color: #d6d6d6;
     margin-bottom: 10px;
 }
 
 .info-merch button {
-    color: #ffffff;
+    text-shadow:
+        0 0 15px rgba(190, 190, 190, 0.8),
+        0 0 20px rgba(131, 131, 131, 0.6),
+        0 0 25px rgba(102, 102, 102, 0.4),
+        0 0 30px rgba(94, 94, 94, 0.4);
+    display: inline-block;
+    box-shadow:
+        0 0 15px rgba(190, 190, 190, 0.8),
+        0 0 20px rgba(131, 131, 131, 0.6),
+        0 0 25px rgba(102, 102, 102, 0.4),
+        0 0 30px rgba(94, 94, 94, 0.4);
+    padding: 11px 35px;
+    background: #12121cd2;
+    color: #fdfeff;
+    transition: all .5s;
+    margin: 0 15px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 800;
 }
 
+.merch-content button:hover {
+    cursor: pointer;
+    background: #262635d0;
+    box-shadow:
+        0 0 5px rgba(190, 190, 190, 0.8),
+        0 0 10px rgba(131, 131, 131, 0.6),
+        0 0 15px rgba(102, 102, 102, 0.4),
+        0 0 20px rgba(94, 94, 94, 0.4);
+    transform: scale(1.05);
+    color: #000;
+    font-weight: 800;
+}
+
+.info-merch span {
+    text-shadow:
+        0 0 10px rgb(190, 190, 190),
+        0 0 15px rgb(131, 131, 131),
+        0 0 20px rgba(102, 102, 102, 0.61),
+        0 0 25px rgb(94, 94, 94);
+    color: #0c0c0c;
+    font-weight: 800;
+}
 
 
 /* Estilos del botón Go Top */
@@ -1871,9 +1875,21 @@ p {
 
 
 
-@media(max-width:991px) {
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px) {
 
     /* header content */
 
@@ -1917,6 +1933,13 @@ p {
         display: initial;
     }
 
+    .menu-icono {
+
+        margin-top: 5px;
+        margin-left: -50px;
+        z-index: 10000;
+    }
+
     .menu .navbar {
         position: absolute;
         top: 100%;
@@ -1937,6 +1960,10 @@ p {
     #menu:checked~.navbar {
         display: initial;
     }
+
+
+
+
 
 
 

@@ -196,7 +196,7 @@ function smoothScroll(target, duration) {
 // Blur Menu Nav
 
 window.addEventListener('scroll', () => {
-    const menu = document.querySelector('.menu'); // Asegúrate de que sea '.menu'
+    const menu = document.querySelector('.menu'); 
     const headerHeight = document.querySelector('#menu').offsetHeight;
 
     if (window.scrollY > headerHeight) {
