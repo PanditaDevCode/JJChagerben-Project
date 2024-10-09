@@ -155,44 +155,55 @@ p {
 
 
 
-
-/*Menu and Logo content*/
+/* Menú y Logo */
 
 .menu {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    height: 60px;
+    z-index: 10000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
-    margin: 0;
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    box-sizing: border-box;
+}
+
+.menu.blur {
     background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
 }
 
 .logo {
-    text-shadow:
-        0 0 5px rgb(255, 255, 255),
-        0 0 10px rgb(207, 207, 207),
-        0 0 15px rgb(163, 163, 163),
-        0 0 20px rgb(131, 131, 131);
+    margin-left: 10px;
+    text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(207, 207, 207), 0 0 15px rgb(163, 163, 163), 0 0 20px rgb(131, 131, 131);
     color: white;
-    font-size: 20px;
-    display: inline;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 800;
     text-decoration: none;
+    white-space: nowrap;
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    color: #131313;
 }
 
 /* Icono del menú hamburguesa */
+
 .menu-icon {
-    display: none;
-    /* Oculto en desktop */
+    display: block;
     cursor: pointer;
 }
 
 .menu-icon span {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(190, 190, 190, 0.8), 0 0 15px rgba(131, 131, 131, 0.6), 0 0 20px rgba(102, 102, 102, 0.4), 0 0 30px rgba(94, 94, 94, 0.4);
     display: block;
     width: 30px;
     height: 4px;
@@ -200,14 +211,14 @@ p {
     background-color: #fff;
     position: relative;
     transition: all 0.4s ease;
-    border: 2px solid rgba(0, 255, 255, 0.7);
-    /* Borde neon */
+    border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
 /* Cambiar a X cuando se abre el menú */
+
 #menu-toggle:checked+.menu-label .menu-icon span:nth-child(1) {
     transform: rotate(45deg);
-    top: 8px;
+    top: 10px;
 }
 
 #menu-toggle:checked+.menu-label .menu-icon span:nth-child(2) {
@@ -216,62 +227,100 @@ p {
 
 #menu-toggle:checked+.menu-label .menu-icon span:nth-child(3) {
     transform: rotate(-45deg);
-    top: -8px;
-}
-
-.menu-toggle:checked+.menu-label+.navbar {
-    display: block;
+    top: -9px;
 }
 
 /* Ocultar el input del menú hamburguesa */
+
 #menu-toggle {
     display: none;
 }
 
+/* Menú desplegable (se oculta inicialmente) */
 
-/* Menú desplegable */
 .navbar {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    width: 80%;
-    background-color: #687cef;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
     display: none;
     z-index: 999;
     padding: 0;
     margin: 0;
 }
 
-#menu-toggle:checked~nav.navbar {
-    display: block;
+/* Mostrar el menú cuando se activa el toggle */
+
+#menu-toggle:checked~.navbar {
+    display: flex;
+    flex-direction: column;
 }
 
+/* Lista de navegación */
+
 .navbar ul {
+    text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(207, 207, 207), 0 0 15px rgb(163, 163, 163), 0 0 20px rgb(131, 131, 131);
     list-style: none;
     margin: 0;
-    width: 80%;
-    font-size: 15px;
-    display: inline;
+    padding: 0;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar ul li {
     text-align: center;
-    width: 80%;
+    width: auto;
     padding: 15px 0;
-    display: inline;
+    display: block;
 }
 
 .navbar ul li a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    display: inline;
+    display: inline-block;
+    padding: 10px 5px;
+    transition: transform 0.5s ease, color 0.5s ease;
 }
 
 .navbar ul li a:hover {
-    color: #00ffff;
-    /* Efecto hover en neon */
+    color: #000000;
+    transform: scale(1.05);
 }
+
+/* Ocultar el menú en desktop */
+
+@media (min-width: 769px) {
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        top: 0;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .navbar ul {
+        margin-left: 500px;
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+
 
 
 
@@ -1497,6 +1546,42 @@ p {
     gap: 100px;
 }
 
+.whatsapp-button {
+    display: inline-block;
+    padding: 8px 35px;
+    background: #12121cd2;
+    text-shadow:
+        0 0 5px rgba(190, 190, 190, 0.8),
+        0 0 10px rgba(131, 131, 131, 0.6),
+        0 0 15px rgba(102, 102, 102, 0.4),
+        0 0 20px rgba(94, 94, 94, 0.4);
+    box-shadow:
+        0 0 15px rgba(190, 190, 190, 0.8),
+        0 0 20px rgba(131, 131, 131, 0.6),
+        0 0 25px rgba(102, 102, 102, 0.4),
+        0 0 30px rgba(94, 94, 94, 0.4);
+    color: #fdfeff;
+    margin: 0 15px;
+    z-index: 2;
+    transition: all .5s;
+    border-radius: 5px;
+    font-weight: 800;
+}
+
+.whatsapp-button:hover {
+    cursor: pointer;
+    background: #262635d0;
+    box-shadow:
+        0 0 5px rgba(190, 190, 190, 0.8),
+        0 0 10px rgba(131, 131, 131, 0.6),
+        0 0 15px rgba(102, 102, 102, 0.4),
+        0 0 20px rgba(94, 94, 94, 0.4);
+    transform: scale(1.08);
+    color: #000;
+    font-weight: 800;
+}
+
+
 .merch {
     position: relative;
     width: 350px;
@@ -1912,6 +1997,11 @@ p {
         width: 100%;
     }
 
+    .logo {
+        font-size: 15px;
+        margin-left: -5px;
+    }
+
 
 
 
@@ -1926,7 +2016,7 @@ p {
         align-items: center;
         align-content: center;
         margin-top: -430px;
-        z-index: 0;
+        z-index: 9999;
     }
 
     .time {
@@ -2102,34 +2192,4 @@ p {
         margin-bottom: -80px;
     }
 
-}
-
-
-/* Ocultar el menú en desktop */
-@media (min-width: 769px) {
-    .navbar {
-        display: flex !important;
-        justify-content: space-around;
-        position: relative;
-        top: 0;
-        background-color: transparent;
-        padding: 0;
-    }
-
-    .menu-icon {
-        display: none;
-    }
-
-    .navbar ul {
-        display: flex;
-        gap: 20px;
-    }
-
-    .navbar ul li {
-        margin: 0;
-    }
-
-    .navbar ul li a {
-        font-size: 1.2em;
-    }
 }

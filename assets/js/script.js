@@ -193,15 +193,14 @@ function smoothScroll(target, duration) {
 
 
 
-/* Blur Menu Nav
+// Blur Menu Nav
 
 window.addEventListener('scroll', () => {
-    const menu = document.querySelector('.menu'); 
-    const headerHeight = document.querySelector('#menu').offsetHeight;
-
-    if (window.scrollY > headerHeight) {
+    const menu = document.querySelector('.menu');
+    
+    if (window.scrollY > 0) {
         menu.classList.add('blur');
     } else {
         menu.classList.remove('blur');
     }
-}); */
+});
