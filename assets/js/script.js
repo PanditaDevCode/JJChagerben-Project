@@ -1,3 +1,19 @@
+// Blur Menu Nav
+
+window.addEventListener('scroll', () => {
+    const menu = document.querySelector('.menu');
+    
+    if (window.scrollY > 0) {
+        menu.classList.add('blur');
+    } else {
+        menu.classList.remove('blur');
+    }
+});
+
+
+
+
+
 // Cuenta regresiva
 
 let days = document.getElementById('days');
@@ -188,19 +204,3 @@ function smoothScroll(target, duration) {
 
     requestAnimationFrame(animation);
 }
-
-
-
-
-
-// Blur Menu Nav
-
-window.addEventListener('scroll', () => {
-    const menu = document.querySelector('.menu');
-    
-    if (window.scrollY > 0) {
-        menu.classList.add('blur');
-    } else {
-        menu.classList.remove('blur');
-    }
-});
