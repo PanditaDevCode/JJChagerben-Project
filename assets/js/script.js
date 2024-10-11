@@ -14,6 +14,8 @@ window.addEventListener('scroll', () => {
 
 
 
+
+
 // Cuenta regresiva
 
 let days = document.getElementById('days');
