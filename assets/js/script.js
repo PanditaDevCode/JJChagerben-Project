@@ -2,7 +2,7 @@
 
 window.addEventListener('scroll', () => {
     const menu = document.querySelector('.menu');
-    
+
     if (window.scrollY > 0) {
         menu.classList.add('blur');
     } else {
@@ -11,6 +11,19 @@ window.addEventListener('scroll', () => {
 });
 
 
+
+
+
+// Cerrar menu hamburgesa al cliclar 
+
+const menuToggle = document.querySelector("#menu-toggle");
+const menuLinks = document.querySelectorAll(".navbar ul li a");
+
+menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        menuToggle.checked = false;
+    });
+});
 
 
 
@@ -124,8 +137,6 @@ function crearBinario(x, y) {
     binario.textContent = Math.random() > 0.5 ? '1' : '0';
     binario.classList.add('binario');
     document.body.appendChild(binario);
-
-    // console.log("Se ha creado un número binario en:", x, y); Para verificar si los números se están creando
 
     // Posición inicial del número binario
 
