@@ -10,10 +10,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-
-
-
-
 // Cerrar menu hamburgesa al cliclar 
 
 const menuToggle = document.querySelector("#menu-toggle");
@@ -24,10 +20,6 @@ menuLinks.forEach(link => {
         menuToggle.checked = false;
     });
 });
-
-
-
-
 
 // Cuenta regresiva
 
@@ -101,10 +93,6 @@ let x = setInterval(function () {
     }
 }, 1000); // Intervalo de 1 segundo
 
-
-
-
-
 // Go Top
 
 const goTopBtn = document.getElementById('goTop');
@@ -116,10 +104,6 @@ window.addEventListener('scroll', () => {
         goTopBtn.classList.remove('show');
     }
 });
-
-
-
-
 
 // Efecto del Puntero
 
@@ -170,10 +154,6 @@ document.addEventListener('mousemove', (e) => {
         lastMouseY = mouseY; // Actualizar la última posición Y
     }
 });
-
-
-
-
 
 // Efecto Scroll
 

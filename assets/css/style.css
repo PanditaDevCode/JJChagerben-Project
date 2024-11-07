@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
-
-
 /* global content */
 
 * {
@@ -36,10 +34,6 @@ img {
     margin: 0 auto;
 }
 
-
-
-
-
 /* Efecto de Puntero */
 
 .binario {
@@ -69,10 +63,6 @@ img {
         transform: translateY(-30px);
     }
 }
-
-
-
-
 
 /* header content */
 
@@ -151,10 +141,6 @@ p {
     color: #D2d2d2;
     margin-bottom: 35px;
 }
-
-
-
-
 
 /* Menú y Logo */
 
@@ -242,10 +228,9 @@ p {
 .navbar {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: -80px;
     right: 0;
     width: 100%;
-
     display: none;
     z-index: 999;
     padding: 0;
@@ -273,11 +258,12 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    white-space: nowrap;
 }
 
 .navbar ul li {
     text-align: center;
-    width: auto;
+    width: 100%;
     padding: 15px 0;
     display: block;
 }
@@ -319,10 +305,6 @@ p {
         align-items: center;
     }
 }
-
-
-
-
 
 /* timer content */
 
@@ -447,10 +429,6 @@ p {
     }
 }
 
-
-
-
-
 /*butons content*/
 
 .butons {
@@ -501,10 +479,6 @@ p {
     font-weight: 800;
 }
 
-
-
-
-
 /*information content*/
 
 .information {
@@ -551,10 +525,6 @@ p {
 .information-1 a {
     color: #fdfeff;
 }
-
-
-
-
 
 /*cryto content*/
 
@@ -634,10 +604,6 @@ p {
             0 0 40px rgb(94, 94, 94);
     }
 }
-
-
-
-
 
 /*about me content*/
 
@@ -724,10 +690,6 @@ p {
     background: #3b3b46;
 }
 
-
-
-
-
 /*lives content*/
 
 .lives {
@@ -801,10 +763,6 @@ p {
     display: flex;
     flex-wrap: wrap;
 }
-
-
-
-
 
 /*work with me content*/
 
@@ -882,10 +840,6 @@ p {
         0 0 22px rgba(94, 94, 94, 0.4);
     color: #fdfeff;
 }
-
-
-
-
 
 /*redes content*/
 
@@ -1371,10 +1325,6 @@ p {
     opacity: 1;
 }
 
-
-
-
-
 /* price content */
 
 .price {
@@ -1540,10 +1490,6 @@ p {
     }
 }
 
-
-
-
-
 /*merch content*/
 
 .merch-container {
@@ -1590,7 +1536,6 @@ p {
     color: #000;
     font-weight: 800;
 }
-
 
 .merch {
     position: relative;
@@ -1860,10 +1805,6 @@ p {
     font-weight: 800;
 }
 
-
-
-
-
 /* Estilos del botón Go Top */
 
 #goTop {
@@ -1998,10 +1939,6 @@ p {
         margin: 0 0 20px 0;
     }
 
-
-
-
-
     /* menu content */
 
     .menu {
@@ -2022,10 +1959,6 @@ p {
         margin-left: -5px;
     }
 
-
-
-
-
     /* time content */
 
     .time-container {
@@ -2043,10 +1976,6 @@ p {
         grid-template-columns: repeat(2, 1fr);
     }
 
-
-
-
-
     /* information content */
 
     .information {
@@ -2058,10 +1987,6 @@ p {
     .information-1 {
         margin: 0 0 20px 0;
     }
-
-
-
-
 
     /* crypto content */
 
@@ -2089,10 +2014,6 @@ p {
         height: 200px;
         margin-left: 5px;
     }
-
-
-
-
 
     /* about me content */
 
@@ -2151,10 +2072,6 @@ p {
         margin: none;
     }
 
-
-
-
-
     /* lives content */
 
     .lives {
@@ -2208,10 +2125,6 @@ p {
         margin-left: -5px;
     }
 
-
-
-
-
     /* work with me content */
 
     .work-with-me {
@@ -2246,10 +2159,6 @@ p {
         margin-top: -15px;
     }
 
-
-
-
-
     /* redes content */
 
     .redes-background {
@@ -2269,10 +2178,6 @@ p {
         margin-top: 50px;
         margin-bottom: 30px;
     }
-
-
-
-
 
     /* price content */
 
@@ -2311,10 +2216,6 @@ p {
     .price-1 {
         margin-bottom: 30px;
     }
-
-
-
-
 
     /* merch content */
 

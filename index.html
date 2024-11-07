@@ -37,6 +37,7 @@
 
                     <ul>
                         <li><a href="#about-me">Acerca de Mi</a></li>
+                        <li><a href="#tradingview-chart">Grafico</a></li>
                         <li><a href="#lives">Directos</a></li>
                         <li><a href="#work-with-me">Trabaja Conmigo</a></li>
                         <li><a href="#redes">Redes Sociales</a></li>
@@ -47,7 +48,7 @@
 
             </section>
 
-            <!-- Sección del contador de tiempo -->
+            <!-- Countdown -->
 
             <section class="time-container">
 
@@ -101,7 +102,7 @@
 
             </section>
 
-            <!-- Contenido del encabezado -->
+            <!-- Header Content -->
 
             <section class="header-content container">
 
@@ -171,7 +172,7 @@
 
         </section>
 
-        <!-- Crypto Container -->
+        <!-- Crypto Content -->
 
         <section class="crypto container">
 
@@ -197,7 +198,40 @@
 
         </section>
 
-        <!-- Informacion JJChagerben -->
+        <!-- Trading Chart -->
+         
+        <section id="tradingview-chart">
+
+            <div class="tradingview-widget-container">
+
+                <div id="tradingview_crypto"></div>
+
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+
+                <script type="text/javascript">
+
+                    new TradingView.widget({
+                        "width": 1350,
+                        "height": 555,
+                        "symbol": "BINANCE:BTCUSDT",
+                        "interval": "D",
+                        "timezone": "Etc/UTC",
+                        "theme": "dark",
+                        "style": "1",
+                        "locale": "es",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "allow_symbol_change": true,
+                        "container_id": "tradingview_crypto"
+                    });
+
+                </script>
+
+            </div>
+
+        </section>
+
+        <!-- Information about JJChagerben -->
 
         <div id="about-me">
 
@@ -232,7 +266,7 @@
 
         </div>
 
-        <!-- Directos -->
+        <!-- Lives -->
 
         <div id="lives">
 
@@ -271,7 +305,7 @@
 
         </div>
 
-        <!-- Trabaja conmigo -->
+        <!-- Work With Me -->
 
         <div id="work-with-me">
 
@@ -306,7 +340,7 @@
 
         </div>
 
-        <!-- Redes Sociales -->
+        <!-- Social Media -->
 
         <section id="redes">
 
@@ -364,7 +398,7 @@
 
         </section>
 
-        <!-- Precios -->
+        <!-- Prices -->
 
         <section class="price container" id="precios">
 
@@ -447,7 +481,7 @@
 
         </section>
 
-        <!-- Contenido del Merch -->
+        <!-- Merch Content -->
 
         <section class="merch-btc" id="merch">
 
