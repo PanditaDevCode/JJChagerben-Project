@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="/assets/css/style.css" as="style" onload="this.rel='stylesheet'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="assets/css/images/iconweb.png" type="image/png">
+    <link rel="icon" href="/assets/css/images/iconweb.webp" type="image/png">
     <title>JJChagerben</title>
 </head>
 
@@ -36,8 +36,8 @@
                 <nav class="navbar">
 
                     <ul>
-                        <li><a href="#about-me">Acerca de Mi</a></li>
                         <li><a href="#tradingview-chart">Grafico</a></li>
+                        <li><a href="#about-me">Acerca de Mi</a></li>
                         <li><a href="#lives">Directos</a></li>
                         <li><a href="#work-with-me">Trabaja Conmigo</a></li>
                         <li><a href="#redes">Redes Sociales</a></li>
@@ -177,7 +177,7 @@
         <section class="crypto container">
 
             <div class="crypto-img">
-                <img src="assets/css/images/btc.gif" alt="Imagen de Bitcoin">
+                <img src="/assets/css/images/btc.webp" alt="Imagen de Bitcoin">
             </div>
 
             <div class="crypto-txt">
@@ -186,8 +186,8 @@
 
                 <h2>¿Qué son las <span>CRIPTOMONEDAS?</span></h2>
 
-                <p>
-                    Una criptomoneda <span class="neonspan">(también llamado criptoactivo o criptodivisa)</span> es un
+                <p class="crypto-p">
+                    Una criptomoneda <span>(también llamado criptoactivo o criptodivisa)</span> es un
                     medio digital de intercambio que utiliza criptografía fuerte para asegurar las transacciones,
                     controlar la creación de unidades adicionales y verificar la transferencia de activos usando
                     tecnologías de registro distribuido. <span class="neonspan">Las criptomonedas son un tipo de divisa
@@ -199,19 +199,17 @@
         </section>
 
         <!-- Trading Chart -->
-         
+
         <section id="tradingview-chart">
 
             <div class="tradingview-widget-container">
-
-                <div id="tradingview_crypto"></div>
 
                 <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 
                 <script type="text/javascript">
 
                     new TradingView.widget({
-                        "width": 1350,
+                        "width": "100%",
                         "height": 555,
                         "symbol": "BINANCE:BTCUSDT",
                         "interval": "D",
@@ -233,38 +231,34 @@
 
         <!-- Information about JJChagerben -->
 
-        <div id="about-me">
+        <section class="about-me container" id="about-me">
 
-            <section class="about-me container">
+            <div class="about-me-img">
+                <img src="/assets/css/images/jjchagerben.webp" alt="Imagen de JJChagerben">
+            </div>
 
-                <div class="about-me-img">
-                    <img src="assets/css/images/jjchagerben.jpg" alt="Imagen de JJChagerben">
-                </div>
+            <div class="about-me1">
 
-                <div class="about-me1">
+                <div class="about-me-txt">
 
-                    <div class="about-me-txt">
+                    <span class="intro">Acerca de mí</span>
+                    <h2><span>JJChagerben</span></h2>
 
-                        <span class="intro">Acerca de mí</span>
-                        <h2><span>JJChagerben</span></h2>
+                    <ul>
+                        <li>- Petroleum <span>Engineer.</span></li>
+                        <li><span>- Jubilado</span> gracias a <span>Bitcoin.</span></li>
+                        <li>- Inversionista en <span>Cripto-Activos.</span></li>
+                    </ul>
 
-                        <ul>
-                            <li>- Petroleum <span>Engineer.</span></li>
-                            <li><span>- Jubilado</span> gracias a <span>Bitcoin.</span></li>
-                            <li>- Inversionista en <span>Cripto-Activos.</span></li>
-                        </ul>
-
-                        <a href="#redes" class="btn-1">Redes Sociales</a>
-
-                    </div>
+                    <a href="#redes" class="btn-1">Redes Sociales</a>
 
                 </div>
 
-                <video controls src="assets/css/images/buyandsave.mp4"></video>
+            </div>
 
-            </section>
+            <video controls src="/assets/css/images/buyandsave.webm"></video>
 
-        </div>
+        </section>
 
         <!-- Lives -->
 
@@ -277,7 +271,9 @@
                     <div class="live-txt1">
 
                         <span class="intro">Directos</span>
-                        <h2>Directos de <span>Lunes a Domingo</span></h2>
+                        <span>
+                            <h2>De Lunes a Domingo</h2>
+                        </span>
 
                         <ul>
                             <li>- Hora de los directos: <span>20:00 PM</span></li>
@@ -298,7 +294,7 @@
                 </div>
 
                 <div class="lives-img">
-                    <img src="assets/css/images/live-img.gif" alt="Imagen de directos en vivo">
+                    <img src="/assets/css/images/live-img.webp" alt="Imagen de directos en vivo">
                 </div>
 
             </section>
@@ -312,7 +308,7 @@
             <section class="work-with-me container">
 
                 <div class="work-with-me-img">
-                    <img src="assets/css/images/workwithme.gif" alt="Imagen trabaja conmigo">
+                    <img src="/assets/css/images/workwithme.webp" alt="Imagen trabaja conmigo">
                 </div>
 
                 <div class="work-with-me-txt">
@@ -393,6 +389,93 @@
                     </div>
 
                 </main>
+
+            </div>
+
+        </section>
+
+        <!-- Merch Content -->
+
+        <section class="merch-btc" id="merch">
+
+            <div class="merch-container">
+
+                <div class="merch">
+
+                    <div class="merch-img">
+                        <img src="/assets/css/images/btc-save-my-life.webp" alt="Camisa Bitcoin Save My Life">
+                    </div>
+
+                    <div class="merch-content">
+
+                        <h2>Bitcoin Save My Life</h2>
+
+                        <div class="size">
+
+                            <h3>Tallas</h3>
+                            <ul class="size-list">
+                                <li><span>S</span></li>
+                                <li><span>M</span></li>
+                                <li><span>L</span></li>
+                                <li><span>XL</span></li>
+                                <li><span>XXL</span></li>
+                            </ul>
+
+                        </div>
+
+                        <div class="info-merch">
+
+                            <span>Precio</span>
+                            <h3>30$</h3>
+                            <a href="https://api.whatsapp.com/send?phone=593999864446&text=La%20quiero%20AHORA!%2C%20la%20camisa%20Inconfiscable!"
+                                target="_blank" class="whatsapp-button">
+                                ¡Pídelo Aquí!
+                            </a>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="merch">
+
+                    <div class="merch-img">
+                        <img src="/assets/css/images/its-time-for-plan.webp" alt="Camisa It's Time For Plan">
+                    </div>
+
+                    <div class="merch-content">
+
+                        <h2>It's Time For Plan</h2>
+
+                        <div class="size">
+
+                            <h3>Tallas</h3>
+                            <ul class="size-list">
+                                <li><span>S</span></li>
+                                <li><span>M</span></li>
+                                <li><span>L</span></li>
+                                <li><span>XL</span></li>
+                                <li><span>XXL</span></li>
+                            </ul>
+
+                        </div>
+
+                        <div class="info-merch">
+
+                            <span>Precio</span>
+                            <h3>30$</h3>
+                            <a href="https://api.whatsapp.com/send?phone=593999864446&text=La%20quiero%20AHORA!%2C%20la%20camisa%20Inconfiscable!"
+                                target="_blank" class="whatsapp-button">
+                                ¡Pídelo Aquí!
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -481,96 +564,9 @@
 
         </section>
 
-        <!-- Merch Content -->
-
-        <section class="merch-btc" id="merch">
-
-            <div class="merch-container">
-
-                <div class="merch">
-
-                    <div class="merch-img">
-                        <img src="assets/css/images/btc-save-my-life.png" alt="Camisa Bitcoin Save My Life">
-                    </div>
-
-                    <div class="merch-content">
-
-                        <h2>Bitcoin Save My Life</h2>
-
-                        <div class="size">
-
-                            <h3>Tallas</h3>
-                            <ul class="size-list">
-                                <li><span>S</span></li>
-                                <li><span>M</span></li>
-                                <li><span>L</span></li>
-                                <li><span>XL</span></li>
-                                <li><span>XXL</span></li>
-                            </ul>
-
-                        </div>
-
-                        <div class="info-merch">
-
-                            <span>Precio</span>
-                            <h3>30$</h3>
-                            <a href="https://api.whatsapp.com/send?phone=593999864446&text=La%20quiero%20AHORA!%2C%20la%20camisa%20Inconfiscable!"
-                                target="_blank" class="whatsapp-button">
-                                ¡Pídelo Aquí!
-                            </a>
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="merch">
-
-                    <div class="merch-img">
-                        <img src="assets/css/images/its-time-for-plan.png" alt="Camisa It's Time For Plan">
-                    </div>
-
-                    <div class="merch-content">
-
-                        <h2>It's Time For Plan</h2>
-
-                        <div class="size">
-
-                            <h3>Tallas</h3>
-                            <ul class="size-list">
-                                <li><span>S</span></li>
-                                <li><span>M</span></li>
-                                <li><span>L</span></li>
-                                <li><span>XL</span></li>
-                                <li><span>XXL</span></li>
-                            </ul>
-
-                        </div>
-
-                        <div class="info-merch">
-
-                            <span>Precio</span>
-                            <h3>30$</h3>
-                            <a href="https://api.whatsapp.com/send?phone=593999864446&text=La%20quiero%20AHORA!%2C%20la%20camisa%20Inconfiscable!"
-                                target="_blank" class="whatsapp-button">
-                                ¡Pídelo Aquí!
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
     </div>
 
-    <script src="assets/js/script.js" defer></script>
+    <script src="/assets/js/script.js" defer></script>
 
 </body>
 

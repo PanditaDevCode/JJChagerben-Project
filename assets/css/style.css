@@ -73,7 +73,7 @@ img {
         0 0 40px rgba(131, 131, 131, 0.6),
         0 0 50px rgba(102, 102, 102, 0.4),
         0 0 60px rgba(94, 94, 94, 0.4);
-    background-image: url(/assets/css/images/background.gif);
+    background-image: url(/assets/css/images/background.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #12121c;
@@ -605,10 +605,27 @@ p {
     }
 }
 
+/* Chart Content */
+
+#tradingview-chart {
+    padding-top: 55px;
+    margin-bottom: 100px;
+    background-color: #1b1b20;
+    width: 100%;
+    height: 500px;
+    max-width: 100%;
+}
+
+.tradingview-widget-container {
+    width: 100%;
+    height: 100%;
+}
+
 /*about me content*/
 
 .about-me {
-    padding: 150px 0;
+    padding-top: 150px;
+    padding-bottom: 150px;
     max-width: 100vw;
     display: flex;
     align-items: center;
@@ -707,7 +724,7 @@ p {
 }
 
 .lives span {
-    color: #12121c;
+    color: #000000;
     font-weight: 800;
 }
 
@@ -860,7 +877,7 @@ p {
 }
 
 .redes {
-    padding: 30px 0 300px 0;
+    padding: 30px 0 200px 0;
     text-align: center;
     margin-top: 20px;
 }
@@ -925,7 +942,7 @@ p {
 
 .redes-background {
     background-color: #12121c;
-    background-image: url(/assets/css/images/background-redes.gif);
+    background-image: url(/assets/css/images/background-redes.webp);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -997,7 +1014,7 @@ p {
 .tiktok {
     border-radius: 15px;
     background-position: center;
-    background-image: url(/assets/css/images/tiktok.jpeg);
+    background-image: url(/assets/css/images/tiktok.webp);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     background-size: cover;
     height: 100%;
@@ -1053,7 +1070,7 @@ p {
 .whatsapp {
     border-radius: 15px;
     background-position: center;
-    background-image: url(/assets/css/images/whatsapp.jpeg);
+    background-image: url(/assets/css/images/whatsapp.webp);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     padding: 35px;
     display: flex;
@@ -1108,7 +1125,7 @@ p {
 .telegram {
     border-radius: 15px;
     background-position: center;
-    background-image: url(/assets/css/images/telegram.jpeg);
+    background-image: url(/assets/css/images/telegram.webp);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     padding: 35px;
     display: flex;
@@ -1163,7 +1180,7 @@ p {
 .instagram {
     border-radius: 15px;
     background-position: center;
-    background-image: url(/assets/css/images/instagram.jpeg);
+    background-image: url(/assets/css/images/instagram.webp);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     padding: 35px;
     display: flex;
@@ -1218,7 +1235,7 @@ p {
 .facebook {
     border-radius: 15px;
     background-position: center;
-    background-image: url(/assets/css/images/facebook.jpeg);
+    background-image: url(/assets/css/images/facebook.webp);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     padding: 35px;
     display: flex;
@@ -1273,7 +1290,7 @@ p {
 .x {
     border-radius: 15px;
     background-position: center;
-    background-image: url(/assets/css/images/x.jpeg);
+    background-image: url(/assets/css/images/x.webp);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     padding: 35px;
     display: flex;
@@ -1325,183 +1342,6 @@ p {
     opacity: 1;
 }
 
-/* price content */
-
-.price {
-    padding: 130px 0 100px 0;
-    text-align: center;
-}
-
-.price-text {
-    margin-top: -60px;
-}
-
-.price h2 {
-    font-size: 50px;
-    text-shadow:
-        0 0 5px rgb(255, 255, 255),
-        0 0 10px rgb(207, 207, 207),
-        0 0 15px rgb(163, 163, 163),
-        0 0 20px rgb(131, 131, 131);
-    margin-bottom: 100px;
-    color: #141414;
-}
-
-.price-1 h3 {
-    text-shadow:
-        0 0 5px rgb(175, 175, 175),
-        0 0 10px rgb(138, 138, 138),
-        0 0 15px rgb(95, 95, 95),
-        0 0 20px rgb(71, 71, 71);
-    color: #ffffff;
-    font-size: 70px;
-}
-
-.price-1 li {
-    text-shadow:
-        0 0 5px rgb(255, 255, 255),
-        0 0 10px rgb(207, 207, 207),
-        0 0 15px rgb(163, 163, 163),
-        0 0 20px rgb(131, 131, 131);
-    color: #ffffff;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.price span {
-    text-shadow:
-        0 0 5px rgb(255, 255, 255),
-        0 0 10px rgb(207, 207, 207),
-        0 0 15px rgb(163, 163, 163),
-        0 0 20px rgb(131, 131, 131);
-    color: #000;
-    font-weight: 800;
-    font-size: 20px;
-}
-
-.price strong {
-    text-shadow:
-        0 0 5px rgb(255, 255, 255),
-        0 0 10px rgb(207, 207, 207),
-        0 0 15px rgb(163, 163, 163),
-        0 0 20px rgb(131, 131, 131);
-    color: #000;
-    font-weight: 800;
-}
-
-.price-content {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 45px;
-}
-
-.price-1 {
-    flex-basis: calc(33% - 20px);
-    padding: 40px;
-    box-shadow:
-        0 0 30px rgba(190, 190, 190, 0.8),
-        0 0 40px rgba(131, 131, 131, 0.6),
-        0 0 50px rgba(102, 102, 102, 0.4),
-        0 0 60px rgba(94, 94, 94, 0.4);
-    animation: border-price 1.5s infinite alternate;
-    border-radius: 15px;
-    background-color: #222222;
-    transition: all .3s;
-}
-
-.price-1:hover {
-    cursor: pointer;
-    background: linear-gradient(90deg,
-            rgb(32, 32, 32) 0%,
-            rgb(15, 15, 15) 68%);
-    transform: scale(1.03);
-}
-
-.bg-pack li {
-    color: #000;
-    font-weight: 700;
-}
-
-.bg-pack {
-    background: linear-gradient(90deg,
-            rgb(92, 91, 91) 0%,
-            rgb(49, 49, 49) 100%);
-    margin-top: -50px;
-}
-
-.bg-pack:hover {
-    cursor: pointer;
-    background: linear-gradient(90deg,
-            rgb(22, 22, 22) 0%,
-            rgb(41, 41, 41) 68%);
-}
-
-.pack {
-    text-shadow:
-        0 0 5px rgb(255, 255, 255),
-        0 0 10px rgb(207, 207, 207),
-        0 0 15px rgb(163, 163, 163),
-        0 0 20px rgb(131, 131, 131);
-    color: #000000;
-    font-weight: 600;
-    margin-bottom: 10px;
-    font-size: 30px;
-}
-
-.unpago {
-    color: #ffffff;
-}
-
-.pack-center {
-    color: #fdfeff;
-}
-
-.paquetes {
-    font-size: 20px;
-    color: #4a63f3;
-}
-
-.pack-center {
-    color: #000000;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-@keyframes border-price {
-    0% {
-        box-shadow:
-            0 0 10px rgb(131, 131, 131),
-            0 0 20px rgba(102, 102, 102, 0.61),
-            0 0 30px rgb(94, 94, 94);
-    }
-
-    50% {
-        box-shadow:
-            0 0 20px rgb(131, 131, 131),
-            0 0 30px rgba(102, 102, 102, 0.61),
-            0 0 50px rgb(94, 94, 94);
-    }
-
-    100% {
-        box-shadow:
-            0 0 10px rgb(131, 131, 131),
-            0 0 20px rgba(102, 102, 102, 0.61),
-            0 0 30px rgb(94, 94, 94);
-    }
-}
-
-/*merch content*/
-
-.merch-container {
-    background-color: #1b1b20;
-    padding: 100px 0;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    position: relative;
-    gap: 100px;
-}
-
 .whatsapp-button {
     display: inline-block;
     padding: 8px 35px;
@@ -1535,6 +1375,18 @@ p {
     transform: scale(1.08);
     color: #000;
     font-weight: 800;
+}
+
+/* Merch Content */
+
+.merch-container {
+    background-color: #1b1b20;
+    padding: 85px 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    gap: 100px;
 }
 
 .merch {
@@ -1805,6 +1657,171 @@ p {
     font-weight: 800;
 }
 
+/* price content */
+
+.price {
+    padding: 130px 0 100px 0;
+    text-align: center;
+}
+
+.price-text {
+    margin-top: -60px;
+}
+
+.price h2 {
+    font-size: 50px;
+    text-shadow:
+        0 0 5px rgb(255, 255, 255),
+        0 0 10px rgb(207, 207, 207),
+        0 0 15px rgb(163, 163, 163),
+        0 0 20px rgb(131, 131, 131);
+    margin-bottom: 100px;
+    color: #141414;
+}
+
+.price-1 h3 {
+    text-shadow:
+        0 0 5px rgb(175, 175, 175),
+        0 0 10px rgb(138, 138, 138),
+        0 0 15px rgb(95, 95, 95),
+        0 0 20px rgb(71, 71, 71);
+    color: #ffffff;
+    font-size: 70px;
+}
+
+.price-1 li {
+    text-shadow:
+        0 0 5px rgb(255, 255, 255),
+        0 0 10px rgb(207, 207, 207),
+        0 0 15px rgb(163, 163, 163),
+        0 0 20px rgb(131, 131, 131);
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.price span {
+    text-shadow:
+        0 0 5px rgb(255, 255, 255),
+        0 0 10px rgb(207, 207, 207),
+        0 0 15px rgb(163, 163, 163),
+        0 0 20px rgb(131, 131, 131);
+    color: #000;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.price strong {
+    text-shadow:
+        0 0 5px rgb(255, 255, 255),
+        0 0 10px rgb(207, 207, 207),
+        0 0 15px rgb(163, 163, 163),
+        0 0 20px rgb(131, 131, 131);
+    color: #000;
+    font-weight: 800;
+}
+
+.price-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+}
+
+.price-1 {
+    flex-basis: calc(33% - 20px);
+    padding: 40px;
+    box-shadow:
+        0 0 30px rgba(190, 190, 190, 0.8),
+        0 0 40px rgba(131, 131, 131, 0.6),
+        0 0 50px rgba(102, 102, 102, 0.4),
+        0 0 60px rgba(94, 94, 94, 0.4);
+    animation: border-price 1.5s infinite alternate;
+    border-radius: 15px;
+    background-color: #222222;
+    transition: all .3s;
+}
+
+.price-1:hover {
+    cursor: pointer;
+    background: linear-gradient(90deg,
+            rgb(32, 32, 32) 0%,
+            rgb(15, 15, 15) 68%);
+    transform: scale(1.03);
+}
+
+.bg-pack li {
+    color: #000;
+    font-weight: 700;
+}
+
+.bg-pack {
+    background: linear-gradient(90deg,
+            rgb(92, 91, 91) 0%,
+            rgb(49, 49, 49) 100%);
+    margin-top: -50px;
+}
+
+.bg-pack:hover {
+    cursor: pointer;
+    background: linear-gradient(90deg,
+            rgb(22, 22, 22) 0%,
+            rgb(41, 41, 41) 68%);
+}
+
+.pack {
+    text-shadow:
+        0 0 5px rgb(255, 255, 255),
+        0 0 10px rgb(207, 207, 207),
+        0 0 15px rgb(163, 163, 163),
+        0 0 20px rgb(131, 131, 131);
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.unpago {
+    color: #ffffff;
+}
+
+.pack-center {
+    color: #fdfeff;
+}
+
+.paquetes {
+    font-size: 20px;
+    color: #4a63f3;
+}
+
+.pack-center {
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@keyframes border-price {
+    0% {
+        box-shadow:
+            0 0 10px rgb(131, 131, 131),
+            0 0 20px rgba(102, 102, 102, 0.61),
+            0 0 30px rgb(94, 94, 94);
+    }
+
+    50% {
+        box-shadow:
+            0 0 20px rgb(131, 131, 131),
+            0 0 30px rgba(102, 102, 102, 0.61),
+            0 0 50px rgb(94, 94, 94);
+    }
+
+    100% {
+        box-shadow:
+            0 0 10px rgb(131, 131, 131),
+            0 0 20px rgba(102, 102, 102, 0.61),
+            0 0 30px rgb(94, 94, 94);
+    }
+}
+
 /* Estilos del botón Go Top */
 
 #goTop {
@@ -1897,6 +1914,1416 @@ p {
 
 
 /* Respondive general */
+
+@media (max-width: 320px) {
+
+    /* header content */
+
+    .header-content {
+        align-content: center;
+        align-items: center;
+    }
+
+    .header {
+        min-height: 0vh;
+        padding: 400px 30px 80px 30px;
+    }
+
+    .header-txt {
+        padding: 0;
+        align-content: center;
+        margin-left: -25px;
+    }
+
+    .header-txt h1 {
+        padding: 10px 10px;
+        margin-left: -50px;
+    }
+
+    .header-txt p {
+        margin-left: -10px;
+        padding: 10px 10px;
+    }
+
+    .butons {
+        flex-direction: column;
+        padding: 0 50px;
+        margin-left: -20px;
+        align-content: center;
+        white-space: nowrap;
+    }
+
+    .btn-1 {
+        margin: 0 0 20px 0;
+    }
+
+    /* menu content */
+
+    .menu {
+        width: 100%;
+        margin-bottom: none;
+    }
+
+    .navbar {
+        margin-top: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .logo {
+        font-size: 15px;
+        margin-left: -5px;
+    }
+
+    /* time content */
+
+    .time-container {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        z-index: 9999;
+    }
+
+    .time {
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 15px;
+        margin-top: -80px;
+    }
+
+    /* information content */
+
+    .information {
+        margin-top: 0;
+        padding: 30px 30px 100px 30px;
+        flex-direction: column;
+    }
+
+    .information-1 {
+        animation: border-img 1.5s infinite alternate;
+        margin: 0 0 20px 0;
+    }
+
+
+    /* crypto content */
+
+    .crypto {
+        padding: 20px 30px 10px 30px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .crypto-txt {
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 300px;
+        margin-bottom: 30px;
+    }
+
+    .crypto-txt h2 {
+        padding: 10px;
+        font-size: 30px;
+        margin-right: 5px;
+    }
+
+    .neonspan {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        margin-left: 8px;
+    }
+
+    .crypto-txt p {
+        font-size: 15px;
+    }
+
+    .crypto-img {
+        margin-left: -5px;
+        order: 1;
+    }
+
+    .crypto-img img {
+        align-items: center;
+        align-content: center;
+        width: 280px;
+        height: 180px;
+        margin-left: 5px;
+    }
+
+    /* about me content */
+
+    .about-me {
+        padding: 30px 30px 120px 30px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-me1 {
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        margin-left: 130px;
+        margin: none;
+    }
+
+    .about-me-txt {
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .about-me-txt a {
+        margin-top: 5px;
+        margin-bottom: -2px;
+    }
+
+    .about-me-txt li {
+        margin-bottom: 5px;
+        margin-top: 5px;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .about-me-img {
+        margin: 30px 30px;
+        order: 0;
+    }
+
+    .about-me-img img {
+        height: 250px;
+        width: 250px;
+        align-items: center;
+        align-content: center;
+        margin-top: -3px;
+    }
+
+    .about-me video {
+        order: 1;
+        margin-top: 30px;
+        height: 450px;
+        width: 250px;
+        align-content: center;
+        align-items: center;
+        margin-left: 50px;
+        margin: none;
+    }
+
+    /* lives content */
+
+    .lives {
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lives-txt {
+        align-content: center;
+        text-align: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: -20px;
+    }
+
+    .live-txt1 {
+        align-content: center;
+        margin-right: 30px;
+    }
+
+    .live-txt1 a {
+        margin: 10px 10px;
+    }
+
+    .lives-img {
+        order: 1;
+        margin-left: -130px;
+    }
+
+    .lives-img img {
+        align-items: center;
+        align-content: center;
+        width: 280px;
+        height: 180px;
+        margin-left: 30px;
+    }
+
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+        margin-left: -5px;
+    }
+
+    /* work with me content */
+
+    .work-with-me {
+        align-items: center;
+        padding: 50px 30px 150px 30px;
+        flex-direction: column;
+    }
+
+    .work-with-me-txt {
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: -20px;
+    }
+
+    .work-with-me ul li {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .work-with-me a {
+        margin-top: 25px;
+    }
+
+    .work-with-me-img {
+        margin-left: -5px;
+        margin-bottom: -60px;
+        order: 1;
+    }
+
+    .work-with-me-img img {
+        align-items: center;
+        align-content: center;
+        width: 280px;
+        height: 180px;
+        margin-left: 5px;
+        margin-top: -15px;
+    }
+
+    /* redes content */
+
+    .redes-background {
+        background-position: -150px center;
+    }
+
+    .redes {
+        padding: 5px 30px 30px 30px;
+    }
+
+    .redes-content {
+        margin-bottom: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .redes h2 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    /* merch content */
+
+    .merch-container {
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .merch {
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: -20px;
+        margin-bottom: -30px;
+        width: 280px;
+        height: 380px;
+    }
+
+    .merch-content h2 {
+        font-size: 25px;
+    }
+
+    .size h3 {
+        font-size: 15px;
+        margin-right: -8px;
+        font-weight: 800;
+    }
+
+    .merch-img img {
+        height: 180px;
+        width: 45px;
+        margin-left: -20px;
+        margin-top: -50px;
+    }
+
+    .merch:hover .merch-img {
+        top: 0%;
+        transform: translateY(-13%);
+    }
+
+    .merch:hover .merch-content {
+        height: 200px;
+    }
+
+    /* price content */
+
+    .price {
+        padding: 100px;
+        padding-bottom: 80px;
+        display: flex;
+        margin-left: -50px;
+        margin-bottom: -80px;
+    }
+
+    .price-text {
+        white-space: nowrap;
+    }
+
+    .price-text span {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .price-text h2 {
+        font-size: 35px;
+        margin-left: 13px;
+    }
+
+    .price-content {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        margin-left: -270px;
+    }
+
+    .bg-pack {
+        margin-top: 10px;
+    }
+
+    .price-1 {
+        margin-bottom: 30px;
+    }
+
+}
+
+/* Falta editar */
+
+@media (max-width: 480px) {
+
+    /* header content */
+
+    .header-content {
+        align-content: center;
+        align-items: center;
+    }
+
+    .header {
+        min-height: 0vh;
+        padding: 400px 30px 80px 30px;
+    }
+
+    .header-txt {
+        padding: 0;
+        align-content: center;
+    }
+
+    .header-txt h1 {
+        font-size: 45px;
+        align-content: center;
+        margin-left: -30px;
+    }
+
+    .header-txt p {
+        align-content: center;
+        margin-right: 40px;
+    }
+
+    .butons {
+        flex-direction: column;
+        padding: 0 50px;
+        margin-left: -40px;
+        align-content: center;
+    }
+
+    .btn-1 {
+        margin: 0 0 20px 0;
+    }
+
+    /* menu content */
+
+    .menu {
+        width: 100%;
+        margin-bottom: none;
+    }
+
+    .navbar {
+        margin-top: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .logo {
+        font-size: 15px;
+        margin-left: -5px;
+    }
+
+    /* time content */
+
+    .time-container {
+        margin-left: -350px;
+        margin-right: 0;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        margin-top: -430px;
+        z-index: 9999;
+    }
+
+    .time {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* information content */
+
+    .information {
+        margin-top: 0;
+        padding: 30px 30px 100px 30px;
+        flex-direction: column;
+    }
+
+    .information-1 {
+        margin: 0 0 20px 0;
+    }
+
+    /* crypto content */
+
+    .crypto {
+        padding: 80px 30px 50px 30px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .crypto-txt {
+        align-content: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .crypto-img {
+        margin-left: -5px;
+        order: 1;
+    }
+
+    .crypto-img img {
+        align-items: center;
+        align-content: center;
+        width: 320px;
+        height: 200px;
+        margin-left: 5px;
+    }
+
+    /* Chart Content */
+
+
+    /* about me content */
+
+    .about-me {
+        padding: 30px 30px 120px 30px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-me1 {
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        margin-left: 130px;
+        margin: none;
+    }
+
+    .about-me-txt {
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .about-me-txt a {
+        margin-top: 5px;
+        margin-bottom: -2px;
+    }
+
+    .about-me-txt li {
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .about-me-img {
+        margin: 30px 30px;
+        order: 0;
+    }
+
+    .about-me-img img {
+        height: 330px;
+        width: 350px;
+        align-items: center;
+        align-content: center;
+        margin-top: -3px;
+    }
+
+    .about-me video {
+        order: 1;
+        margin-top: 30px;
+        height: 500px;
+        width: 330px;
+        align-content: center;
+        align-items: center;
+        margin-left: 50px;
+        margin: none;
+    }
+
+    /* lives content */
+
+    .lives {
+        padding: 0 30px 50px 30px;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .lives-txt {
+        align-content: center;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: -20px;
+    }
+
+    .live-txt1 {
+        align-content: center;
+        margin-right: 20px;
+    }
+
+    .live-txt1 a {
+        margin: 10px 10px;
+    }
+
+    .lives-img {
+        order: 1;
+        margin-left: -130px;
+    }
+
+    .lives-img img {
+        align-items: center;
+        align-content: center;
+        width: 320px;
+        height: 200px;
+        margin-left: 37px;
+    }
+
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+        margin-left: -5px;
+    }
+
+    /* work with me content */
+
+    .work-with-me {
+        align-items: center;
+        padding: 50px 30px 150px 30px;
+        flex-direction: column;
+    }
+
+    .work-with-me-txt {
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .work-with-me a {
+        margin-top: 25px;
+    }
+
+    .work-with-me-img {
+        margin-left: -5px;
+        margin-bottom: -60px;
+        order: 1;
+    }
+
+    .work-with-me-img img {
+        align-items: center;
+        align-content: center;
+        width: 320px;
+        height: 200px;
+        margin-left: 5px;
+        margin-top: -15px;
+    }
+
+    /* redes content */
+
+    .redes-background {
+        background-position: -150px center;
+    }
+
+    .redes {
+        padding: 5px 30px 30px 30px;
+    }
+
+    .redes-content {
+        margin-bottom: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .redes h2 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    /* merch content */
+
+    .merch-container {
+        flex-direction: column;
+    }
+
+    .merch {
+        margin-top: -20px;
+        margin-bottom: -30px;
+        width: 330px;
+    }
+
+    /* price content */
+
+    .price {
+        padding: 120px;
+        padding-bottom: 100px;
+        display: flex;
+        margin-left: -50px;
+        margin-bottom: -80px;
+    }
+
+    .price-text {
+        white-space: nowrap;
+        margin-left: -40px;
+    }
+
+    .price-text span {
+        font-size: 20px;
+    }
+
+    .price-text h2 {
+        font-size: 40px;
+    }
+
+    .price-content {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        margin-left: -285px;
+    }
+
+    .bg-pack {
+        margin-top: 10px;
+    }
+
+    .price-1 {
+        margin-bottom: 30px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    /* header content */
+
+    .header-content {
+        align-content: center;
+        align-items: center;
+    }
+
+    .header {
+        min-height: 0vh;
+        padding: 400px 30px 80px 30px;
+    }
+
+    .header-txt {
+        padding: 0;
+        align-content: center;
+    }
+
+    .header-txt h1 {
+        font-size: 45px;
+        align-content: center;
+        margin-left: -30px;
+    }
+
+    .header-txt p {
+        align-content: center;
+        margin-right: 40px;
+    }
+
+    .butons {
+        flex-direction: column;
+        padding: 0 50px;
+        margin-left: -40px;
+        align-content: center;
+    }
+
+    .btn-1 {
+        margin: 0 0 20px 0;
+    }
+
+    /* menu content */
+
+    .menu {
+        width: 100%;
+        margin-bottom: none;
+    }
+
+    .navbar {
+        margin-top: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .logo {
+        font-size: 15px;
+        margin-left: -5px;
+    }
+
+    /* time content */
+
+    .time-container {
+        margin-left: -350px;
+        margin-right: 0;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        margin-top: -430px;
+        z-index: 9999;
+    }
+
+    .time {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* information content */
+
+    .information {
+        margin-top: 0;
+        padding: 30px 30px 100px 30px;
+        flex-direction: column;
+    }
+
+    .information-1 {
+        margin: 0 0 20px 0;
+    }
+
+    /* crypto content */
+
+    .crypto {
+        padding: 80px 30px 50px 30px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .crypto-txt {
+        align-content: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .crypto-img {
+        margin-left: -5px;
+        order: 1;
+    }
+
+    .crypto-img img {
+        align-items: center;
+        align-content: center;
+        width: 320px;
+        height: 200px;
+        margin-left: 5px;
+    }
+
+    /* Chart Content */
+
+
+    /* about me content */
+
+    .about-me {
+        padding: 30px 30px 120px 30px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-me1 {
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        margin-left: 130px;
+        margin: none;
+    }
+
+    .about-me-txt {
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .about-me-txt a {
+        margin-top: 5px;
+        margin-bottom: -2px;
+    }
+
+    .about-me-txt li {
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .about-me-img {
+        margin: 30px 30px;
+        order: 0;
+    }
+
+    .about-me-img img {
+        height: 330px;
+        width: 350px;
+        align-items: center;
+        align-content: center;
+        margin-top: -3px;
+    }
+
+    .about-me video {
+        order: 1;
+        margin-top: 30px;
+        height: 500px;
+        width: 330px;
+        align-content: center;
+        align-items: center;
+        margin-left: 50px;
+        margin: none;
+    }
+
+    /* lives content */
+
+    .lives {
+        padding: 0 30px 50px 30px;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .lives-txt {
+        align-content: center;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: -20px;
+    }
+
+    .live-txt1 {
+        align-content: center;
+        margin-right: 20px;
+    }
+
+    .live-txt1 a {
+        margin: 10px 10px;
+    }
+
+    .lives-img {
+        order: 1;
+        margin-left: -130px;
+    }
+
+    .lives-img img {
+        align-items: center;
+        align-content: center;
+        width: 320px;
+        height: 200px;
+        margin-left: 37px;
+    }
+
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+        margin-left: -5px;
+    }
+
+    /* work with me content */
+
+    .work-with-me {
+        align-items: center;
+        padding: 50px 30px 150px 30px;
+        flex-direction: column;
+    }
+
+    .work-with-me-txt {
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .work-with-me a {
+        margin-top: 25px;
+    }
+
+    .work-with-me-img {
+        margin-left: -5px;
+        margin-bottom: -60px;
+        order: 1;
+    }
+
+    .work-with-me-img img {
+        align-items: center;
+        align-content: center;
+        width: 320px;
+        height: 200px;
+        margin-left: 5px;
+        margin-top: -15px;
+    }
+
+    /* redes content */
+
+    .redes-background {
+        background-position: -150px center;
+    }
+
+    .redes {
+        padding: 5px 30px 30px 30px;
+    }
+
+    .redes-content {
+        margin-bottom: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .redes h2 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    /* merch content */
+
+    .merch-container {
+        flex-direction: column;
+    }
+
+    .merch {
+        margin-top: -20px;
+        margin-bottom: -30px;
+        width: 330px;
+    }
+
+    /* price content */
+
+    .price {
+        padding: 120px;
+        padding-bottom: 100px;
+        display: flex;
+        margin-left: -50px;
+        margin-bottom: -80px;
+    }
+
+    .price-text {
+        white-space: nowrap;
+        margin-left: -40px;
+    }
+
+    .price-text span {
+        font-size: 20px;
+    }
+
+    .price-text h2 {
+        font-size: 40px;
+    }
+
+    .price-content {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        margin-left: -285px;
+    }
+
+    .bg-pack {
+        margin-top: 10px;
+    }
+
+    .price-1 {
+        margin-bottom: 30px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    /* header content */
+
+    .header-content {
+        align-content: center;
+        align-items: center;
+        margin-right: 100px;
+        text-align: center;
+    }
+
+    .header-txt {
+        margin-left: 30px;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-txt p {
+        align-content: center;
+        margin-left: 10px;
+    }
+
+    .butons {
+        flex-direction: column;
+        padding: 0 50px;
+        margin-right: 30px;
+        align-content: center;
+    }
+
+    .btn-1 {
+        margin: 0 0 20px 0;
+    }
+
+    /* menu content */
+
+    .menu {
+        width: 100%;
+        margin-bottom: none;
+    }
+
+    .navbar {
+        margin-top: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .logo {
+        font-size: 15px;
+        margin-left: -5px;
+    }
+
+    /* time content */
+
+    .time-container {
+        margin-left: -350px;
+        margin-right: 0;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        margin-top: -430px;
+        z-index: 9999;
+    }
+
+    .time {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* information content */
+
+    .information {
+        margin-top: 0;
+        padding: 30px 30px 100px 30px;
+        flex-direction: column;
+    }
+
+    .information-1 {
+        margin: 0 0 20px 0;
+    }
+
+    /* crypto content */
+
+    .crypto {
+        padding: 80px 30px 50px 30px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .crypto-txt {
+        align-content: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .crypto-img {
+        margin-left: -5px;
+        order: 1;
+    }
+
+    .crypto-img img {
+        align-items: center;
+        align-content: center;
+        width: 320px;
+        height: 200px;
+        margin-left: 5px;
+    }
+
+    /* Chart Content */
+
+
+    /* about me content */
+
+    .about-me {
+        padding: 30px 30px 120px 30px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-me1 {
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        margin-left: 130px;
+        margin: none;
+    }
+
+    .about-me-txt {
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .about-me-txt a {
+        margin-top: 5px;
+        margin-bottom: -2px;
+    }
+
+    .about-me-txt li {
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .about-me-img {
+        margin: 30px 30px;
+        order: 0;
+    }
+
+    .about-me-img img {
+        height: 330px;
+        width: 350px;
+        align-items: center;
+        align-content: center;
+        margin-top: -3px;
+    }
+
+    .about-me video {
+        order: 1;
+        margin-top: 30px;
+        height: 500px;
+        width: 330px;
+        align-content: center;
+        align-items: center;
+        margin-left: 50px;
+        margin: none;
+    }
+
+    /* lives content */
+
+    .lives {
+        padding: 0 30px 50px 30px;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .lives-txt {
+        align-content: center;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: -20px;
+    }
+
+    .live-txt1 {
+        align-content: center;
+        margin-right: 20px;
+    }
+
+    .live-txt1 a {
+        margin: 10px 10px;
+    }
+
+    .lives-img {
+        order: 1;
+        margin-left: -130px;
+    }
+
+    .lives-img img {
+        align-items: center;
+        align-content: center;
+        width: 320px;
+        height: 200px;
+        margin-left: 37px;
+    }
+
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+        margin-left: -5px;
+    }
+
+    /* work with me content */
+
+    .work-with-me {
+        align-items: center;
+        padding: 50px 30px 150px 30px;
+        flex-direction: column;
+    }
+
+    .work-with-me-txt {
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .work-with-me a {
+        margin-top: 25px;
+    }
+
+    .work-with-me-img {
+        margin-left: -5px;
+        margin-bottom: -60px;
+        order: 1;
+    }
+
+    .work-with-me-img img {
+        align-items: center;
+        align-content: center;
+        width: 320px;
+        height: 200px;
+        margin-left: 5px;
+        margin-top: -15px;
+    }
+
+    /* redes content */
+
+    .redes-background {
+        background-position: -150px center;
+    }
+
+    .redes {
+        padding: 5px 30px 30px 30px;
+    }
+
+    .redes-content {
+        margin-bottom: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .redes h2 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    /* merch content */
+
+    .merch-container {
+        flex-direction: column;
+    }
+
+    .merch {
+        margin-top: -20px;
+        margin-bottom: -30px;
+        width: 330px;
+    }
+
+    /* price content */
+
+    .price {
+        padding: 120px;
+        padding-bottom: 100px;
+        display: flex;
+        margin-left: -50px;
+        margin-bottom: -80px;
+    }
+
+    .price-text {
+        white-space: nowrap;
+        margin-left: -40px;
+    }
+
+    .price-text span {
+        font-size: 20px;
+    }
+
+    .price-text h2 {
+        font-size: 40px;
+    }
+
+    .price-content {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        margin-left: -285px;
+    }
+
+    .bg-pack {
+        margin-top: 10px;
+    }
+
+    .price-1 {
+        margin-bottom: 30px;
+    }
+
+}
 
 @media (max-width:990px) {
 
@@ -2018,7 +3445,7 @@ p {
     /* about me content */
 
     .about-me {
-        padding: 30px 30px 100px 30px;
+        padding: 30px 30px 120px 30px;
         flex-direction: column;
         justify-content: center;
     }
@@ -2075,7 +3502,7 @@ p {
     /* lives content */
 
     .lives {
-        padding: 0 30px 30px 30px;
+        padding: 0 30px 50px 30px;
         flex-direction: column;
         justify-content: center;
         align-content: center;
@@ -2129,7 +3556,7 @@ p {
 
     .work-with-me {
         align-items: center;
-        padding: 50px 30px 130px 30px;
+        padding: 50px 30px 150px 30px;
         flex-direction: column;
     }
 
@@ -2179,10 +3606,23 @@ p {
         margin-bottom: 30px;
     }
 
+    /* merch content */
+
+    .merch-container {
+        flex-direction: column;
+    }
+
+    .merch {
+        margin-top: -20px;
+        margin-bottom: -30px;
+        width: 330px;
+    }
+
     /* price content */
 
     .price {
         padding: 120px;
+        padding-bottom: 100px;
         display: flex;
         margin-left: -50px;
         margin-bottom: -80px;
@@ -2217,6 +3657,292 @@ p {
         margin-bottom: 30px;
     }
 
+}
+
+@media (max-width: 1024px) {
+
+    /* header content */
+
+    .header-content {
+        align-content: center;
+        align-items: center;
+    }
+
+    .header {
+        min-height: 0vh;
+        padding: 400px 30px 80px 30px;
+    }
+
+    .header-txt {
+        padding: 0;
+        align-content: center;
+    }
+
+    .header-txt h1 {
+        font-size: 45px;
+        align-content: center;
+        margin-left: -30px;
+    }
+
+    .header-txt p {
+        align-content: center;
+        margin-right: 40px;
+    }
+
+    .butons {
+        flex-direction: column;
+        padding: 0 50px;
+        margin-left: -40px;
+        align-content: center;
+    }
+
+    .btn-1 {
+        margin: 0 0 20px 0;
+    }
+
+    /* menu content */
+
+    .menu {
+        width: 100%;
+        margin-bottom: none;
+    }
+
+    .navbar {
+        margin-top: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .logo {
+        font-size: 15px;
+        margin-left: -5px;
+    }
+
+    /* time content */
+
+    .time-container {
+        margin-left: -350px;
+        margin-right: 0;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        margin-top: -430px;
+        z-index: 9999;
+    }
+
+    .time {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* information content */
+
+    .information {
+        margin-top: 0;
+        padding: 30px 30px 100px 30px;
+        flex-direction: column;
+    }
+
+    .information-1 {
+        margin: 0 0 20px 0;
+    }
+
+    /* crypto content */
+
+    .crypto {
+        padding: 80px 30px 50px 30px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .crypto-txt {
+        align-content: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .crypto-img {
+        margin-left: -5px;
+        order: 1;
+    }
+
+    .crypto-img img {
+        align-items: center;
+        align-content: center;
+        width: 320px;
+        height: 200px;
+        margin-left: 5px;
+    }
+
+    /* Chart Content */
+
+
+    /* about me content */
+
+    .about-me {
+        padding: 30px 30px 120px 30px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-me1 {
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        margin-left: 130px;
+        margin: none;
+    }
+
+    .about-me-txt {
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .about-me-txt a {
+        margin-top: 5px;
+        margin-bottom: -2px;
+    }
+
+    .about-me-txt li {
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .about-me-img {
+        margin: 30px 30px;
+        order: 0;
+    }
+
+    .about-me-img img {
+        height: 330px;
+        width: 350px;
+        align-items: center;
+        align-content: center;
+        margin-top: -3px;
+    }
+
+    .about-me video {
+        order: 1;
+        margin-top: 30px;
+        height: 500px;
+        width: 330px;
+        align-content: center;
+        align-items: center;
+        margin-left: 50px;
+        margin: none;
+    }
+
+    /* lives content */
+
+    .lives {
+        padding: 0 30px 50px 30px;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .lives-txt {
+        align-content: center;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: -20px;
+    }
+
+    .live-txt1 {
+        align-content: center;
+        margin-right: 20px;
+    }
+
+    .live-txt1 a {
+        margin: 10px 10px;
+    }
+
+    .lives-img {
+        order: 1;
+        margin-left: -130px;
+    }
+
+    .lives-img img {
+        align-items: center;
+        align-content: center;
+        width: 320px;
+        height: 200px;
+        margin-left: 37px;
+    }
+
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+        margin-left: -5px;
+    }
+
+    /* work with me content */
+
+    .work-with-me {
+        align-items: center;
+        padding: 50px 30px 150px 30px;
+        flex-direction: column;
+    }
+
+    .work-with-me-txt {
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .work-with-me a {
+        margin-top: 25px;
+    }
+
+    .work-with-me-img {
+        margin-left: -5px;
+        margin-bottom: -60px;
+        order: 1;
+    }
+
+    .work-with-me-img img {
+        align-items: center;
+        align-content: center;
+        width: 320px;
+        height: 200px;
+        margin-left: 5px;
+        margin-top: -15px;
+    }
+
+    /* redes content */
+
+    .redes-background {
+        background-position: -150px center;
+    }
+
+    .redes {
+        padding: 5px 30px 30px 30px;
+    }
+
+    .redes-content {
+        margin-bottom: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .redes h2 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
     /* merch content */
 
     .merch-container {
@@ -2227,6 +3953,45 @@ p {
         margin-top: -20px;
         margin-bottom: -30px;
         width: 330px;
+    }
+
+    /* price content */
+
+    .price {
+        padding: 120px;
+        padding-bottom: 100px;
+        display: flex;
+        margin-left: -50px;
+        margin-bottom: -80px;
+    }
+
+    .price-text {
+        white-space: nowrap;
+        margin-left: -40px;
+    }
+
+    .price-text span {
+        font-size: 20px;
+    }
+
+    .price-text h2 {
+        font-size: 40px;
+    }
+
+    .price-content {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        margin-left: -285px;
+    }
+
+    .bg-pack {
+        margin-top: 10px;
+    }
+
+    .price-1 {
+        margin-bottom: 30px;
     }
 
 }
