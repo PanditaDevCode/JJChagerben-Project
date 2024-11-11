@@ -13,7 +13,6 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    box-sizing: border-box;
     width: 100%;
 }
 
@@ -21,7 +20,6 @@ body {
     width: 100%;
     overflow-x: hidden;
     font-family: "Poppins", sans-serif;
-    box-sizing: border-box;
     background-color: #141418;
 }
 
@@ -32,6 +30,7 @@ img {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
 }
 
 /* Efecto de Puntero */
@@ -157,7 +156,6 @@ p {
     padding: 0 20px;
     background-color: rgba(0, 0, 0, 0);
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
-    box-sizing: border-box;
 }
 
 .menu.blur {
@@ -1915,7 +1913,10 @@ p {
 
 /* Respondive general */
 
-@media (max-width: 320px) {
+@media screen and (max-width: 640px) {
+    .container {
+        width: 100%;
+    }
 
     /* header content */
 
@@ -1926,34 +1927,39 @@ p {
 
     .header {
         min-height: 0vh;
-        padding: 400px 30px 80px 30px;
+        padding-bottom: 60px;
     }
 
     .header-txt {
         padding: 0;
         align-content: center;
+        align-items: center;
+        text-align: center;
         margin-left: -25px;
+        margin-top: 180px;
     }
 
     .header-txt h1 {
+        font-size: 50px;
         padding: 10px 10px;
-        margin-left: -50px;
+        margin-left: 30px;
     }
 
     .header-txt p {
-        margin-left: -10px;
+        margin-left: 30px;
         padding: 10px 10px;
     }
 
     .butons {
         flex-direction: column;
-        padding: 0 50px;
-        margin-left: -20px;
+        padding: 10px 20px;
+        margin-left: 25px;
         align-content: center;
         white-space: nowrap;
     }
 
     .btn-1 {
+        animation: border-img 1.5s infinite alternate;
         margin: 0 0 20px 0;
     }
 
@@ -1980,6 +1986,7 @@ p {
     /* time content */
 
     .time-container {
+        padding: 10px 10px;
         text-align: center;
         display: flex;
         align-items: center;
@@ -1993,9 +2000,432 @@ p {
         text-align: center;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        margin-left: 15px;
-        margin-top: -80px;
+        margin-left: -105px;
+        margin-top: -150px;
+        width: 100%;
     }
+
+
+    /* information content */
+
+    .information {
+        margin-top: 0;
+        padding: 30px 30px 100px 30px;
+        flex-direction: column;
+    }
+
+    .information-1 {
+        animation: border-img 1.5s infinite alternate;
+        margin: 0 0 20px 0;
+    }
+
+
+    /* crypto content */
+
+    .crypto {
+        padding: 20px 30px 10px 30px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .crypto-txt {
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .crypto-txt h2 {
+        padding: 10px;
+        font-size: 30px;
+        margin-right: 5px;
+    }
+
+    .neonspan {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        margin-left: 150px;
+    }
+
+    .crypto-txt p {
+        font-size: 15px;
+    }
+
+    .crypto-img {
+        margin-left: -5px;
+        order: 1;
+    }
+
+    .crypto-img img {
+        align-items: center;
+        align-content: center;
+        width: 450px;
+        height: 250px;
+        margin-left: 6px;
+    }
+
+    /* about me content */
+
+    .about-me {
+        padding: 30px 30px 120px 30px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-me1 {
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        margin-left: 130px;
+        margin: none;
+    }
+
+    .about-me-txt {
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .about-me-txt a {
+        margin-top: 5px;
+        margin-bottom: -2px;
+    }
+
+    .about-me-txt li {
+        margin-bottom: 5px;
+        margin-top: 5px;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .about-me-img {
+        margin: 30px 30px;
+        order: 0;
+    }
+
+    .about-me-img img {
+        height: 350px;
+        width: 350px;
+        align-items: center;
+        align-content: center;
+        margin-top: -3px;
+    }
+
+    .about-me video {
+        order: 1;
+        margin-top: 35px;
+        height: 450px;
+        width: 350px;
+        align-content: center;
+        align-items: center;
+        margin-left: 50px;
+        margin: none;
+    }
+
+    /* lives content */
+
+    .lives {
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lives.container {
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 50px;
+    }
+
+    .lives-txt {
+        align-content: center;
+        text-align: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: -20px;
+    }
+
+    .live-txt1 {
+        align-content: center;
+        margin-right: 30px;
+    }
+
+    .live-txt1 a {
+        margin: 10px 10px;
+    }
+
+    .lives-img {
+        order: 1;
+        margin-left: -130px;
+    }
+
+    .lives-img img {
+        align-items: center;
+        align-content: center;
+        width: 450px;
+        height: 250px;
+        margin-left: 95px;
+    }
+
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+        margin-left: -5px;
+    }
+
+    /* work with me content */
+
+    .work-with-me {
+        align-items: center;
+        padding: 50px 30px 150px 30px;
+        flex-direction: column;
+    }
+
+    .work-with-me-txt {
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: -20px;
+    }
+
+    .work-with-me ul li {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .work-with-me a {
+        margin-top: 25px;
+    }
+
+    .work-with-me-img {
+        margin-left: -5px;
+        margin-bottom: -60px;
+        order: 1;
+    }
+
+    .work-with-me-img img {
+        align-items: center;
+        align-content: center;
+        width: 450px;
+        height: 250px;
+        margin-left: 6px;
+        margin-top: -15px;
+    }
+
+    /* redes content */
+
+    .redes-background {
+        background-position: -150px center;
+    }
+
+    .redes {
+        padding: 5px 30px 30px 30px;
+    }
+
+    .redes-content {
+        margin-bottom: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .redes h2 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    /* merch content */
+
+    .merch-container {
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .merch {
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: -20px;
+        margin-bottom: -30px;
+        width: 280px;
+        height: 380px;
+    }
+
+    .merch-content h2 {
+        font-size: 25px;
+    }
+
+    .size span {
+        width: 30px;
+        height: 20px;
+    }
+
+    .merch-img img {
+        height: 180px;
+        width: 40px;
+        margin-left: -20px;
+        margin-top: -50px;
+    }
+
+    .merch:hover .merch-img {
+        top: 0%;
+        transform: translateY(-13%);
+    }
+
+    .merch:hover .merch-content {
+        height: 200px;
+    }
+
+    /* price content */
+
+    .price {
+        padding: 100px;
+        padding-bottom: 80px;
+        display: flex;
+        margin-left: -70px;
+        margin-bottom: -80px;
+    }
+
+    .price-text {
+        white-space: nowrap;
+        align-items: center;
+        text-align: center;
+        margin-left: 150px;
+    }
+
+    .price-text span {
+        font-size: 20px;
+    }
+
+    .price-text h2 {
+        font-size: 35px;
+        margin-left: 1px;
+    }
+
+    .price-content {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        margin-left: -290px;
+    }
+
+    .bg-pack {
+        margin-top: 10px;
+    }
+
+    .price-1 {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .container {
+        width: 100%;
+    }
+
+    /* header content */
+
+    .header-content {
+        align-content: center;
+        align-items: center;
+    }
+
+    .header {
+        min-height: 0vh;
+        padding-bottom: 60px;
+    }
+
+    .header-txt {
+        padding: 0;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: -25px;
+        margin-top: 180px;
+    }
+
+    .header-txt h1 {
+        font-size: 50px;
+        padding: 10px 10px;
+        margin-left: 30px;
+    }
+
+    .header-txt p {
+        margin-left: 30px;
+        padding: 10px 10px;
+    }
+
+    .butons {
+        flex-direction: column;
+        padding: 10px 20px;
+        margin-left: 25px;
+        align-content: center;
+        white-space: nowrap;
+    }
+
+    .btn-1 {
+        animation: border-img 1.5s infinite alternate;
+        margin: 0 0 20px 0;
+    }
+
+    /* menu content */
+
+    .menu {
+        width: 100%;
+        margin-bottom: none;
+    }
+
+    .navbar {
+        margin-top: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .logo {
+        font-size: 15px;
+        margin-left: -5px;
+    }
+
+    /* time content */
+
+    .time-container {
+        padding: 10px 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        z-index: 9999;
+    }
+
+    .time {
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: -158px;
+        margin-top: -150px;
+        width: 100%;
+    }
+
 
     /* information content */
 
@@ -2053,9 +2483,429 @@ p {
     .crypto-img img {
         align-items: center;
         align-content: center;
+        width: 350px;
+        height: 200px;
+        margin-left: 6px;
+    }
+
+    /* about me content */
+
+    .about-me {
+        padding: 30px 30px 120px 30px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-me1 {
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        margin-left: 130px;
+        margin: none;
+    }
+
+    .about-me-txt {
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .about-me-txt a {
+        margin-top: 5px;
+        margin-bottom: -2px;
+    }
+
+    .about-me-txt li {
+        margin-bottom: 5px;
+        margin-top: 5px;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .about-me-img {
+        margin: 30px 30px;
+        order: 0;
+    }
+
+    .about-me-img img {
+        height: 250px;
+        width: 250px;
+        align-items: center;
+        align-content: center;
+        margin-top: -3px;
+    }
+
+    .about-me video {
+        order: 1;
+        margin-top: 35px;
+        height: 450px;
+        width: 300px;
+        align-content: center;
+        align-items: center;
+        margin-left: 50px;
+        margin: none;
+    }
+
+    /* lives content */
+
+    .lives {
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lives.container {
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 50px;
+    }
+
+    .lives-txt {
+        align-content: center;
+        text-align: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: -20px;
+    }
+
+    .live-txt1 {
+        align-content: center;
+        margin-right: 30px;
+    }
+
+    .live-txt1 a {
+        margin: 10px 10px;
+    }
+
+    .lives-img {
+        order: 1;
+        margin-left: -130px;
+    }
+
+    .lives-img img {
+        align-items: center;
+        align-content: center;
+        width: 350px;
+        height: 200px;
+        margin-left: 85px;
+    }
+
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+        margin-left: -5px;
+    }
+
+    /* work with me content */
+
+    .work-with-me {
+        align-items: center;
+        padding: 50px 30px 150px 30px;
+        flex-direction: column;
+    }
+
+    .work-with-me-txt {
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: -20px;
+    }
+
+    .work-with-me ul li {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .work-with-me a {
+        margin-top: 25px;
+    }
+
+    .work-with-me-img {
+        margin-left: -5px;
+        margin-bottom: -60px;
+        order: 1;
+    }
+
+    .work-with-me-img img {
+        align-items: center;
+        align-content: center;
+        width: 350px;
+        height: 200px;
+        margin-left: 6px;
+        margin-top: -15px;
+    }
+
+    /* redes content */
+
+    .redes-background {
+        background-position: -150px center;
+    }
+
+    .redes {
+        padding: 5px 30px 30px 30px;
+    }
+
+    .redes-content {
+        margin-bottom: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .redes h2 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    /* merch content */
+
+    .merch-container {
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .merch {
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: -20px;
+        margin-bottom: -30px;
+        width: 280px;
+        height: 380px;
+    }
+
+    .merch-content h2 {
+        font-size: 25px;
+    }
+
+    .size span {
+        width: 30px;
+        height: 20px;
+    }
+
+    .merch-img img {
+        height: 180px;
+        width: 40px;
+        margin-left: -20px;
+        margin-top: -50px;
+    }
+
+    .merch:hover .merch-img {
+        top: 0%;
+        transform: translateY(-13%);
+    }
+
+    .merch:hover .merch-content {
+        height: 200px;
+    }
+
+    /* price content */
+
+    .price {
+        padding: 100px;
+        padding-bottom: 80px;
+        display: flex;
+        margin-left: 10px;
+        margin-bottom: -80px;
+    }
+
+    .price-text {
+        white-space: nowrap;
+        align-items: center;
+        text-align: center;
+        margin-left: -10px;
+    }
+
+    .price-text span {
+        font-size: 20px;
+    }
+
+    .price-text h2 {
+        font-size: 35px;
+        margin-left: 1px;
+    }
+
+    .price-content {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        margin-left: -290px;
+    }
+
+    .bg-pack {
+        margin-top: 10px;
+    }
+
+    .price-1 {
+        margin-bottom: 30px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .container {
+        width: 100%;
+    }
+
+    /* header content */
+
+    .header-content {
+        align-content: center;
+        align-items: center;
+    }
+
+    .header {
+        min-height: 0vh;
+        padding-bottom: 60px;
+    }
+
+    .header-txt {
+        padding: 0;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: -25px;
+        margin-top: 180px;
+    }
+
+    .header-txt h1 {
+        font-size: 50px;
+        padding: 10px 10px;
+        margin-left: 30px;
+    }
+
+    .header-txt p {
+        margin-left: 30px;
+        padding: 10px 10px;
+    }
+
+    .butons {
+        flex-direction: column;
+        padding: 10px 20px;
+        margin-left: 25px;
+        align-content: center;
+        white-space: nowrap;
+    }
+
+    .btn-1 {
+        animation: border-img 1.5s infinite alternate;
+        margin: 0 0 20px 0;
+    }
+
+    /* menu content */
+
+    .menu {
+        width: 100%;
+        margin-bottom: none;
+    }
+
+    .navbar {
+        margin-top: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .logo {
+        font-size: 15px;
+        margin-left: -5px;
+    }
+
+    /* time content */
+
+    .time-container {
+        padding: 10px 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        z-index: 9999;
+    }
+
+    .time {
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 150px;
+        margin-right: -158px;
+        width: 100%;
+    }
+
+    /* information content */
+
+    .information {
+        margin-top: 0;
+        padding: 30px 30px 100px 30px;
+        flex-direction: column;
+    }
+
+    .information-1 {
+        animation: border-img 1.5s infinite alternate;
+        margin: 0 0 20px 0;
+    }
+
+
+    /* crypto content */
+
+    .crypto {
+        padding: 20px 30px 10px 30px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .crypto-txt {
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 300px;
+        margin-bottom: 30px;
+    }
+
+    .crypto-txt h2 {
+        padding: 10px;
+        font-size: 30px;
+        margin-right: 5px;
+    }
+
+    .neonspan {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        margin-left: 8px;
+    }
+
+    .crypto-txt p {
+        font-size: 15px;
+    }
+
+    .crypto-img {
+        margin-left: -5px;
+        order: 1;
+
+    }
+
+    .crypto-img img {
         width: 280px;
         height: 180px;
-        margin-left: 5px;
     }
 
     /* about me content */
@@ -2127,6 +2977,12 @@ p {
         text-align: center;
     }
 
+    .lives.container {
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 50px;
+    }
+
     .lives-txt {
         align-content: center;
         text-align: center;
@@ -2155,7 +3011,7 @@ p {
         align-content: center;
         width: 280px;
         height: 180px;
-        margin-left: 30px;
+        margin-left: 52px;
     }
 
     .btn-container {
@@ -2255,15 +3111,14 @@ p {
         font-size: 25px;
     }
 
-    .size h3 {
-        font-size: 15px;
-        margin-right: -8px;
-        font-weight: 800;
+    .size span {
+        width: 30px;
+        height: 20px;
     }
 
     .merch-img img {
         height: 180px;
-        width: 45px;
+        width: 40px;
         margin-left: -20px;
         margin-top: -50px;
     }
@@ -2283,22 +3138,24 @@ p {
         padding: 100px;
         padding-bottom: 80px;
         display: flex;
-        margin-left: -50px;
+        margin-left: -40px;
         margin-bottom: -80px;
     }
 
     .price-text {
         white-space: nowrap;
+        align-items: center;
+        text-align: center;
     }
 
     .price-text span {
         font-size: 20px;
-        margin-left: 10px;
+        margin-right: 30px;
     }
 
     .price-text h2 {
         font-size: 35px;
-        margin-left: 13px;
+        margin-left: -28px;
     }
 
     .price-content {
@@ -2306,7 +3163,7 @@ p {
         align-items: center;
         align-content: center;
         justify-content: center;
-        margin-left: -270px;
+        margin-left: -265px;
     }
 
     .bg-pack {
@@ -2319,1679 +3176,22 @@ p {
 
 }
 
-/* Falta editar */
-
-@media (max-width: 480px) {
-
-    /* header content */
-
-    .header-content {
-        align-content: center;
-        align-items: center;
-    }
-
-    .header {
-        min-height: 0vh;
-        padding: 400px 30px 80px 30px;
-    }
-
-    .header-txt {
-        padding: 0;
-        align-content: center;
-    }
-
-    .header-txt h1 {
-        font-size: 45px;
-        align-content: center;
-        margin-left: -30px;
-    }
-
-    .header-txt p {
-        align-content: center;
-        margin-right: 40px;
-    }
-
-    .butons {
-        flex-direction: column;
-        padding: 0 50px;
-        margin-left: -40px;
-        align-content: center;
-    }
-
-    .btn-1 {
-        margin: 0 0 20px 0;
-    }
-
-    /* menu content */
-
-    .menu {
-        width: 100%;
-        margin-bottom: none;
-    }
-
-    .navbar {
-        margin-top: none;
-        position: absolute;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .logo {
-        font-size: 15px;
-        margin-left: -5px;
-    }
-
-    /* time content */
-
-    .time-container {
-        margin-left: -350px;
-        margin-right: 0;
-        display: flex;
-        align-items: center;
-        align-content: center;
-        margin-top: -430px;
-        z-index: 9999;
-    }
-
-    .time {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* information content */
-
-    .information {
-        margin-top: 0;
-        padding: 30px 30px 100px 30px;
-        flex-direction: column;
-    }
-
-    .information-1 {
-        margin: 0 0 20px 0;
-    }
-
-    /* crypto content */
-
-    .crypto {
-        padding: 80px 30px 50px 30px;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .crypto-txt {
-        align-content: center;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .crypto-img {
-        margin-left: -5px;
-        order: 1;
-    }
-
-    .crypto-img img {
-        align-items: center;
-        align-content: center;
-        width: 320px;
-        height: 200px;
-        margin-left: 5px;
-    }
-
-    /* Chart Content */
-
-
-    /* about me content */
-
-    .about-me {
-        padding: 30px 30px 120px 30px;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .about-me1 {
-        text-align: center;
-        align-content: center;
-        align-items: center;
-        margin-left: 130px;
-        margin: none;
-    }
-
-    .about-me-txt {
-        text-align: center;
-        align-items: center;
-        align-content: center;
-    }
-
-    .about-me-txt a {
-        margin-top: 5px;
-        margin-bottom: -2px;
-    }
-
-    .about-me-txt li {
-        text-align: center;
-        align-items: center;
-        align-content: center;
-    }
-
-    .about-me-img {
-        margin: 30px 30px;
-        order: 0;
-    }
-
-    .about-me-img img {
-        height: 330px;
-        width: 350px;
-        align-items: center;
-        align-content: center;
-        margin-top: -3px;
-    }
-
-    .about-me video {
-        order: 1;
-        margin-top: 30px;
-        height: 500px;
-        width: 330px;
-        align-content: center;
-        align-items: center;
-        margin-left: 50px;
-        margin: none;
-    }
-
-    /* lives content */
-
-    .lives {
-        padding: 0 30px 50px 30px;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .lives-txt {
-        align-content: center;
-        text-align: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        margin-left: -20px;
-    }
-
-    .live-txt1 {
-        align-content: center;
-        margin-right: 20px;
-    }
-
-    .live-txt1 a {
-        margin: 10px 10px;
-    }
-
-    .lives-img {
-        order: 1;
-        margin-left: -130px;
-    }
-
-    .lives-img img {
-        align-items: center;
-        align-content: center;
-        width: 320px;
-        height: 200px;
-        margin-left: 37px;
-    }
-
-    .btn-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn-group {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        margin-bottom: 10px;
-        margin-left: -5px;
-    }
-
-    /* work with me content */
-
-    .work-with-me {
-        align-items: center;
-        padding: 50px 30px 150px 30px;
-        flex-direction: column;
-    }
-
-    .work-with-me-txt {
-        align-items: center;
-        align-content: center;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .work-with-me a {
-        margin-top: 25px;
-    }
-
-    .work-with-me-img {
-        margin-left: -5px;
-        margin-bottom: -60px;
-        order: 1;
-    }
-
-    .work-with-me-img img {
-        align-items: center;
-        align-content: center;
-        width: 320px;
-        height: 200px;
-        margin-left: 5px;
-        margin-top: -15px;
-    }
-
-    /* redes content */
-
-    .redes-background {
-        background-position: -150px center;
-    }
-
-    .redes {
-        padding: 5px 30px 30px 30px;
-    }
-
-    .redes-content {
-        margin-bottom: 30px;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .redes h2 {
-        margin-top: 50px;
-        margin-bottom: 30px;
-    }
-
-    /* merch content */
-
-    .merch-container {
-        flex-direction: column;
-    }
-
-    .merch {
-        margin-top: -20px;
-        margin-bottom: -30px;
-        width: 330px;
-    }
-
-    /* price content */
-
-    .price {
-        padding: 120px;
-        padding-bottom: 100px;
-        display: flex;
-        margin-left: -50px;
-        margin-bottom: -80px;
-    }
-
-    .price-text {
-        white-space: nowrap;
-        margin-left: -40px;
-    }
-
-    .price-text span {
-        font-size: 20px;
-    }
-
-    .price-text h2 {
-        font-size: 40px;
-    }
-
-    .price-content {
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        margin-left: -285px;
-    }
-
-    .bg-pack {
-        margin-top: 10px;
-    }
-
-    .price-1 {
-        margin-bottom: 30px;
-    }
-
-}
-
-@media (max-width: 600px) {
-
-    /* header content */
-
-    .header-content {
-        align-content: center;
-        align-items: center;
-    }
-
-    .header {
-        min-height: 0vh;
-        padding: 400px 30px 80px 30px;
-    }
-
-    .header-txt {
-        padding: 0;
-        align-content: center;
-    }
-
-    .header-txt h1 {
-        font-size: 45px;
-        align-content: center;
-        margin-left: -30px;
-    }
-
-    .header-txt p {
-        align-content: center;
-        margin-right: 40px;
-    }
-
-    .butons {
-        flex-direction: column;
-        padding: 0 50px;
-        margin-left: -40px;
-        align-content: center;
-    }
-
-    .btn-1 {
-        margin: 0 0 20px 0;
-    }
-
-    /* menu content */
-
-    .menu {
-        width: 100%;
-        margin-bottom: none;
-    }
-
-    .navbar {
-        margin-top: none;
-        position: absolute;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .logo {
-        font-size: 15px;
-        margin-left: -5px;
-    }
-
-    /* time content */
-
-    .time-container {
-        margin-left: -350px;
-        margin-right: 0;
-        display: flex;
-        align-items: center;
-        align-content: center;
-        margin-top: -430px;
-        z-index: 9999;
-    }
-
-    .time {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* information content */
-
-    .information {
-        margin-top: 0;
-        padding: 30px 30px 100px 30px;
-        flex-direction: column;
-    }
-
-    .information-1 {
-        margin: 0 0 20px 0;
-    }
-
-    /* crypto content */
-
-    .crypto {
-        padding: 80px 30px 50px 30px;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .crypto-txt {
-        align-content: center;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .crypto-img {
-        margin-left: -5px;
-        order: 1;
-    }
-
-    .crypto-img img {
-        align-items: center;
-        align-content: center;
-        width: 320px;
-        height: 200px;
-        margin-left: 5px;
-    }
-
-    /* Chart Content */
-
-
-    /* about me content */
-
-    .about-me {
-        padding: 30px 30px 120px 30px;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .about-me1 {
-        text-align: center;
-        align-content: center;
-        align-items: center;
-        margin-left: 130px;
-        margin: none;
-    }
-
-    .about-me-txt {
-        text-align: center;
-        align-items: center;
-        align-content: center;
-    }
-
-    .about-me-txt a {
-        margin-top: 5px;
-        margin-bottom: -2px;
-    }
-
-    .about-me-txt li {
-        text-align: center;
-        align-items: center;
-        align-content: center;
-    }
-
-    .about-me-img {
-        margin: 30px 30px;
-        order: 0;
-    }
-
-    .about-me-img img {
-        height: 330px;
-        width: 350px;
-        align-items: center;
-        align-content: center;
-        margin-top: -3px;
-    }
-
-    .about-me video {
-        order: 1;
-        margin-top: 30px;
-        height: 500px;
-        width: 330px;
-        align-content: center;
-        align-items: center;
-        margin-left: 50px;
-        margin: none;
-    }
-
-    /* lives content */
-
-    .lives {
-        padding: 0 30px 50px 30px;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .lives-txt {
-        align-content: center;
-        text-align: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        margin-left: -20px;
-    }
-
-    .live-txt1 {
-        align-content: center;
-        margin-right: 20px;
-    }
-
-    .live-txt1 a {
-        margin: 10px 10px;
-    }
-
-    .lives-img {
-        order: 1;
-        margin-left: -130px;
-    }
-
-    .lives-img img {
-        align-items: center;
-        align-content: center;
-        width: 320px;
-        height: 200px;
-        margin-left: 37px;
-    }
-
-    .btn-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn-group {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        margin-bottom: 10px;
-        margin-left: -5px;
-    }
-
-    /* work with me content */
-
-    .work-with-me {
-        align-items: center;
-        padding: 50px 30px 150px 30px;
-        flex-direction: column;
-    }
-
-    .work-with-me-txt {
-        align-items: center;
-        align-content: center;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .work-with-me a {
-        margin-top: 25px;
-    }
-
-    .work-with-me-img {
-        margin-left: -5px;
-        margin-bottom: -60px;
-        order: 1;
-    }
-
-    .work-with-me-img img {
-        align-items: center;
-        align-content: center;
-        width: 320px;
-        height: 200px;
-        margin-left: 5px;
-        margin-top: -15px;
-    }
-
-    /* redes content */
-
-    .redes-background {
-        background-position: -150px center;
-    }
-
-    .redes {
-        padding: 5px 30px 30px 30px;
-    }
-
-    .redes-content {
-        margin-bottom: 30px;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .redes h2 {
-        margin-top: 50px;
-        margin-bottom: 30px;
-    }
-
-    /* merch content */
-
-    .merch-container {
-        flex-direction: column;
-    }
-
-    .merch {
-        margin-top: -20px;
-        margin-bottom: -30px;
-        width: 330px;
-    }
-
-    /* price content */
-
-    .price {
-        padding: 120px;
-        padding-bottom: 100px;
-        display: flex;
-        margin-left: -50px;
-        margin-bottom: -80px;
-    }
-
-    .price-text {
-        white-space: nowrap;
-        margin-left: -40px;
-    }
-
-    .price-text span {
-        font-size: 20px;
-    }
-
-    .price-text h2 {
-        font-size: 40px;
-    }
-
-    .price-content {
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        margin-left: -285px;
-    }
-
-    .bg-pack {
-        margin-top: 10px;
-    }
-
-    .price-1 {
-        margin-bottom: 30px;
-    }
-
-}
-
-@media (max-width: 768px) {
-
-    /* header content */
-
-    .header-content {
-        align-content: center;
-        align-items: center;
-        margin-right: 100px;
-        text-align: center;
-    }
-
-    .header-txt {
-        margin-left: 30px;
-        align-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .header-txt p {
-        align-content: center;
-        margin-left: 10px;
-    }
-
-    .butons {
-        flex-direction: column;
-        padding: 0 50px;
-        margin-right: 30px;
-        align-content: center;
-    }
-
-    .btn-1 {
-        margin: 0 0 20px 0;
-    }
-
-    /* menu content */
-
-    .menu {
-        width: 100%;
-        margin-bottom: none;
-    }
-
-    .navbar {
-        margin-top: none;
-        position: absolute;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .logo {
-        font-size: 15px;
-        margin-left: -5px;
-    }
-
-    /* time content */
-
-    .time-container {
-        margin-left: -350px;
-        margin-right: 0;
-        display: flex;
-        align-items: center;
-        align-content: center;
-        margin-top: -430px;
-        z-index: 9999;
-    }
-
-    .time {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* information content */
-
-    .information {
-        margin-top: 0;
-        padding: 30px 30px 100px 30px;
-        flex-direction: column;
-    }
-
-    .information-1 {
-        margin: 0 0 20px 0;
-    }
-
-    /* crypto content */
-
-    .crypto {
-        padding: 80px 30px 50px 30px;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .crypto-txt {
-        align-content: center;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .crypto-img {
-        margin-left: -5px;
-        order: 1;
-    }
-
-    .crypto-img img {
-        align-items: center;
-        align-content: center;
-        width: 320px;
-        height: 200px;
-        margin-left: 5px;
-    }
-
-    /* Chart Content */
-
-
-    /* about me content */
-
-    .about-me {
-        padding: 30px 30px 120px 30px;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .about-me1 {
-        text-align: center;
-        align-content: center;
-        align-items: center;
-        margin-left: 130px;
-        margin: none;
-    }
-
-    .about-me-txt {
-        text-align: center;
-        align-items: center;
-        align-content: center;
-    }
-
-    .about-me-txt a {
-        margin-top: 5px;
-        margin-bottom: -2px;
-    }
-
-    .about-me-txt li {
-        text-align: center;
-        align-items: center;
-        align-content: center;
-    }
-
-    .about-me-img {
-        margin: 30px 30px;
-        order: 0;
-    }
-
-    .about-me-img img {
-        height: 330px;
-        width: 350px;
-        align-items: center;
-        align-content: center;
-        margin-top: -3px;
-    }
-
-    .about-me video {
-        order: 1;
-        margin-top: 30px;
-        height: 500px;
-        width: 330px;
-        align-content: center;
-        align-items: center;
-        margin-left: 50px;
-        margin: none;
-    }
-
-    /* lives content */
-
-    .lives {
-        padding: 0 30px 50px 30px;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .lives-txt {
-        align-content: center;
-        text-align: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        margin-left: -20px;
-    }
-
-    .live-txt1 {
-        align-content: center;
-        margin-right: 20px;
-    }
-
-    .live-txt1 a {
-        margin: 10px 10px;
-    }
-
-    .lives-img {
-        order: 1;
-        margin-left: -130px;
-    }
-
-    .lives-img img {
-        align-items: center;
-        align-content: center;
-        width: 320px;
-        height: 200px;
-        margin-left: 37px;
-    }
-
-    .btn-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn-group {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        margin-bottom: 10px;
-        margin-left: -5px;
-    }
-
-    /* work with me content */
-
-    .work-with-me {
-        align-items: center;
-        padding: 50px 30px 150px 30px;
-        flex-direction: column;
-    }
-
-    .work-with-me-txt {
-        align-items: center;
-        align-content: center;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .work-with-me a {
-        margin-top: 25px;
-    }
-
-    .work-with-me-img {
-        margin-left: -5px;
-        margin-bottom: -60px;
-        order: 1;
-    }
-
-    .work-with-me-img img {
-        align-items: center;
-        align-content: center;
-        width: 320px;
-        height: 200px;
-        margin-left: 5px;
-        margin-top: -15px;
-    }
-
-    /* redes content */
-
-    .redes-background {
-        background-position: -150px center;
-    }
-
-    .redes {
-        padding: 5px 30px 30px 30px;
-    }
-
-    .redes-content {
-        margin-bottom: 30px;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .redes h2 {
-        margin-top: 50px;
-        margin-bottom: 30px;
-    }
-
-    /* merch content */
-
-    .merch-container {
-        flex-direction: column;
-    }
-
-    .merch {
-        margin-top: -20px;
-        margin-bottom: -30px;
-        width: 330px;
-    }
-
-    /* price content */
-
-    .price {
-        padding: 120px;
-        padding-bottom: 100px;
-        display: flex;
-        margin-left: -50px;
-        margin-bottom: -80px;
-    }
-
-    .price-text {
-        white-space: nowrap;
-        margin-left: -40px;
-    }
-
-    .price-text span {
-        font-size: 20px;
-    }
-
-    .price-text h2 {
-        font-size: 40px;
-    }
-
-    .price-content {
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        margin-left: -285px;
-    }
-
-    .bg-pack {
-        margin-top: 10px;
-    }
-
-    .price-1 {
-        margin-bottom: 30px;
-    }
-
-}
-
-@media (max-width:990px) {
-
-    /* header content */
-
-    .header-content {
-        align-content: center;
-        align-items: center;
-    }
-
-    .header {
-        min-height: 0vh;
-        padding: 400px 30px 80px 30px;
-    }
-
-    .header-txt {
-        padding: 0;
-        align-content: center;
-    }
-
-    .header-txt h1 {
-        font-size: 45px;
-        align-content: center;
-        margin-left: -30px;
-    }
-
-    .header-txt p {
-        align-content: center;
-        margin-right: 40px;
-    }
-
-    .butons {
-        flex-direction: column;
-        padding: 0 50px;
-        margin-left: -40px;
-        align-content: center;
-    }
-
-    .btn-1 {
-        margin: 0 0 20px 0;
-    }
-
-    /* menu content */
-
-    .menu {
-        width: 100%;
-        margin-bottom: none;
-    }
-
-    .navbar {
-        margin-top: none;
-        position: absolute;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .logo {
-        font-size: 15px;
-        margin-left: -5px;
-    }
-
-    /* time content */
-
-    .time-container {
-        margin-left: -350px;
-        margin-right: 0;
-        display: flex;
-        align-items: center;
-        align-content: center;
-        margin-top: -430px;
-        z-index: 9999;
-    }
-
-    .time {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* information content */
-
-    .information {
-        margin-top: 0;
-        padding: 30px 30px 100px 30px;
-        flex-direction: column;
-    }
-
-    .information-1 {
-        margin: 0 0 20px 0;
-    }
-
-    /* crypto content */
-
-    .crypto {
-        padding: 80px 30px 50px 30px;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .crypto-txt {
-        align-content: center;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .crypto-img {
-        margin-left: -5px;
-        order: 1;
-    }
-
-    .crypto-img img {
-        align-items: center;
-        align-content: center;
-        width: 320px;
-        height: 200px;
-        margin-left: 5px;
-    }
-
-    /* about me content */
-
-    .about-me {
-        padding: 30px 30px 120px 30px;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .about-me1 {
-        text-align: center;
-        align-content: center;
-        align-items: center;
-        margin-left: 130px;
-        margin: none;
-    }
-
-    .about-me-txt {
-        text-align: center;
-        align-items: center;
-        align-content: center;
-    }
-
-    .about-me-txt a {
-        margin-top: 5px;
-        margin-bottom: -2px;
-    }
-
-    .about-me-txt li {
-        text-align: center;
-        align-items: center;
-        align-content: center;
-    }
-
-    .about-me-img {
-        margin: 30px 30px;
-        order: 0;
-    }
-
-    .about-me-img img {
-        height: 330px;
-        width: 350px;
-        align-items: center;
-        align-content: center;
-        margin-top: -3px;
-    }
-
-    .about-me video {
-        order: 1;
-        margin-top: 30px;
-        height: 500px;
-        width: 330px;
-        align-content: center;
-        align-items: center;
-        margin-left: 50px;
-        margin: none;
-    }
-
-    /* lives content */
-
-    .lives {
-        padding: 0 30px 50px 30px;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .lives-txt {
-        align-content: center;
-        text-align: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        margin-left: -20px;
-    }
-
-    .live-txt1 {
-        align-content: center;
-        margin-right: 20px;
-    }
-
-    .live-txt1 a {
-        margin: 10px 10px;
-    }
-
-    .lives-img {
-        order: 1;
-        margin-left: -130px;
-    }
-
-    .lives-img img {
-        align-items: center;
-        align-content: center;
-        width: 320px;
-        height: 200px;
-        margin-left: 37px;
-    }
-
-    .btn-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn-group {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        margin-bottom: 10px;
-        margin-left: -5px;
-    }
-
-    /* work with me content */
-
-    .work-with-me {
-        align-items: center;
-        padding: 50px 30px 150px 30px;
-        flex-direction: column;
-    }
-
-    .work-with-me-txt {
-        align-items: center;
-        align-content: center;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .work-with-me a {
-        margin-top: 25px;
-    }
-
-    .work-with-me-img {
-        margin-left: -5px;
-        margin-bottom: -60px;
-        order: 1;
-    }
-
-    .work-with-me-img img {
-        align-items: center;
-        align-content: center;
-        width: 320px;
-        height: 200px;
-        margin-left: 5px;
-        margin-top: -15px;
-    }
-
-    /* redes content */
-
-    .redes-background {
-        background-position: -150px center;
-    }
-
-    .redes {
-        padding: 5px 30px 30px 30px;
-    }
-
-    .redes-content {
-        margin-bottom: 30px;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .redes h2 {
-        margin-top: 50px;
-        margin-bottom: 30px;
-    }
-
-    /* merch content */
-
-    .merch-container {
-        flex-direction: column;
-    }
-
-    .merch {
-        margin-top: -20px;
-        margin-bottom: -30px;
-        width: 330px;
-    }
-
-    /* price content */
-
-    .price {
-        padding: 120px;
-        padding-bottom: 100px;
-        display: flex;
-        margin-left: -50px;
-        margin-bottom: -80px;
-    }
-
-    .price-text {
-        white-space: nowrap;
-        margin-left: -40px;
-    }
-
-    .price-text span {
-        font-size: 20px;
-    }
-
-    .price-text h2 {
-        font-size: 40px;
-    }
-
-    .price-content {
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        margin-left: -285px;
-    }
-
-    .bg-pack {
-        margin-top: 10px;
-    }
-
-    .price-1 {
-        margin-bottom: 30px;
-    }
-
-}
-
-@media (max-width: 1024px) {
-
-    /* header content */
-
-    .header-content {
-        align-content: center;
-        align-items: center;
-    }
-
-    .header {
-        min-height: 0vh;
-        padding: 400px 30px 80px 30px;
-    }
-
-    .header-txt {
-        padding: 0;
-        align-content: center;
-    }
-
-    .header-txt h1 {
-        font-size: 45px;
-        align-content: center;
-        margin-left: -30px;
-    }
-
-    .header-txt p {
-        align-content: center;
-        margin-right: 40px;
-    }
-
-    .butons {
-        flex-direction: column;
-        padding: 0 50px;
-        margin-left: -40px;
-        align-content: center;
-    }
-
-    .btn-1 {
-        margin: 0 0 20px 0;
-    }
-
-    /* menu content */
-
-    .menu {
-        width: 100%;
-        margin-bottom: none;
-    }
-
-    .navbar {
-        margin-top: none;
-        position: absolute;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .logo {
-        font-size: 15px;
-        margin-left: -5px;
-    }
-
-    /* time content */
-
-    .time-container {
-        margin-left: -350px;
-        margin-right: 0;
-        display: flex;
-        align-items: center;
-        align-content: center;
-        margin-top: -430px;
-        z-index: 9999;
-    }
-
-    .time {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* information content */
-
-    .information {
-        margin-top: 0;
-        padding: 30px 30px 100px 30px;
-        flex-direction: column;
-    }
-
-    .information-1 {
-        margin: 0 0 20px 0;
-    }
-
-    /* crypto content */
-
-    .crypto {
-        padding: 80px 30px 50px 30px;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .crypto-txt {
-        align-content: center;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .crypto-img {
-        margin-left: -5px;
-        order: 1;
-    }
-
-    .crypto-img img {
-        align-items: center;
-        align-content: center;
-        width: 320px;
-        height: 200px;
-        margin-left: 5px;
-    }
-
-    /* Chart Content */
-
-
-    /* about me content */
-
-    .about-me {
-        padding: 30px 30px 120px 30px;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .about-me1 {
-        text-align: center;
-        align-content: center;
-        align-items: center;
-        margin-left: 130px;
-        margin: none;
-    }
-
-    .about-me-txt {
-        text-align: center;
-        align-items: center;
-        align-content: center;
-    }
-
-    .about-me-txt a {
-        margin-top: 5px;
-        margin-bottom: -2px;
-    }
-
-    .about-me-txt li {
-        text-align: center;
-        align-items: center;
-        align-content: center;
-    }
-
-    .about-me-img {
-        margin: 30px 30px;
-        order: 0;
-    }
-
-    .about-me-img img {
-        height: 330px;
-        width: 350px;
-        align-items: center;
-        align-content: center;
-        margin-top: -3px;
-    }
-
-    .about-me video {
-        order: 1;
-        margin-top: 30px;
-        height: 500px;
-        width: 330px;
-        align-content: center;
-        align-items: center;
-        margin-left: 50px;
-        margin: none;
-    }
-
-    /* lives content */
-
-    .lives {
-        padding: 0 30px 50px 30px;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .lives-txt {
-        align-content: center;
-        text-align: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        margin-left: -20px;
-    }
-
-    .live-txt1 {
-        align-content: center;
-        margin-right: 20px;
-    }
-
-    .live-txt1 a {
-        margin: 10px 10px;
-    }
-
-    .lives-img {
-        order: 1;
-        margin-left: -130px;
-    }
-
-    .lives-img img {
-        align-items: center;
-        align-content: center;
-        width: 320px;
-        height: 200px;
-        margin-left: 37px;
-    }
-
-    .btn-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn-group {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        margin-bottom: 10px;
-        margin-left: -5px;
-    }
-
-    /* work with me content */
-
-    .work-with-me {
-        align-items: center;
-        padding: 50px 30px 150px 30px;
-        flex-direction: column;
-    }
-
-    .work-with-me-txt {
-        align-items: center;
-        align-content: center;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .work-with-me a {
-        margin-top: 25px;
-    }
-
-    .work-with-me-img {
-        margin-left: -5px;
-        margin-bottom: -60px;
-        order: 1;
-    }
-
-    .work-with-me-img img {
-        align-items: center;
-        align-content: center;
-        width: 320px;
-        height: 200px;
-        margin-left: 5px;
-        margin-top: -15px;
-    }
-
-    /* redes content */
-
-    .redes-background {
-        background-position: -150px center;
-    }
-
-    .redes {
-        padding: 5px 30px 30px 30px;
-    }
-
-    .redes-content {
-        margin-bottom: 30px;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .redes h2 {
-        margin-top: 50px;
-        margin-bottom: 30px;
-    }
-
-    /* merch content */
-
-    .merch-container {
-        flex-direction: column;
-    }
-
-    .merch {
-        margin-top: -20px;
-        margin-bottom: -30px;
-        width: 330px;
-    }
-
-    /* price content */
-
-    .price {
-        padding: 120px;
-        padding-bottom: 100px;
-        display: flex;
-        margin-left: -50px;
-        margin-bottom: -80px;
-    }
-
-    .price-text {
-        white-space: nowrap;
-        margin-left: -40px;
-    }
-
-    .price-text span {
-        font-size: 20px;
-    }
-
-    .price-text h2 {
-        font-size: 40px;
-    }
-
-    .price-content {
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        margin-left: -285px;
-    }
-
-    .bg-pack {
-        margin-top: 10px;
-    }
-
-    .price-1 {
-        margin-bottom: 30px;
-    }
-
-}
+/*
+ @media (max-width: 640px) {
+ 
+ }
+ 
+@media screen and (max-width: 820px)
+ 
+ @media (max-width:990px) {
+ 
+ }
+ 
+ @media (max-width: 1024px) {
+ 
+ }
+ 
+  @media (max-width: 1440px) {
+ 
+ }
+  */
