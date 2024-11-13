@@ -10,8 +10,8 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Cerrar menu hamburgesa al cliclar 
-
+// Close hamburger menu when clicking 
+ 
 const menuToggle = document.querySelector("#menu-toggle");
 const menuLinks = document.querySelectorAll(".navbar ul li a");
 
@@ -21,7 +21,7 @@ menuLinks.forEach(link => {
     });
 });
 
-// Cuenta regresiva
+// Countdown 
 
 let days = document.getElementById('days');
 let hours = document.getElementById('hours');
@@ -38,21 +38,21 @@ let hr_dot = document.querySelector('.hr_dot');
 let min_dot = document.querySelector('.min_dot');
 let sec_dot = document.querySelector('.sec_dot');
 
-let endDate = '04/17/2028 00:00:00'; // Fecha de fin
+let endDate = '04/17/2028 00:00:00'; // End date
 
 let x = setInterval(function () {
     let now = new Date(endDate).getTime();
     let countDown = new Date().getTime();
     let distance = now - countDown;
 
-    // Cálculo de días, horas, minutos y segundos
+    // Calculation of days, hours, minutes and seconds
 
     let d = Math.floor(distance / (1000 * 60 * 60 * 24));
     let h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     let s = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Si el tiempo ha terminado, mostrar "00:00:00"
+    // If time is up, display "00:00:00"
 
     if (distance < 0) {
         clearInterval(x);
@@ -60,38 +60,38 @@ let x = setInterval(function () {
         hours.innerHTML = "00<br><span>Horas</span>";
         minutes.innerHTML = "00<br><span>Minutos</span>";
         seconds.innerHTML = "00<br><span>Segundos</span>";
-        dd.style.strokeDashoffset = 440;  // Barra vacía para los días
-        hh.style.strokeDashoffset = 440;  // Barra vacía para las horas
-        mm.style.strokeDashoffset = 440;  // Barra vacía para los minutos
-        ss.style.strokeDashoffset = 440;  // Barra vacía para los segundos
-        day_dot.style.transform = `rotateZ(0deg)`; // Resetear los dots
+        dd.style.strokeDashoffset = 440;  // Empty bar for days
+        hh.style.strokeDashoffset = 440;  // Empty bar for hours
+        mm.style.strokeDashoffset = 440;  // Empty bar for minutes
+        ss.style.strokeDashoffset = 440;  // Empty bar for days
+        day_dot.style.transform = `rotateZ(0deg)`; // Reset the dots
         hr_dot.style.transform = `rotateZ(0deg)`;
         min_dot.style.transform = `rotateZ(0deg)`;
         sec_dot.style.transform = `rotateZ(0deg)`;
     } else {
 
-        // Mostrar el tiempo restante en los elementos correspondientes
+        // Show remaining time on corresponding items
 
         days.innerHTML = d + "<br><span>Dias</span>";
         hours.innerHTML = h + "<br><span>Horas</span>";
         minutes.innerHTML = m + "<br><span>Minutos</span>";
         seconds.innerHTML = s + "<br><span>Segundos</span>";
 
-        // Animar las líneas de la cuenta regresiva (barras circulares)
+        // Animate countdown lines (circular bars)
 
         dd.style.strokeDashoffset = 440 - (440 * d) / 365; // 365 días al año
         hh.style.strokeDashoffset = 440 - (440 * h) / 24; // 24 horas al día
         mm.style.strokeDashoffset = 440 - (440 * m) / 60; // 60 minutos por hora
         ss.style.strokeDashoffset = 440 - (440 * s) / 60; // 60 segundos por minuto
 
-        // Animar los dots (puntos circulares)
+        // Animate the dots (circular points)
 
         day_dot.style.transform = `rotateZ(${d * 0.986}deg)`; // 360° / 365 días = 0.986° por día
         hr_dot.style.transform = `rotateZ(${h * 15}deg)`; // 360° / 24 horas = 15° por hora
         min_dot.style.transform = `rotateZ(${m * 6}deg)`; // 360° / 60 minutos = 6° por minuto
         sec_dot.style.transform = `rotateZ(${s * 6}deg)`; // 360° / 60 segundos = 6° por segundo
     }
-}, 1000); // Intervalo de 1 segundo
+}, 1000); // 1 second interval
 
 // Go Top
 
@@ -105,57 +105,57 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Efecto del Puntero
+// Pointer Effect
 
 let lastMouseX = 0; // Última posición X del mouse
 let lastMouseY = 0; // Última posición Y del mouse
 const separation = 8; // Separación de los numeros por pixeles
 
-// Función para crear un número binario (0 o 1)
+// Function to create a binary number (0 or 1)
 
 function crearBinario(x, y) {
     const binario = document.createElement('div');
 
-    // Asignar aleatoriamente un 0 o 1
+    // Randomly assign a 0 or 1
 
     binario.textContent = Math.random() > 0.5 ? '1' : '0';
     binario.classList.add('binario');
     document.body.appendChild(binario);
 
-    // Posición inicial del número binario
+    // Initial position of binary number
 
     binario.style.position = 'absolute';
     binario.style.left = `${x}px`;
     binario.style.top = `${y}px`;
 
-    // Animación para desvanecer el número binario
+    // Animation to fade binary number
 
     setTimeout(() => {
         binario.remove();
-    }, 3000); // Eliminar el número después de 3 segundos
+    }, 3000); // Delete number after 3 seconds
 }
 
-// Mover el ratón y crear números binarios en su camino
+// Move your mouse and create binary numbers in your path
 
 document.addEventListener('mousemove', (e) => {
     const mouseX = e.clientX + window.scrollX;
     const mouseY = e.clientY + window.scrollY;
 
-    // Calcular la distancia entre la posición actual y la última donde se creó un número
+    // Calculate the distance between the current position and the last one where a number was created
 
     const distX = Math.abs(mouseX - lastMouseX);
     const distY = Math.abs(mouseY - lastMouseY);
 
-    // Solo crear un número si el ratón se ha movido más de la separación deseada
+    // Only create a number if the mouse has moved further than the desired distance
 
     if (distX >= separation || distY >= separation) {
         crearBinario(mouseX, mouseY);
-        lastMouseX = mouseX; // Actualizar la última posición X
-        lastMouseY = mouseY; // Actualizar la última posición Y
+        lastMouseX = mouseX; // Update last position X
+        lastMouseY = mouseY; // Update last position Y
     }
 });
 
-// Efecto Scroll
+// Scroll Effect
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"], button').forEach(anchor => {
@@ -166,13 +166,13 @@ document.addEventListener('DOMContentLoaded', () => {
             let targetElement = document.getElementById(targetId.substring(1));
 
             if (targetElement) {
-                smoothScroll(targetElement, 1000); // 1000ms = 1 segundo
+                smoothScroll(targetElement, 1000); // 1000ms = 1 second
             }
         });
     });
 });
 
-// Función de scroll suave
+// Smooth scroll function
 
 function smoothScroll(target, duration) {
     let targetPosition = target.getBoundingClientRect().top + window.scrollY;
