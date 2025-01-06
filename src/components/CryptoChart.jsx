@@ -2,11 +2,36 @@ import React, { useEffect } from "react";
 
 const CryptoChart = () => {
     useEffect(() => {
+        // Cargar el script de TradingView
         const script = document.createElement("script");
         script.src = "https://s3.tradingview.com/tv.js";
         script.async = true;
+        script.onload = () => {
+            // Asegúrate de que TradingView esté definido antes de usarlo
+            if (window.TradingView) {
+                new window.TradingView.widget({
+                    "autosize": true,
+                    "symbol": "BINANCE:BTCUSDT",
+                    "interval": "D",
+                    "timezone": "Etc/UTC",
+                    "theme": "dark",
+                    "style": "1",
+                    "locale": "en",
+                    "backgroundColor": "rgba(0, 0, 0, 1)",
+                    "hide_side_toolbar": false,
+                    "allow_symbol_change": true,
+                    "calendar": false,
+                    "support_host": "https://www.tradingview.com",
+                    "container_id": "tradingview-chart"
+                });
+            } else {
+                console.error('TradingView is not defined');
+            }
+        };
+
         document.body.appendChild(script);
 
+        // Limpiar el script al desmontar el componente
         return () => {
             document.body.removeChild(script);
         };

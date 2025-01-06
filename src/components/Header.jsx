@@ -1,20 +1,57 @@
-import React from 'react';
+// Header.jsx
+import React, { useEffect, useState, useRef } from 'react';
+import { startCountdown } from '../utils/CountdownLogic';
 
-const CountdownCircle = ({ id, label }) => (
+const CountdownCircle = ({ id, label, refCircle, refDot, value }) => (
     <div className="circle" style={{ '--clr': '#969696' }}>
-        <div className={`dots ${id}_dot`}></div>
+        <div ref={refDot} className={`dots ${id}_dot`}></div>
         <svg>
             <circle cx="70" cy="70" r="70"></circle>
-            <circle cx="70" cy="70" r="70" id={id}></circle>
+            <circle ref={refCircle} cx="70" cy="70" r="70" id={id}></circle>
         </svg>
-        <div id={id} className="clock">00<br /><span>{label}</span></div>
+        <div id={id} className="clock">
+            {value}<br /><span>{label}</span>
+        </div>
     </div>
 );
 
 const Header = () => {
+    const [timeData, setTimeData] = useState({
+        days: "00",
+        hours: "00",
+        minutes: "00",
+        seconds: "00"
+    });
+
+    const daysRef = useRef(null);
+    const hoursRef = useRef(null);
+    const minutesRef = useRef(null);
+    const secondsRef = useRef(null);
+    const dayDotRef = useRef(null);
+    const hourDotRef = useRef(null);
+    const minDotRef = useRef(null);
+    const secDotRef = useRef(null);
+
+    useEffect(() => {
+        const endDate = '04/17/2028 00:00:00'; 
+        startCountdown(
+            endDate, 
+            setTimeData, 
+            {
+                daysRef,
+                hoursRef,
+                minutesRef,
+                secondsRef,
+                dayDotRef,
+                hourDotRef,
+                minDotRef,
+                secDotRef
+            }
+        );
+    }, []);
+
     return (
         <header id="header" className="header">
-            {/* Menu Nav */}
             <section className="menu" id="menu">
                 <a href="#about-me" className="logo">JJ Chagerben</a>
                 <input type="checkbox" id="menu-toggle" className="menu-toggle" />
@@ -37,17 +74,39 @@ const Header = () => {
                 </nav>
             </section>
 
-            {/* Countdown */}
             <section className="time-container">
                 <div className="time">
-                    <CountdownCircle id="days" label="Días" />
-                    <CountdownCircle id="hours" label="Horas" />
-                    <CountdownCircle id="minutes" label="Minutos" />
-                    <CountdownCircle id="seconds" label="Segundos" />
+                    <CountdownCircle 
+                        id="days" 
+                        label="Días" 
+                        refCircle={daysRef} 
+                        refDot={dayDotRef} 
+                        value={timeData.days} 
+                    />
+                    <CountdownCircle 
+                        id="hours" 
+                        label="Horas" 
+                        refCircle={hoursRef} 
+                        refDot={hourDotRef} 
+                        value={timeData.hours} 
+                    />
+                    <CountdownCircle 
+                        id="minutes" 
+                        label="Minutos" 
+                        refCircle={minutesRef} 
+                        refDot={minDotRef} 
+                        value={timeData.minutes} 
+                    />
+                    <CountdownCircle 
+                        id="seconds" 
+                        label="Segundos" 
+                        refCircle={secondsRef} 
+                        refDot={secDotRef} 
+                        value={timeData.seconds} 
+                    />
                 </div>
             </section>
 
-            {/* Header Content */}
             <section className="header-content container">
                 <article className="header-txt">
                     <h1>
@@ -68,4 +127,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default Header; 

@@ -1,8 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const GoTopButton = () => {
+    const [visible, setVisible] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setVisible(window.scrollY > 250);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
-        <a href="#header" id="goTop">
+        <a 
+            href="#header" 
+            id="goTop" 
+            className={visible ? 'show' : ''} // Agregar la clase 'show' si visible es true
+            onClick={scrollToTop}
+        >
             <i className="fas fa-arrow-up"></i>
         </a>
     );
