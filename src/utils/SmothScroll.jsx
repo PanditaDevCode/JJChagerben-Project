@@ -1,4 +1,3 @@
-// SmoothScroll.jsx
 import React, { useEffect } from 'react';
 
 const SmoothScroll = () => {
@@ -41,12 +40,12 @@ const SmoothScroll = () => {
 
         return () => {
             document.querySelectorAll('a[href^="#"], button').forEach(anchor => {
-                anchor.removeEventListener('click', () => {});
+                anchor.removeEventListener('click', () => { });
             });
         };
     }, []);
 
-    return null; // Este componente no renderiza nada
+    return null;
 };
 
 export default SmoothScroll;

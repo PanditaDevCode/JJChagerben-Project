@@ -2,11 +2,11 @@ import React from "react";
 
 const TrilemaInformation = ({ items }) => {
     return (
-        <section className="information container">
+        <section className="information container flex justify-between pt-0 pb-0 pr-[100px] pl-[100px] gap-[10px] ">
             {items.map(item => (
-                <div className="information-1" key={item.id}>
-                    <h3><strong>{item.title}</strong></h3>
-                    <p>{item.content}</p>
+                <div className="information-1 mt-0 mb-0 ml-[15px] mr-{15px} bg-[#141418] p-[15px] rounded-[15px] z-2 " key={item.id}>
+                    <h3 class="text-white text-[18px]"><strong>{item.title}</strong></h3>
+                    <p class="mb-[5px]">{item.content}</p>
                 </div>
             ))}
         </section>

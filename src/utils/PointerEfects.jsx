@@ -1,4 +1,3 @@
-// PointerEffect.jsx
 import React, { useEffect } from 'react';
 
 const PointerEffect = () => {
@@ -37,7 +36,7 @@ const PointerEffect = () => {
         return () => document.removeEventListener('mousemove', handleMouseMove);
     }, []);
 
-    return null; // Este componente no renderiza nada
+    return null;
 };
 
 export default PointerEffect;

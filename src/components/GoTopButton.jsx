@@ -17,11 +17,10 @@ const GoTopButton = () => {
     };
 
     return (
-        <a 
-            href="#header" 
-            id="goTop" 
-            className={visible ? 'show' : ''} // Agregar la clase 'show' si visible es true
-            onClick={scrollToTop}
+        <a
+            href="#header"
+            id="goTop"
+            className={visible ? 'show' : ''}
         >
             <i className="fas fa-arrow-up"></i>
         </a>

@@ -1,4 +1,3 @@
-// NavBlur.jsx
 import React, { useEffect } from 'react';
 
 const NavBlur = () => {
@@ -12,7 +11,7 @@ const NavBlur = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    return null; // Este componente no renderiza nada
+    return null;
 };
 
 export default NavBlur;
