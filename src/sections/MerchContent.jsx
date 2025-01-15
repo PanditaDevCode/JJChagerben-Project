@@ -6,7 +6,7 @@ import TimeForPlan from "../assets/images/its-time-for-plan.webp";
 const MerchContent = () => {
     const Title1 = 'Bitcoin Save My Life';
     const Title2 = "It's Time For Plan";
-    const Price = 'Precios';
+    const Price = 'Precio';
     const PriceH3 = '30$';
     const Sizes = 'Tallas';
     const Link = 'https://api.whatsapp.com /send?phone=593999864446&text=La%20quiero%20AHORA!%2C%20la%20camisa%20Inconfiscable!';

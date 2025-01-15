@@ -2,15 +2,27 @@ import React from "react";
 
 const SocialContent = ({ title, socialItems }) => {
     return (
-        <section id="redes">
-            <div className="redes-background">
-                <main className="redes container">
-                    <h2>{title}</h2>
-                    <div className="redes-content">
+        <section id="redes" className="bg-[#12121c] mt-[-50px] relative">
+            <div className="redes-background bg-BGRedes bg-cover bg-no-repeat">
+                <main className="redes container pt-[30px] pb-[200px] text-center mt-[20px]">
+                    <h2 className="font-extrabold p-[10px] z-[9999] mt-[150px] mb-[50px] rounded-[5px] relative hover:scale-[1.02] cursor-pointer hover:text-[#dadada]">
+                        {title}
+                    </h2>
+                    <div className="redes-content grid grid-cols-3 gap-[30px] mb-[-50px] mt-[20px] z-[9999]">
                         {socialItems.map((item) => (
-                            <a key={item.id} href={item.link} className={item.className} target="_blank" rel="noopener noreferrer">
-                                <div className={item.divClassName}>
-                                    <h3>{item.title}</h3>
+                            <a
+                                key={item.id}
+                                href={item.link}
+                                className={`redes-sociales relative rounded-[15px] hover:scale-105 z-[9999] transition-transform duration-500`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <div
+                                    className={`${item.divClassName} rounded-[15px] bg-center bg-cover h-full w-full p-[35px] flex flex-col justify-center items-center z-[9999] relative`}
+                                >
+                                    <h3 className="mt-[10px] relative z-[9999] text-white mb-[15px] font-bold">
+                                        {item.title}
+                                    </h3>
                                 </div>
                             </a>
                         ))}
@@ -24,7 +36,7 @@ const SocialContent = ({ title, socialItems }) => {
 const SocialItems = () => {
     const title = 'Redes Oficiales';
     const socialItems = [
-        { id: 1, title: 'TikTok', link: 'https://www.tiktok.com/@jjchagerben753', className: 'redes-sociales', divClassName: 'tiktok' },
+        { id: 1, title: 'TikTok', link: 'https://www.tiktok.com/@jjchagerben753', className: 'redes-sociales bg-BGTiktok ', divClassName: 'tiktok' },
         { id: 2, title: 'WhatsApp', link: 'https://api.whatsapp.com/send/?phone=593998177135&text=Información+sobre+la+MENTORIA+PREMIUM', className: 'redes-sociales', divClassName: 'whatsapp' },
         { id: 3, title: 'Telegram', link: 'https://t.me/jjchagerben357', className: 'redes-sociales', divClassName: 'telegram' },
         { id: 4, title: 'Instagram', link: 'https://www.instagram.com/jjchagerben', className: 'redes-sociales', divClassName: 'instagram' },

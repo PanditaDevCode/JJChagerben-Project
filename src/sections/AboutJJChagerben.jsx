@@ -20,7 +20,7 @@ const AboutItems = ({ ImageSrc, VideoSrc, Title }) => {
                 </div>
                 <a
                     href="#redes"
-                    className="btn-1 bg-[#12121cd2] text-[#fdfeff] pt-[11px] pb-[11px] pl-[35px] pr-[35px] z-10 font-extrabold rounded-[5px] mt-[15px] inline-block transition-transform duration-300 hover:scale-110"
+                    className="btn-1 bg-[#12121cd2] text-[#fdfeff] pt-[11px] pb-[11px] pl-[35px] pr-[35px] z-10 font-extrabold rounded-[5px] mt-[15px] inline-block transition-transform duration-300"
                 >Redes Sociales</a>
             </div>
             <div className="about-me-video">

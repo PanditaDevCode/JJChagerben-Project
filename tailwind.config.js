@@ -8,6 +8,7 @@ module.exports = {
 
       backgroundImage: {
         'BGHeader': "url('/src/assets/images/background.webp')",
+        'BGRedes': "url('/src/assets/images/background-redes.webp')",
       },
 
       spacing: {
@@ -16,9 +17,11 @@ module.exports = {
 
       zIndex: {
         '2': '2',
-        '10000': '10000',
+        '90': '90',
         '999': '999',
         '1000': '1000',
+        '9999': '9999',
+        '10000': '10000',
       },
 
       fontFamily: {
