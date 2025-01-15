@@ -17,7 +17,6 @@ const LivesItems = ({ TitleH1, TitleH2, Link1, Link2, Link3, ImageSrc }) => {
                         <div className="btn-container flex flex-wrap">
                             <a href={Link1} target="_blank" rel="noopener noreferrer" className="btn-1 bg-[#12121cd2] text-[#fdfeff] pt-[11px] pb-[11px] pl-[35px] pr-[35px] z-2 font-extrabold rounded-[5px] mt-0 mb-0 ml-[15px] mr-[15px]">YouTube</a>
                             <a href={Link2} target="_blank" rel="noopener noreferrer" className="btn-1 bg-[#12121cd2] text-[#fdfeff] pt-[11px] pb-[11px] pl-[35px] pr-[35px] z-2 font-extrabold rounded-[5px] mt-0 mb-0 ml-[15px] mr-[15px]">Twitch</a>
-
                             <a href={Link3} target="_blank" rel="noopener noreferrer" className="btn-1 bg-[#12121cd2] text-[#fdfeff] pt-[11px] pb-[11px] pl-[35px] pr-[35px] z-2 font-extrabold rounded-[5px] mt-0 mb-0 ml-[15px] mr-[15px]">TikTok</a>
                         </div>
                     </div>

@@ -464,3 +464,430 @@ p {
         0 0 25px rgba(102, 102, 102, 0.4),
         0 0 30px rgba(94, 94, 94, 0.4);
 }
+
+.work-with-me-img img {
+    box-shadow:
+        0 0 30px rgba(190, 190, 190, 0.8),
+        0 0 40px rgba(131, 131, 131, 0.6),
+        0 0 50px rgba(102, 102, 102, 0.4),
+        0 0 60px rgba(94, 94, 94, 0.4);
+    animation: border-img 1.5s infinite alternate;
+}
+
+.work-with-me-txt {
+    text-shadow:
+        0 0 5px rgba(190, 190, 190, 0.8),
+        0 0 10px rgba(131, 131, 131, 0.6),
+        0 0 15px rgba(102, 102, 102, 0.4),
+        0 0 20px rgba(94, 94, 94, 0.4);
+    margin: 0;
+    margin-left: 5em;
+    margin-top: 10px;
+}
+
+.work-with-me span {
+    text-shadow:
+        0 0 5px rgb(190, 190, 190),
+        0 0 10px rgb(131, 131, 131),
+        0 0 15px rgb(102, 102, 102),
+        0 0 20px rgb(94, 94, 94);
+    color: #000;
+    font-weight: 700;
+}
+
+#redes::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.856);
+}
+
+.redes-sociales {
+    position: relative;
+    box-shadow:
+        0 0 10px rgba(190, 190, 190, 0.8),
+        0 0 20px rgba(131, 131, 131, 0.6),
+        0 0 30px rgba(102, 102, 102, 0.4),
+        0 0 40px rgba(94, 94, 94, 0.4);
+    border-radius: 15px;
+    animation: border-redes 1.5s infinite alternate;
+}
+
+.redes h2 {
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.795),
+        0 0 20px rgba(204, 204, 204, 0.685),
+        0 0 30px rgba(173, 173, 173, 0.671),
+        0 0 40px rgba(117, 117, 117, 0.562);
+    background: linear-gradient(90deg,
+            rgba(84, 105, 210, 1) 0%,
+            rgba(35, 43, 88, 1) 68%);
+    box-shadow:
+        0 0 30px rgba(190, 190, 190, 0.8),
+        0 0 40px rgba(131, 131, 131, 0.6),
+        0 0 50px rgba(102, 102, 102, 0.4),
+        0 0 60px rgba(94, 94, 94, 0.4);
+    animation: border-redes 1.5s infinite alternate;
+    transition: all .5s;
+}
+
+.redes h2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.747);
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.redes h3 {
+    text-shadow:
+        0 0 10px rgb(255, 255, 255),
+        0 0 20px rgb(204, 204, 204),
+        0 0 30px rgb(173, 173, 173),
+        0 0 40px rgb(117, 117, 117);
+}
+
+.redes-sociales:hover h3 {
+    color: #000000;
+    transition: color 0.3s ease;
+    font-weight: 800;
+}
+
+@keyframes border-redes {
+    0% {
+        box-shadow:
+            0 0 10px rgb(131, 131, 131),
+            0 0 20px rgba(102, 102, 102, 0.61),
+            0 0 30px rgb(94, 94, 94);
+    }
+
+    50% {
+        box-shadow:
+            0 0 20px rgb(131, 131, 131),
+            0 0 30px rgba(102, 102, 102, 0.61),
+            0 0 50px rgb(94, 94, 94);
+    }
+
+    100% {
+        box-shadow:
+            0 0 10px rgb(131, 131, 131),
+            0 0 20px rgba(102, 102, 102, 0.61),
+            0 0 30px rgb(94, 94, 94);
+    }
+}
+
+.tiktok {
+    background-image: url(./assets/images/tiktok.webp);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.tiktok::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.603);
+    z-index: 1;
+    border-radius: 15px;
+    backdrop-filter: blur(0);
+    transition: backdrop-filter 0.5s ease, opacity 0.5s ease;
+}
+
+.tiktok:hover::before {
+    backdrop-filter: blur(5px);
+    opacity: 1;
+}
+
+.whatsapp {
+    background-image: url(./assets/images/whatsapp.webp);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.603);
+    z-index: 1;
+    border-radius: 15px;
+    backdrop-filter: blur(0);
+    transition: backdrop-filter 0.5s ease, opacity 0.5s ease;
+}
+
+.whatsapp:hover::before {
+    backdrop-filter: blur(5px);
+    opacity: 1;
+}
+
+.telegram {
+    background-image: url(./assets/images/telegram.webp);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.telegram::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.603);
+    z-index: 1;
+    border-radius: 15px;
+    backdrop-filter: blur(0);
+    transition: backdrop-filter 0.5s ease, opacity 0.5s ease;
+}
+
+.telegram:hover::before {
+    backdrop-filter: blur(5px);
+    opacity: 1;
+}
+
+.instagram {
+    background-image: url(./assets/images/instagram.webp);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.instagram::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.603);
+    z-index: 1;
+    border-radius: 15px;
+    backdrop-filter: blur(0);
+    transition: backdrop-filter 0.5s ease, opacity 0.5s ease;
+}
+
+.instagram:hover::before {
+    backdrop-filter: blur(5px);
+    opacity: 1;
+}
+
+.facebook {
+    background-image: url(./assets/images/facebook.webp);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.facebook:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.603);
+    z-index: 1;
+    border-radius: 15px;
+    backdrop-filter: blur(0);
+    transition: backdrop-filter 0.5s ease, opacity 0.5s ease;
+}
+
+.facebook:hover::before {
+    backdrop-filter: blur(5px);
+    opacity: 1;
+}
+
+.x {
+    background-image: url(./assets/images/x.webp);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.x::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.603);
+    z-index: 1;
+    border-radius: 15px;
+    backdrop-filter: blur(0);
+    transition: backdrop-filter 0.5s ease, opacity 0.5s ease;
+}
+
+.x:hover::before {
+    backdrop-filter: blur(5px);
+    opacity: 1;
+}
+
+.merch:hover {
+    box-shadow: 0 1px 20px #969696;
+    animation: border-price 1.5s infinite alternate;
+    transform: scale(1.05);
+}
+
+.merch::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #3a3a3a;
+    clip-path: circle(150px at 80% 20%);
+    transform: .5s ease-in-out;
+    transition: all .5s;
+    z-index: 1;
+}
+
+.merch:hover::before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+.merch:after {
+    content: "BTC";
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(225, 225, 225, 0.04);
+}
+
+.merch .merch-img {
+    transform: translateY(-50%);
+    transition: .5s;
+}
+
+.merch:hover .merch-img {
+    top: 0%;
+    transform: translateY(-25%);
+}
+
+.merch .merch-img img {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 27%;
+    left: 15%;
+    transform: translateY(-50%, -50%) rotate(20deg);
+    width: 240px;
+    animation: merch-neon 3s infinite;
+}
+
+@keyframes merch-neon {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 5px rgba(131, 131, 131, )) drop-shadow(0 0 10px rgba(102, 102, 102, 0.61)) drop-shadow(0 0 15px rgba(94, 94, 94));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 10px rgba(131, 131, 131)) drop-shadow(0 0 20px rgba(102, 102, 102, 0.61)) drop-shadow(0 0 10px rgba(94, 94, 94));
+    }
+}
+
+.merch .merch-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 90;
+}
+
+.merch:hover .merch-content {
+    height: 240px;
+}
+
+.merch-content .info-merch {
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.merch:hover .merch-content .info-merch {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .5s;
+}
+
+.merch-content h2 {
+    text-shadow:
+        0 0 10px rgb(190, 190, 190),
+        0 0 15px rgb(131, 131, 131),
+        0 0 20px rgba(102, 102, 102, 0.61),
+        0 0 25px rgb(94, 94, 94);
+    animation: border-text 1.5s infinite alternate;
+}
+
+@keyframes border-text {
+    0% {
+        text-shadow:
+            0 0 10px rgb(131, 131, 131),
+            0 0 20px rgb(102, 102, 102),
+            0 0 40px rgb(94, 94, 94);
+    }
+
+    50% {
+        text-shadow:
+            0 0 20px rgb(131, 131, 131),
+            0 0 30px rgb(102, 102, 102),
+            0 0 50px rgb(94, 94, 94);
+    }
+
+    100% {
+        text-shadow:
+            0 0 10px rgb(131, 131, 131),
+            0 0 20px rgb(102, 102, 102),
+            0 0 40px rgb(94, 94, 94);
+    }
+}
+
+.merch-content .size {
+    transition: .5s;
+}
+
+.merch:hover .merch-content .size {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .5s;
+}
+
+.size h3 {
+    text-shadow:
+        0 0 10px rgb(190, 190, 190),
+        0 0 15px rgb(131, 131, 131),
+        0 0 20px rgba(102, 102, 102, 0.61),
+        0 0 25px rgb(94, 94, 94);
+}
+
+.size span {
+    text-shadow:
+        0 0 10px rgb(190, 190, 190),
+        0 0 15px rgb(131, 131, 131),
+        0 0 20px rgba(102, 102, 102, 0.61),
+        0 0 25px rgb(94, 94, 94);
+    box-shadow:
+        0 0 10px rgb(190, 190, 190),
+        0 0 15px rgb(131, 131, 131),
+        0 0 20px rgba(102, 102, 102, 0.61),
+        0 0 25px rgb(94, 94, 94);
+}
+
+.info-merch span {
+    text-shadow:
+        0 0 10px rgb(190, 190, 190),
+        0 0 15px rgb(131, 131, 131),
+        0 0 20px rgba(102, 102, 102, 0.61),
+        0 0 25px rgb(94, 94, 94);
+}
