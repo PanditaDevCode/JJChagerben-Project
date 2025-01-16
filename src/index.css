@@ -132,25 +132,15 @@ p {
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
-.menu.blur {
+.blur {
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(5px);
 }
 
-.logo {
-    text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(207, 207, 207), 0 0 15px rgb(163, 163, 163), 0 0 20px rgb(131, 131, 131);
-    transition: transform 0.5s ease, color 0.5s ease;
-}
-
-.logo:hover {
-    transform: scale(1.05);
-    color: #131313;
-}
-
 .menu-icon span {
     box-shadow: 0 0 10px rgba(190, 190, 190, 0.8), 0 0 15px rgba(131, 131, 131, 0.6), 0 0 20px rgba(102, 102, 102, 0.4), 0 0 30px rgba(94, 94, 94, 0.4);
-    border: 2px solid rgba(255, 255, 255, 0.7);
     transition: all 0.4s ease;
+    border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
 #menu-toggle:checked+.menu-label .menu-icon span:nth-child(1) {
@@ -170,41 +160,6 @@ p {
 #menu-toggle:checked~.navbar {
     display: flex;
     flex-direction: column;
-}
-
-.navbar ul {
-    text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(207, 207, 207), 0 0 15px rgb(163, 163, 163), 0 0 20px rgb(131, 131, 131);
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-size: 17px;
-    font-weight: 700;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-}
-
-.navbar ul li {
-    text-align: center;
-    width: 100%;
-    padding: 15px 0;
-    display: block;
-}
-
-.navbar ul li a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px 5px;
-    transition: transform 0.5s ease, color 0.5s ease;
-}
-
-.navbar ul li a:hover {
-    color: #000000;
-    transform: scale(1.05);
 }
 
 @media (min-width: 1025px) {
@@ -890,4 +845,150 @@ p {
         0 0 15px rgb(131, 131, 131),
         0 0 20px rgba(102, 102, 102, 0.61),
         0 0 25px rgb(94, 94, 94);
+}
+
+.price h2 {
+    text-shadow:
+        0 0 5px rgb(255, 255, 255),
+        0 0 10px rgb(207, 207, 207),
+        0 0 15px rgb(163, 163, 163),
+        0 0 20px rgb(131, 131, 131);
+}
+
+.price-1 h3 {
+    text-shadow:
+        0 0 5px rgb(175, 175, 175),
+        0 0 10px rgb(138, 138, 138),
+        0 0 15px rgb(95, 95, 95),
+        0 0 20px rgb(71, 71, 71);
+}
+
+.price-1 li {
+    text-shadow:
+        0 0 5px rgb(255, 255, 255),
+        0 0 10px rgb(207, 207, 207),
+        0 0 15px rgb(163, 163, 163),
+        0 0 20px rgb(131, 131, 131);
+}
+
+.price span {
+    text-shadow:
+        0 0 5px rgb(255, 255, 255),
+        0 0 10px rgb(207, 207, 207),
+        0 0 15px rgb(163, 163, 163),
+        0 0 20px rgb(131, 131, 131);
+}
+
+.price strong {
+    text-shadow:
+        0 0 5px rgb(255, 255, 255),
+        0 0 10px rgb(207, 207, 207),
+        0 0 15px rgb(163, 163, 163),
+        0 0 20px rgb(131, 131, 131);
+    color: #000;
+    font-weight: 800;
+}
+
+.price-1 {
+    flex-basis: calc(33% - 20px);
+    box-shadow:
+        0 0 30px rgba(190, 190, 190, 0.8),
+        0 0 40px rgba(131, 131, 131, 0.6),
+        0 0 50px rgba(102, 102, 102, 0.4),
+        0 0 60px rgba(94, 94, 94, 0.4);
+    animation: border-img 1.5s infinite alternate;
+    transition: all .3s;
+}
+
+.price-1:hover {
+    background: linear-gradient(90deg,
+            rgb(32, 32, 32) 0%,
+            rgb(15, 15, 15) 68%);
+}
+.bg-pack li {
+    color: #000;
+    font-weight: 700;
+}
+
+.bg-pack li {
+    color: #000;
+    font-weight: 700;
+}
+
+.pack {
+    text-shadow:
+        0 0 5px rgb(255, 255, 255),
+        0 0 10px rgb(207, 207, 207),
+        0 0 15px rgb(163, 163, 163),
+        0 0 20px rgb(131, 131, 131);
+}
+
+.bg-pack {
+    background: linear-gradient(90deg,
+            rgb(92, 91, 91) 0%,
+            rgb(49, 49, 49) 100%);
+}
+
+#goTop {
+    box-shadow:
+        0 0 10px rgb(190, 190, 190),
+        0 0 15px rgb(131, 131, 131),
+        0 0 20px rgba(102, 102, 102, 0.61),
+        0 0 25px rgb(94, 94, 94);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.63);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease,  all .5s ease;
+    z-index: 10000;
+}
+
+#goTop:hover {
+    transform: scale(1.05);
+}
+
+#goTop i {
+    text-shadow:
+        0 0 10px rgb(190, 190, 190),
+        0 0 15px rgb(131, 131, 131),
+        0 0 20px rgba(102, 102, 102, 0.61),
+        0 0 25px rgb(94, 94, 94);
+    color: white;
+}
+
+#goTop.show {
+    opacity: 1;
+    visibility: visible;
+    animation: bounceIn 0.5s ease, border-img 1.5s infinite alternate;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    60% {
+        transform: translateY(-10%);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateY(5%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }

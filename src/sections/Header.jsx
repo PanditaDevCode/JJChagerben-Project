@@ -50,32 +50,46 @@ const Header = () => {
     }, []);
 
     return (
-        <header id="header" className="header  shadow-BX1 bg-BGHeader bg-no-repeat bg-cover flex items-center min-h-[120vh] p-[200px 0] relative w-full">
-            <section className="menu  fixed top-0 left-0 w-full h-[60px] z-50 flex items-center justify-between px-[20px] transition-all duration-300" id="menu">
-                <div className="menu-background absolute inset-0 transition-all duration-300"></div>
-                <a href="#about-me" className="logo text-white font-extrabold whitespace-nowrap z-10 relative ml-[10px]">JJ Chagerben</a>
+        <header id="header" className="header shadow-BX1 bg-BGHeader bg-no-repeat bg-cover flex items-center min-h-[120vh] pt-[200px] pb-[200px] pl-0 pr-0 relative w-full sm:pt-1 sm:pb-10 ">
+            <section className="menu fixed top-0 left-0 w-full h-[60px] z-10000 flex items-center justify-between pt-0 pb-0 pl-[20px] pr-[20px] sm:w-full sm:mb-0" id="menu">
+                <div className="menu-background absolute inset-0 transition-all duration-300 bg-cover bg-center"></div>
+                <a href="#about-me" className="logo text-white font-extrabold whitespace-nowrap z-10000 relative ml-[10px] hover:scale-[1.05] hover:text-[#131313]">
+                    JJ Chagerben
+                </a>
                 <input type="checkbox" id="menu-toggle" className="menu-toggle hidden" />
                 <label htmlFor="menu-toggle" className="menu-label z-10 relative">
-                    <div className="menu-icon block cursor-pointer">
-                        <span class="rounded-[5px] block w-[30px] h-[4px] mt-[6px] mb-[6px] bg-white"></span>
-                        <span class="rounded-[5px] block w-[30px] h-[4px] mt-[6px] mb-[6px] bg-white"></span>
-                        <span class="rounded-[5px] block w-[30px] h-[4px] mt-[6px] mb-[6px] bg-white"></span>
+                    <div className="menu-icon">
+                        <span className="rounded-[5px] block w-[30px] h-[4px] mt-[6px] mb-[6px] ml-auto mr-auto relative bg-white"></span>
+                        <span className="rounded-[5px] block w-[30px] h-[4px] mt-[6px] mb-[6px] ml-auto mr-auto relative bg-white"></span>
+                        <span className="rounded-[5px] block w-[30px] h-[4px] mt-[6px] mb-[6px] ml-auto mr-auto relative bg-white"></span>
                     </div>
                 </label>
-                <nav className="navbar absolute top-full left-[-88px] right-0 w-full hidden z-10">
-                    <ul className='flex space-x-1'>
-                        <li><a href="#tradingview-chart" class="text-white">Grafico</a></li>
-                        <li><a href="#about-me" class="text-white">Acerca de Mi</a></li>
-                        <li><a href="#lives" class="text-white">Directos</a></li>
-                        <li><a href="#work-with-me" class="text-white">Trabaja Conmigo</a></li>
-                        <li><a href="#redes" class="text-white">Redes Sociales</a></li>
-                        <li><a href="#merch" class="text-white">Merch</a></li>
+                <nav className="navbar absolute top-full left-[-88px] right-0 w-full hidden z-9999 p-0 m-0 sm:mt-0 sm:absolute sm:left-0 sm:w-full sm:bg-RGBA1 sm:backdrop-blur-[5px]">
+                    <ul className="flex flex-col space-y-1 z-10000">
+                        <li className="w-full">
+                            <a href="#tradingview-chart" className="block w-full px-4 py-2 text-white hover:bg-gray-800" onClick={() => closeMenu()}>Gráfico</a>
+                        </li>
+                        <li className="w-full">
+                            <a href="#about-me" className="block w-full px-4 py-2 text-white hover:bg-gray-800" onClick={() => closeMenu()}>Acerca de Mi</a>
+                        </li>
+                        <li className="w-full">
+                            <a href="#lives" className="block w-full px-4 py-2 text-white hover:bg-gray-800" onClick={() => closeMenu()}>Directos</a>
+                        </li>
+                        <li className="w-full">
+                            <a href="#work-with-me" className="block w-full px-4 py-2 text-white hover:bg-gray-800" onClick={() => closeMenu()}>Trabaja Conmigo</a>
+                        </li>
+                        <li className="w-full">
+                            <a href="#redes" className="block w-full px-4 py-2 text-white hover:bg-gray-800" onClick={() => closeMenu()}>Redes Sociales</a>
+                        </li>
+                        <li className="w-full">
+                            <a href="#merch" className="block w-full px-4 py-2 text-white hover:bg-gray-800" onClick={() => closeMenu()}>Merch</a>
+                        </li>
                     </ul>
                 </nav>
             </section>
 
-            <section className="time-container absolute z-2">
-                <div className="time flex gap-[30px] justify-center ml-[50px]">
+            <section className="time-container absolute z-10 sm:p-[10px] sm:align-center sm:flex sm:items-center sm:content-center sm:z-9999 ">
+                <div className="time flex gap-[30px] justify-center ml-[50px] sm:items-center sm:content-center sm:text-center sm:grid sm:grid-cols-2 sm:ml-[-10em] sm:mt-[2em] ">
                     <CountdownCircle
                         id="days"
                         label="Días"
@@ -107,13 +121,13 @@ const Header = () => {
                 </div>
             </section>
 
-            <section className="header-content container">
-                <article className="header-txt text-center p-[0 150px] ml-[50px]">
-                    <h1 class="relative z-2 text-6xl/[55px] leading-[1] text-[#FFFFFF] mt-[200px] mb-[25px]">
+            <section className="header-content container sm:align-center sm:items-center ">
+                <article className="header-txt text-center p-[0 150px] ml-[50px] sm:p-0 align-center sm:items-center sm:text-center sm:ml-[-25] sm:mt-[30em] ">
+                    <h1 class="relative z-2 text-6xl/[55px] leading-[1] text-[#FFFFFF] mt-[200px] mb-[25px] sm:text-[50px] sm:p-[10px] sm:mr-[0.8em] ">
                         Bitcoin es <span class="text-slate-900 font-medium">SACARSE</span> la <span class="text-slate-900 font-medium">LOTERIA</span>
                         <br />en cámara <span class="text-slate-900 font-medium">Lenta.</span>
                     </h1>
-                    <p class="relative z-2">
+                    <p class="relative z-2 sm:mr-[2em] p-[10px] ">
                         No importa el día ni el momento en que lo leas, BITCOIN siempre será barato sin importar en qué
                         precio esté.<br />
                         <strong>BITCOIN será lo que pondrá el PAN en tu MESA.</strong>
