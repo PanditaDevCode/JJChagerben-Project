@@ -6,6 +6,12 @@ module.exports = {
   theme: {
     extend: {
 
+      screens: {
+        'xxs': '320px',
+        'xs': '420px',
+        's': '540px',
+      },
+
       backgroundImage: {
         'BGHeader': "url('/src/assets/images/background.webp')",
         'BGRedes': "url('/src/assets/images/background-redes.webp')",

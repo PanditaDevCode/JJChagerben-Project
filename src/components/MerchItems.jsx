@@ -12,13 +12,16 @@ const MerchItems = ({ ImageSrc1, ImageSrc2, Title1, Title2, PriceH3, Sizes, Pric
 
     return (
         <section className="merch-btc" id="merch">
-            <div className="merch-container bg-[#1b1b20] pt-[85px] pb-[85px] pl-0 pr-0 items-center justify-center flex relative gap-[100px] ">
-                <div className="merch relative w-[350px] h-[500px] bg-[#232323] overflow-hidden rounded-[20px] ">
-                    <div className="merch-img absolute top-[50%] z-1000 w-full h-full  ">
-                        <img src={ImageSrc1} alt={Title1} className="absolute items-center justify-center top-[27%] left-[15%] w-[240px] " />
+            <div className="merch-container bg-[#1b1b20] pt-[85px] pb-[85px] pl-0 pr-0 items-center justify-center flex relative gap-[100px] 
+                            xxs:items-center xxs:content-center xxs:text-center xxs:flex-col
+                            md:flex md:flex-row">
+                <div className="merch relative w-[350px] h-[500px] bg-[#232323] overflow-hidden rounded-[20px]
+                                xxs:content-center xxs:items-center xxs:text-center xxs:mt-[-20px] xxs:mb-[-30px] xxs:w-[18em]">
+                    <div className="merch-img absolute top-[50%] z-1000 w-full h-full ">
+                        <img src={ImageSrc1} alt={Title1} className="absolute items-center justify-center top-[27%] left-[15%] w-[240px] xxs:ml-[-1.5em] " />
                     </div>
                     <div className="merch-content absolute bottom-0 w-full h-[100px] text-center z-90 ">
-                        <h2 className="relative font-extrabold tracking-[1px] text-[#111111] text-[30px] ">{Title1}</h2>
+                        <h2 className="relative font-extrabold tracking-[1px] text-[#111111] text-[30px] xxs:text-[25px] ">{Title1}</h2>
                         <div className="size flex justify-center align-center pt-[8px] pb-[8px] pl-[20px] pr-[20px] opacity-0 invisible ">
                             <h3 className="text-[#0c0c0c] font-extrabold">{Sizes}</h3>
                             <ul className="size-list list-none p-0 m-0 ml-[10px] flex ">
@@ -39,12 +42,12 @@ const MerchItems = ({ ImageSrc1, ImageSrc2, Title1, Title2, PriceH3, Sizes, Pric
                     </div>
                 </div>
 
-                <div className="merch relative w-[350px] h-[500px] bg-[#232323] overflow-hidden rounded-[20px] ">
+                <div className="merch relative w-[350px] h-[500px] bg-[#232323] overflow-hidden rounded-[20px] xxs:content-center xxs:items-center xxs:text-center xxs:mt-[-20px] xxs:mb-[-30px] xxs:w-[18em] ">
                     <div className="merch-img absolute top-[50%] z-1000 w-full h-full  ">
-                        <img src={ImageSrc2} alt={Title2} className="absolute items-center justify-center top-[27%] left-[15%] w-[240px] " />
+                        <img src={ImageSrc2} alt={Title2} className="absolute items-center justify-center top-[27%] left-[15%] w-[240px] xxs:ml-[-1.3em] " />
                     </div>
                     <div className="merch-content absolute bottom-0 w-full h-[100px] text-center z-90 ">
-                        <h2 className="relative font-extrabold tracking-[1px] text-[#111111] text-[30px] ">{Title2}</h2>
+                        <h2 className="relative font-extrabold tracking-[1px] text-[#111111] text-[30px] xxs:text-[25px] ">{Title2}</h2>
                         <div className="size flex justify-center align-center pt-[8px] pb-[8px] pl-[20px] pr-[20px] opacity-0 invisible ">
                             <h3 className="text-[#0c0c0c] font-extrabold">{Sizes}</h3>
                             <ul className="size-list list-none p-0 m-0 ml-[10px] flex ">

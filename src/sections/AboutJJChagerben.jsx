@@ -4,12 +4,16 @@ import ChagerbenImg from '../assets/images/jjchagerben.webp';
 
 const AboutItems = ({ ImageSrc, VideoSrc, Title }) => {
     return (
-        <section className="about-me container pt-[150px] pb-[150px] flex items-center relative sm:pt-[30px] sm:pb-[120px] sm:pr-[30px] sm:pl-[30px] sm:flex-col sm:content-center " id="about-me">
-            <div className="about-me-img basis-[45%] mt-0 mb-0 mr-0 ml-[-7em] flex justify-center sm:mt-[-3em] sm:ml-[1em] sm:mb-[30px] sm:pl-[30px] sm:pr-[30px]">
-                <img src={ImageSrc} alt={`Imagen de ${Title}`} className="w-[350px] h-[350px] rounded-full object-cover" />
+        <section className="about-me container pt-[150px] pb-[150px] flex items-center relative 
+                            xxs:p-[30px] xxs:pb-[60px] xxs:mt-[-6em] xxs:flex-col xxs:content-center" id="about-me">
+            <div className="about-me-img basis-[45%] mt-0 mb-0 mr-0 ml-[-7em] flex justify-center 
+                            xxs:m-[30px] xxs:w-[18em] ">
+                <img src={ImageSrc} alt={`Imagen de ${Title}`} className="w-[350px] h-[350px] rounded-full object-cover xxs:h-[18em] " />
             </div>
-            <div className="about-me1 mr-[130px] sm:text-center sm:content-center sm:items-center sm:ml-[130px] sm:m-0 ">
-                <div className="about-me-txt whitespace-nowrap basis-[-50%] text-[20px] sm:text-center sm:items-center sm:content-center sm:p-5 sm:mr-[6em] ">
+            <div className="about-me1 mr-[130px]
+                            xxs:text-center xxs:content-center xxs:items-center xxs:m-0 ">
+                <div className="about-me-txt whitespace-nowrap basis-[-50%] text-[20px] 
+                                xxs:text-center xxs:text-[18px] xxs:items-center xxs:content-center">
                     <span className="intro text-black font-bold">Acerca de mí</span>
                     <h2><span className="text-black font-bold">{Title}</span></h2>
                     <ul className="mb-[20px]">
@@ -27,7 +31,8 @@ const AboutItems = ({ ImageSrc, VideoSrc, Title }) => {
                 <video
                     controls
                     src={VideoSrc}
-                    className="w-[400px] h-[500px] object-cover justify-right mr-[-50px] mt-[-70px] rounded-[5px] sm:ml-3"
+                    className="w-[400px] h-[500px] object-cover justify-right mr-[-50px] mt-[-70px] rounded-[5px]
+                                xxs:mt-10 xxs:ml-0.5"
                 ></video>
             </div>
         </section>

@@ -6,12 +6,18 @@ const PriceMentoring = ({ services }) => {
         <section className="price container pt-[130px] pb-[100px] pl-0 pr-0 text-center" id="precios">
             <div className="price-text mt-[-60px]">
                 <span className='text-black font-extrabold text-[20px] '>Rango de Servicios</span>
-                <h2 className='text-[50px] mb-[100px] text-[#141414] font-bold'>Lista de Precios</h2>
+                <h2 className='text-[50px] mb-[100px] text-[#141414] font-bold '>Lista de Precios</h2>
             </div>
 
-            <div className="price-content flex justify-between mt-[45px]">
+            <div className="price-content flex justify-between mt-[45px]
+                            xxs:flex-col xxs:w-[18em] xxs:gap-10
+                            xs:ml-[3em] xs:mt-[-5em]
+                            s:ml-[7em]
+                            sm:ml-[10em]
+                            md:ml-[14em]">
                 {services.map((service, index) => (
-                    <div className={`price-1 ${index % 2 === 1 ? 'bg-pack mt-[-50px]' : ''} p-[40px] rounded-[15px] bg-[#222222] hover:cursor-pointer hover:scale-[1.03] `} key={service.title}>
+                    <div className={`price-1 ${index % 2 === 1 ? 'bg-pack mt-[-50px]' : ''} p-[40px] rounded-[15px] bg-[#222222] hover:cursor-pointer hover:scale-[1.03]
+                                    xxs:mt-1 xxs:mr-[-1em] xxs:ml-[1em] `} key={service.title}>
                         <a href={service.link} target="_blank" rel="noopener noreferrer">
                             <p className="pack text-black font-semibold mb-[10px] text-[30px] ">{service.title}</p>
                             <span className="paquetes text-black font-extrabold text-[20px]"><strong>{service.description}</strong></span>
