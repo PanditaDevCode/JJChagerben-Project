@@ -6,11 +6,15 @@ const CryptoItem = ({ ImageSrc, Title, }) => {
         <section className="crypto container pt-[150px] pb-[70px] pl-0 pr-0 items-center bg-[#1b1b20] 
                             xxs:pt-[20px] xxs:pb-[5px] xxs:flex xxs:pl-[30px] xxs:[30px] xxs:flex-col xxs:content-center
                             xl:flex xl:flex-row-reverse xl:pb-[1em] xl:pt-[5em]">
-            <div className="crypto-img xxs:ml-[-5px] xxs:mt-[-2em] xxs:order-1
+            <div className="crypto-img xxs:ml-[-5px] xxs:mt-[-2em] xxs:order-1 xxs:mr-[25px]
+                            s:w-[80%]
+                            md:ml-[5em]
+                            x:ml-[9em]
+                            lg:ml-[28%]
                             xl:basis-[70%] xl:mt-[5em] xl:mb-0 xl:mr-[5em] xl:ml-[2em] ">
                 <img src={ImageSrc} alt={`Imagen de ${Title}`} className="w-[500px] rounded-[20px] m-0 xxs:ml-[2px] xl:h-[20em] xl:w-[40em]" />
             </div>
-            <div className="crypto-txt xxs:content-center xxs:flex-wrap xxs:items-center xxs:text-center xxs:max-w-[300px] xxs:mb-[30px]
+            <div className="crypto-txt xxs:content-center xxs:flex-wrap xxs:items-center xxs:text-center xxs:max-w-[300px] xxs:mb-[30px] xxs:mr-[30px]
                             s:w-[80%] s:max-w-[50em]
                             mx:mt-[10em] mx:mb-[3em] mx:mr-[4em] mx:w-[80%] xl:text-left ">
                 <span className="neonspan text-black font-extrabold ">Introducción a las Criptomonedas</span>

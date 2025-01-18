@@ -17,7 +17,7 @@ const PriceMentoring = ({ services }) => {
                 sm:ml-[10em]
                 md:ml-[14em]
                 x:ml-[16.5em]
-                mx:flex-row mx:ml-[i4em] mx:justify-between mx:mt-[1em] mx:gap-6
+                mx:flex-row mx:ml-[4em] mx:justify-between mx:mt-[1em] mx:gap-6
                 lg:ml-[6em] lg:gap-[3em]
                 xl:ml-[-4em] ">
                 {services.map((service, index) => (

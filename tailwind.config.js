@@ -6,6 +6,11 @@ module.exports = {
   theme: {
     extend: {
 
+      safelist: [
+        "hidden", "block", "absolute", "top-full", "left-0", "text-white",
+        "backdrop-blur-[5px]", "bg-RGBA1", "menu", "navbar", "menu-icon"
+      ],
+
       screens: {
         'xxs': '320px',
         'xs': '420px',

@@ -14,16 +14,16 @@ const WorkWithMeItems = ({ ImageSrc, TitleH1, TitleH2, SpanH1, Link }) => {
                     alt="Imagen que representa trabajar conmigo"
                     className="w-[550px] h-[280px] rounded-[20px] shadow-[0_0_30px_rgba(190,190,190,0.8),0_0_40px_rgba(131,131,131,0.6),0_0_50px_rgba(102,102,102,0.4),0_0_60px_rgba(94,94,94,0.4)] animate-[border-img_1.5s_infinite_alternate]
                                 xxs:w-[50em] xxs:h-[10em] xxs:mt-5 xxs:ml-1 xs:w-[18em]
-                                s:h-[20em] s:w-[33em]
-                                md:w-[30em] md:h-[18em]"
+                                s:h-[17em] s:w-[85%] s:ml-10
+                                md:w-[30em] md:h-[18em] md:mr-10
+                                xl:w-[40em] xl:h-[20em] xl:ml-0 "
                 />
             </div>
             <div className="flex w-full">
                 <div className="work-with-me-txt flex-basis-[50%] text-[18px]
                                 xxs:items-center xxs:content-center xxs:text-center xxs:mb-[30px] xxs:mt-[-20] xxs:ml-[-2em] xxs:mr-[-2em] xxs:text-[0.9em]
                                 s:ml-1
-                                md:ml-[4em]
-                                mx:ml-[9em]
+                                md:ml-[7.5em]
                                 lg:ml-[13em]
                                 xl:ml-[50%] xl:text-left">
                     <h1>
