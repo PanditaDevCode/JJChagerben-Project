@@ -10,6 +10,8 @@ module.exports = {
         'xxs': '320px',
         'xs': '420px',
         's': '540px',
+        'x': '850px',
+        'mx': '920px',
       },
 
       backgroundImage: {

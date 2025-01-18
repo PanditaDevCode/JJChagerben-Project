@@ -3,7 +3,10 @@ import React from "react";
 const TrilemaInformation = ({ items }) => {
     return (
         <section className="information container flex justify-between pt-0 pb-0 pr-[100px] pl-[100px] gap-[10px] 
-                            xxs:mt-5 xxs:p-[30px] xxs:pb-[150px] xxs:flex-col xxs:gap-8 ">
+                            xxs:mt-5 xxs:p-[30px] xxs:pb-[150px] xxs:flex-col xxs:gap-8
+                            mx:flex mx:flex-row mx:mt-[-8em] mx:m-[-.5em] mx:pb-[1em] mx:pr-[10px] mx:pl-[10px] mx:gap-0 
+                            xl:ml-[4em] xl:mt-[-7em] xl:gap-3
+                            2xl:ml-[10%] ">
             {items.map(item => (
                 <div className="information-1 mt-0 mb-0 ml-[15px] mr-{15px} bg-[#141418] p-[15px] rounded-[15px] z-2 " key={item.id}>
                     <h3 class="text-white text-[18px]"><strong>{item.title}</strong></h3>

@@ -3,23 +3,29 @@ import WorkWithMeImg from '../assets/images/workwithme.webp';
 
 const WorkWithMeItems = ({ ImageSrc, TitleH1, TitleH2, SpanH1, Link }) => {
     return (
-        <section className="work-with-me container py-[200px] max-w-full flex items-center flex-col
-                            xxs:items-center xxs:pt-[50px] xxs:pb-[150px] xxs:p-[30px] xxs:flex-col">
+        <section id="work-with-me" className="work-with-me container py-[200px] max-w-full flex items-center flex-col
+                            xxs:items-center xxs:pt-[50px] xxs:pb-[150px] xxs:p-[30px] xxs:flex-col
+                            xl:pt-[13em] xl:pb-[15.1em] ">
             <div className="work-with-me-img flex-basis-[45%] ml-[50px] 
-                            xxs:ml-[-5px] xxs:mb-[-60px] xxs:order-1">
+                            xxs:ml-[-5px] xxs:mb-[-60px] xxs:order-1
+                            xl:mr-[60%] xl:mt-[-20em] ">
                 <img
                     src={ImageSrc}
                     alt="Imagen que representa trabajar conmigo"
                     className="w-[550px] h-[280px] rounded-[20px] shadow-[0_0_30px_rgba(190,190,190,0.8),0_0_40px_rgba(131,131,131,0.6),0_0_50px_rgba(102,102,102,0.4),0_0_60px_rgba(94,94,94,0.4)] animate-[border-img_1.5s_infinite_alternate]
                                 xxs:w-[50em] xxs:h-[10em] xxs:mt-5 xxs:ml-1 xs:w-[18em]
-                                s:h-[15em] s:w-[28em]
+                                s:h-[20em] s:w-[33em]
                                 md:w-[30em] md:h-[18em]"
                 />
             </div>
-            <div id="work-with-me" className="flex w-full">
+            <div className="flex w-full">
                 <div className="work-with-me-txt flex-basis-[50%] text-[18px]
                                 xxs:items-center xxs:content-center xxs:text-center xxs:mb-[30px] xxs:mt-[-20] xxs:ml-[-2em] xxs:mr-[-2em] xxs:text-[0.9em]
-                                md:ml-[4em]">
+                                s:ml-1
+                                md:ml-[4em]
+                                mx:ml-[9em]
+                                lg:ml-[13em]
+                                xl:ml-[50%] xl:text-left">
                     <h1>
                         <span>{TitleH1}</span>
                     </h1>
@@ -55,11 +61,11 @@ const WorkWithMeItems = ({ ImageSrc, TitleH1, TitleH2, SpanH1, Link }) => {
                 rel="noopener noreferrer"
                 className="btn-1 ml-[15em] mt-[-4em] bg-[#12121cd2] text-[#fdfeff] font-extrabold rounded-[5px] inline-block transition-transform duration-300 
                             xxs:text-center xxs:whitespace-nowrap xxs:w-auto xxs:mr-[15em] xxs:mt-0 xxs:mb-5 xxs:pl-[3em] xxs:pr-[3em] xxs:pt-[1em] xxs:pb-[1em] xxs:text-xs
-                            xs:pl-[3em] xs:pr-[3em] xs:pt-[1em] xs:pb-[1em]"
+                            xs:pl-[3em] xs:pr-[3em] xs:pt-[1em] xs:pb-[1em]
+                            xl:ml-[35%] xl:mt-[-2em]  xl:mb-[4em]  "
             >
                 Grupo de Editores
             </a>
-
         </section>
     );
 };

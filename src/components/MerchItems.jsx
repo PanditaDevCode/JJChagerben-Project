@@ -16,7 +16,7 @@ const MerchItems = ({ ImageSrc1, ImageSrc2, Title1, Title2, PriceH3, Sizes, Pric
                             xxs:items-center xxs:content-center xxs:text-center xxs:flex-col
                             md:flex md:flex-row">
                 <div className="merch relative w-[350px] h-[500px] bg-[#232323] overflow-hidden rounded-[20px]
-                                xxs:content-center xxs:items-center xxs:text-center xxs:mt-[-20px] xxs:mb-[-30px] xxs:w-[18em]">
+                                xxs:content-center xxs:items-center xxs:text-center xxs:mt-[-20px] xxs:mb-[-30px] xxs:w-[18em] xl:w-[20em]">
                     <div className="merch-img absolute top-[50%] z-1000 w-full h-full ">
                         <img src={ImageSrc1} alt={Title1} className="absolute items-center justify-center top-[27%] left-[15%] w-[240px] xxs:ml-[-1.5em] " />
                     </div>
@@ -42,7 +42,7 @@ const MerchItems = ({ ImageSrc1, ImageSrc2, Title1, Title2, PriceH3, Sizes, Pric
                     </div>
                 </div>
 
-                <div className="merch relative w-[350px] h-[500px] bg-[#232323] overflow-hidden rounded-[20px] xxs:content-center xxs:items-center xxs:text-center xxs:mt-[-20px] xxs:mb-[-30px] xxs:w-[18em] ">
+                <div className="merch relative w-[350px] h-[500px] bg-[#232323] overflow-hidden rounded-[20px] xxs:content-center xxs:items-center xxs:text-center xxs:mt-[-20px] xxs:mb-[-30px] xxs:w-[18em] xl:w-[20em]">
                     <div className="merch-img absolute top-[50%] z-1000 w-full h-full  ">
                         <img src={ImageSrc2} alt={Title2} className="absolute items-center justify-center top-[27%] left-[15%] w-[240px] xxs:ml-[-1.3em] " />
                     </div>
