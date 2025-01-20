@@ -3,7 +3,7 @@ import BtcImg from '../assets/images/btc.webp';
 
 const CryptoItem = ({ ImageSrc, Title, }) => {
     return (
-        <section className="crypto container pt-[150px] pb-[70px] pl-0 pr-0 items-center bg-[#1b1b20] 
+        <section className="crypto container pt-[150px] pb-[70px] pl-0 pr-0 items-center bg-[#1b1b20] max-w-110vh
                             xxs:pt-[20px] xxs:pb-[5px] xxs:flex xxs:pl-[30px] xxs:[30px] xxs:flex-col xxs:content-center
                             xl:flex xl:flex-row-reverse xl:pb-[1em] xl:pt-[5em]">
             <div className="crypto-img xxs:ml-[-5px] xxs:mt-[-2em] xxs:order-1 xxs:mr-[25px]

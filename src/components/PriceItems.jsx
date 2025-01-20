@@ -14,6 +14,7 @@ const PriceMentoring = ({ services }) => {
                 xxs:flex-col xxs:w-[18em] xxs:gap-10 xxs:mt-[-3em]
                 xx:ml-10
                 xs:ml-[3em] xs:mt-[-5em]
+                sx:ml-[6em]
                 s:ml-[7em]
                 sm:ml-[10em]
                 md:ml-[14em]

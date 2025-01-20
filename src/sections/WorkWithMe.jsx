@@ -8,6 +8,7 @@ const WorkWithMeItems = ({ ImageSrc, TitleH1, TitleH2, SpanH1, Link }) => {
                             xl:pt-[13em] xl:pb-[15.1em] ">
             <div className="work-with-me-img flex-basis-[45%] ml-[50px] 
                             xxs:ml-[-5px] xxs:mb-[-60px] xxs:order-1
+                            md:ml-0
                             m:ml-0
                             xl:mr-[60%] xl:mt-[-20em] ">
                 <img
@@ -26,9 +27,11 @@ const WorkWithMeItems = ({ ImageSrc, TitleH1, TitleH2, SpanH1, Link }) => {
                 <div className="work-with-me-txt flex-basis-[50%] text-[18px]
                                 xxs:items-center xxs:content-center xxs:text-center xxs:mb-[30px] xxs:mt-[-20] xxs:ml-[-2em] xxs:mr-[-2em] xxs:text-[0.9em]
                                 s:ml-1
-                                md:ml-[7.5em]
+                                md:ml-[4em]
                                 lg:ml-[13em]
                                 m:ml-[25%]
+                                x:ml-[7em]
+                                mx:ml-[9em]
                                 xl:ml-[50%] xl:text-left">
                     <h1>
                         <span>{TitleH1}</span>

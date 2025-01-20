@@ -32,13 +32,16 @@ const LivesItems = ({ TitleH1, TitleH2, Link1, Link2, Link3, ImageSrc }) => {
                 <div className="lives-img w-[80%] basis-[45%] mt-[-16em] mb-0 ml-0 mr-0 
                                 xxs:order-1 xxs:ml-[3.3em] xxs:mt-[2em] 
                                 xs:ml-[4.5em] s:ml-[3.5em]
-                                md:ml-[4em] xl:ml-[0] xl:mt-0 xl:order-2">
+                                md:ml-[4em] 
+                                mx:w-[70%]
+                                xl:ml-[0] xl:mt-0 xl:order-2">
                     <img src={ImageSrc} alt="Imagen de directos en vivo" className="w-[500px] rounded-[20px] 
                     xxs:items-center xxs:content-center xxs:w-[280px] 
                     xx:max-w-[120vw] xx:ml-[-1.5em] xx:w-[21em] xx:h-[13em] 
-                    xs:h-[15em] xs:w-[23.5em] xs:ml-[-3em]
-                    s:h-[16em] s:ml-0 s:w-[100em] sm:ml-8 sm:w-[90%] 
-                    md:w-[35em] md:h-[18em] md:ml-0 " />
+                    xs:h-[14em] xs:w-[23.5em] xs:ml-[-.5em]
+                    s:h-[16em] s:ml-0 s:w-[100%] 
+                    sm:ml-5 sm:w-[90%]
+                    md:w-[32em] md:h-[18em] md:ml-[-.5em] " />
                 </div>
             </div>
         </section>
