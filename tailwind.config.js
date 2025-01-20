@@ -13,10 +13,13 @@ module.exports = {
 
       screens: {
         'xxs': '320px',
+        'xx': '390px',
         'xs': '420px',
+        'sx': '500px',
         's': '540px',
         'x': '850px',
         'mx': '920px',
+        'm': '1200px',
       },
 
       backgroundImage: {

@@ -11,6 +11,7 @@ const CryptoItem = ({ ImageSrc, Title, }) => {
                             md:ml-[5em]
                             x:ml-[9em]
                             lg:ml-[28%]
+                            m:ml-[35%]
                             xl:basis-[70%] xl:mt-[5em] xl:mb-0 xl:mr-[5em] xl:ml-[2em] ">
                 <img src={ImageSrc} alt={`Imagen de ${Title}`} className="w-[500px] rounded-[20px] m-0 xxs:ml-[2px] xl:h-[20em] xl:w-[40em]" />
             </div>

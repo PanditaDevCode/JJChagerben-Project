@@ -22,6 +22,13 @@ const Header = () => {
         seconds: "00"
     });
 
+    const closeMenu = () => {
+        const menuToggle = document.getElementById('menu-toggle');
+        if (menuToggle) {
+            menuToggle.checked = false; 
+        }
+    };
+
     const daysRef = useRef(null);
     const hoursRef = useRef(null);
     const minutesRef = useRef(null);
@@ -72,7 +79,8 @@ const Header = () => {
                 <nav className="navbar absolute top-full left-[-88px] right-0 w-full hidden z-9999 p-0 m-0
                     xxs:mt-0 xxs:absolute xxs:left-0 xxs:w-full xxs:bg-RGBA1 xxs:backdrop-blur-[5px] 
                     lg:bg-transparent lg:backdrop-blur-0 lg:mt-[-.5em] lg:ml-[-15em]
-                    xl:bg-transparent xl:backdrop-blur-0 xl:ml-[-3em] ">
+                    m:ml-[-4em]
+                    xl:bg-transparent xl:backdrop-blur-0 xl:ml-[-3em]">
                     <ul className="xxs:list-none xxs:m-0 xxs:p-0 xxs:w-full xxs:text-[17px] xxs:font-bold xxs:flex xxs:flex-col xxs:content-center xxs:items-center xxs:whitespace-nowrap xl:space-x-1">
                         <li className="xxs:w-full xxs:text-center xxs:pt-[15px] xxs:pb-[15px] xxs:p-0 lg:mr-[-1em]">
                             <a href="#tradingview-chart" className="block w-full px-4 py-2 text-white" onClick={() => closeMenu()}>Gráfico</a>
@@ -98,13 +106,16 @@ const Header = () => {
 
             <section className="time-container absolute z-10
                                 xxs:p-[10] xxs:text-center xxs:flex xxs:items-center xxs:content-center xxs:z-9999 
+                                xx:ml-9
                                 xs:ml-[3.1em] xs:mt-[2em] s:ml-[7em] 
+                                sx:ml-[6em] sx:mt-[6em]
                                 s:mt-[10em]
                                 sm:ml-[10em]
                                 md:ml-[1em] md:mt-[8em]     
                                 x:ml-[3.5em] x:mt-[12em]
                                 mx:ml-[5.5em] mx:mt-[10em]
                                 lg:ml-[8.8em] lg:mt-[14em]
+                                m:ml-[15em]
                                 xl:ml-[19em]
                                 2xl:ml-[26%]">
                 <div className="time flex gap-[30px] justify-center ml-[50px] 

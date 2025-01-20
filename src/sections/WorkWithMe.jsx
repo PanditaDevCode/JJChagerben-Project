@@ -8,12 +8,15 @@ const WorkWithMeItems = ({ ImageSrc, TitleH1, TitleH2, SpanH1, Link }) => {
                             xl:pt-[13em] xl:pb-[15.1em] ">
             <div className="work-with-me-img flex-basis-[45%] ml-[50px] 
                             xxs:ml-[-5px] xxs:mb-[-60px] xxs:order-1
+                            m:ml-0
                             xl:mr-[60%] xl:mt-[-20em] ">
                 <img
                     src={ImageSrc}
                     alt="Imagen que representa trabajar conmigo"
                     className="w-[550px] h-[280px] rounded-[20px] shadow-[0_0_30px_rgba(190,190,190,0.8),0_0_40px_rgba(131,131,131,0.6),0_0_50px_rgba(102,102,102,0.4),0_0_60px_rgba(94,94,94,0.4)] animate-[border-img_1.5s_infinite_alternate]
-                                xxs:w-[50em] xxs:h-[10em] xxs:mt-5 xxs:ml-1 xs:w-[18em]
+                                xxs:w-[50em] xxs:h-[10em] xxs:mt-5 xxs:ml-1
+                                xx:h-[14em]
+                                xs:h-[15em] xs:w-[23.5em] xs:ml-1   
                                 s:h-[17em] s:w-[85%] s:ml-10
                                 md:w-[30em] md:h-[18em] md:mr-10
                                 xl:w-[40em] xl:h-[20em] xl:ml-0 "
@@ -25,6 +28,7 @@ const WorkWithMeItems = ({ ImageSrc, TitleH1, TitleH2, SpanH1, Link }) => {
                                 s:ml-1
                                 md:ml-[7.5em]
                                 lg:ml-[13em]
+                                m:ml-[25%]
                                 xl:ml-[50%] xl:text-left">
                     <h1>
                         <span>{TitleH1}</span>

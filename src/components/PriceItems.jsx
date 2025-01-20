@@ -11,7 +11,8 @@ const PriceMentoring = ({ services }) => {
             </div>
 
             <div className="price-content flex justify-between mt-[45px]
-                xxs:flex-col xxs:w-[18em] xxs:gap-10
+                xxs:flex-col xxs:w-[18em] xxs:gap-10 xxs:mt-[-3em]
+                xx:ml-10
                 xs:ml-[3em] xs:mt-[-5em]
                 s:ml-[7em]
                 sm:ml-[10em]
@@ -19,6 +20,7 @@ const PriceMentoring = ({ services }) => {
                 x:ml-[16.5em]
                 mx:flex-row mx:ml-[4em] mx:justify-between mx:mt-[1em] mx:gap-6
                 lg:ml-[6em] lg:gap-[3em]
+                m:ml-[11em]
                 xl:ml-[-4em] ">
                 {services.map((service, index) => (
                     <div className={`price-1 ${index % 2 === 1 ? 'bg-pack mt-[-50px] mx:mt-[-50px]' : ''} 
