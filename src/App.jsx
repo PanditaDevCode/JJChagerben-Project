@@ -13,6 +13,9 @@ import WorkWithMeContent from "./sections/WorkWithMe";
 import NavBlur from "./utils/NavBlur";
 import PointerEffect from "./utils/PointerEfects";
 import SmoothScroll from "./utils/SmothScroll";
+import CalcBTC from "./sections/CalcBTC";
+
+
 
 const App = () => {
   return (
@@ -24,6 +27,7 @@ const App = () => {
       <GoTopButton />
       <TrilemaContent />
       <CryptoContent />
+      <CalcBTC />
       <CryptoChart />
       <AboutJJChagerben />
       <LivesContent />

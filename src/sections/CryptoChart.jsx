@@ -15,7 +15,7 @@ const CryptoChart = () => {
                     "theme": "dark",
                     "style": "1",
                     "locale": "en",
-                    "backgroundColor": "rgba(0, 0, 0, 1)",
+                    "backgroundColor": "#1b1b20",
                     "hide_side_toolbar": false,
                     "allow_symbol_change": true,
                     "calendar": false,
@@ -35,7 +35,7 @@ const CryptoChart = () => {
     }, []);
 
     return (
-        <section id="tradingview-chart" className="pt-[55px] mb-[100px] bg-[#1b1b20] w-full h-[610px] max-w-[100%] " >
+        <section id="tradingview-chart" className="pt-[55px] mb-[100px] bg-[#141418] w-full h-[610px] max-w-[100%] " >
             <div className="tradingview-widget-container w-full h-full " style={{ height: '100%', width: '100%' }}>
                 <div className="tradingview-widget-container__widget" style={{ height: 'calc(100% - 32px)', width: '100%' }}></div>
                 <div className="tradingview-widget-copyright hidden ">

@@ -20,7 +20,7 @@ const WorkWithMeItems = ({ ImageSrc, TitleH1, TitleH2, SpanH1, Link }) => {
                                 xs:h-[15em] xs:w-[23.5em] xs:ml-1   
                                 s:h-[17em] s:w-[85%] s:ml-10
                                 md:w-[30em] md:h-[18em] md:mr-10
-                                xl:w-[40em] xl:h-[20em] xl:ml-0 "
+                                xl:w-[35em] xl:h-[20em] xl:ml-10 xl:mt-0 xl:max-w-110vh "
                 />
             </div>
             <div className="flex w-full">

@@ -4,7 +4,7 @@ import BtcSaveMyLife from "../assets/images/btc-save-my-life.webp";
 import TimeForPlan from "../assets/images/its-time-for-plan.webp";
 
 const MerchContent = () => {
-    const Title1 = 'Bitcoin Save My Life';
+    const Title1 = 'Bitcoin Saved My Life';
     const Title2 = "It's Time For Plan";
     const Price = 'Precio';
     const PriceH3 = '30$';
