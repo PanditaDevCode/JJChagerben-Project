@@ -118,7 +118,7 @@ const Header = () => {
                                 m:ml-[15em]
                                 xl:ml-[19em]
                                 2xl:ml-[26%]">
-                <div className="time flex gap-[30px] justify-center ml-[50px] 
+                <div className="time flex gap-[30px] justify-center ml-[50px]
                                 xxs:items-center xxs:content-center xxs:text-center xxs:grid xxs:grid-cols-2 xxs:ml-[-19em] xxs:mt-[-20rem] 
                                 md:flex md:mt-[-5em] md:ml-[-17em]">
                     <CountdownCircle
@@ -168,7 +168,7 @@ const Header = () => {
                         <strong>BITCOIN será lo que pondrá el PAN en tu MESA.</strong>
                     </p>
                     <div className="butons flex justify-center">
-                        <a href="#precios" className="btn-1  bg-[#12121cd2] text-[#fdfeff] pt-[11px] pb-[11px] pl-[35px] pr-[35px] z-2 font-extrabold rounded-[5px] mt-0 mb-0 ml-[15px] mr-[15px] xxs:mr-[-10px]">Mentoria Premium</a>
+                        <a href="#precios" className="btn-1 bg-[#12121cd2] text-[#fdfeff] pt-[11px] pb-[11px] pl-[35px] pr-[35px] z-2 font-extrabold rounded-[5px] mt-0 mb-0 ml-[15px] mr-[15px] xxs:mr-[-10px]">Mentoria Premium</a>
                     </div>
                 </article>
             </section>

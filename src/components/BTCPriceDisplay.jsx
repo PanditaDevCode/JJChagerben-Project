@@ -24,8 +24,10 @@ export const BTCPriceDisplay = () => {
 
   return (
     <div className="flex items-center gap-2 text-2xl font-bold text-bitcoin-orange">
-      <span className="calc-text text-3xl text-white">₿</span>
-      <span className="calc-text text-white">${price.toLocaleString()}</span>
+      <span className="calc-text text-3xl text-white -mt-16">₿</span>
+      <span className="calc-text text-white -mt-16">
+        ${price.toLocaleString()}
+      </span>
     </div>
   );
 };
