@@ -1,19 +1,30 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import LocomotiveScroll from "locomotive-scroll";
 
-const SmoothScrollLinks = () => {
+const SmoothScroll = () => {
+  const [scrollInstance, setScrollInstance] = useState(null);
+  const [visible, setVisible] = useState(false);
+
   useEffect(() => {
     const scroll = new LocomotiveScroll({
-      el: document.querySelector("body"),
+      el: document.querySelector("#main-content"),
       smooth: true,
-      smoothMobile: true,
+      lerp: 0.1,
+      multiplier: 1,
+      smartphone: { smooth: true },
+      tablet: { smooth: true },
     });
 
-    const resetScroll = () => {
-      setTimeout(() => {
-        scroll.update();
-      }, 1000);
-    };
+    setScrollInstance(scroll);
+
+    scroll.on("scroll", ({ scroll }) => {
+      const menuBackground = document.querySelector(".menu-background");
+      if (menuBackground) {
+        menuBackground.classList.toggle("blur", scroll.y > 0);
+      }
+
+      setVisible(scroll.y > 250);
+    });
 
     const handleLinkClick = (e) => {
       e.preventDefault();
@@ -33,22 +44,39 @@ const SmoothScrollLinks = () => {
           window.dispatchEvent(new Event("scroll"));
         }, 1200);
       }
+
+      const menu = document.querySelector(".menu"); 
+      if (menu) {
+        menu.classList.remove("is-open"); 
+      }
     };
 
     const links = document.querySelectorAll("a[href^='#']");
-    links.forEach((link) => {
-      link.addEventListener("click", handleLinkClick);
-    });
+    links.forEach((link) => link.addEventListener("click", handleLinkClick));
 
     return () => {
-      links.forEach((link) => {
-        link.removeEventListener("click", handleLinkClick);
-      });
+      links.forEach((link) =>
+        link.removeEventListener("click", handleLinkClick)
+      );
       scroll.destroy();
     };
   }, []);
 
-  return null;
+  return (
+    <>
+      <a
+        href="#header"
+        id="goTop"
+        className={visible ? "show" : ""}
+        onClick={(e) => {
+          e.preventDefault();
+          scrollInstance?.scrollTo(0);
+        }}
+      >
+        <i className="fas fa-arrow-up"></i>
+      </a>
+    </>
+  );
 };
 
-export default SmoothScrollLinks;
+export default SmoothScroll;

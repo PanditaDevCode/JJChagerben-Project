@@ -5,7 +5,7 @@ export const calculateBTCAmount = (usdAmount, btcPrice) => {
 export const getCurrentHalvingInfo = () => {
   const startYear = 2009;
   const startingBlock = 50;
-  const halvingNumber = 5;
+  const halvingNumber = 5; 
   const currentBlockReward = startingBlock / Math.pow(2, halvingNumber - 1);
 
   return {
@@ -24,7 +24,7 @@ export const calculateRetirementHalving = (investmentAmount) => {
     };
   }
 
-  const currentYear = new Date().getFullYear();
+  const currentYear = 2024; 
   let yearsToAdd;
 
   if (investmentAmount <= 100) {
@@ -53,18 +53,17 @@ export const calculateRetirementHalving = (investmentAmount) => {
 
 export const generateHalvingTable = (investmentAmount, currentBTCPrice) => {
   if (!investmentAmount || !currentBTCPrice) return [];
-
-  const currentYear = new Date().getFullYear();
+  
+  const startYear = 2024; 
   const initialBTC = calculateBTCAmount(investmentAmount, currentBTCPrice);
   const numberOfHalvings = 10;
 
   const table = [];
 
   for (let i = 0; i <= numberOfHalvings; i++) {
-    const year = currentYear + i * 4;
+    const year = startYear + i * 4; 
     const numberOfHalvingsPassed = i;
-    const projectedPrice =
-      currentBTCPrice * Math.pow(2, numberOfHalvingsPassed);
+    const projectedPrice = currentBTCPrice * Math.pow(2, numberOfHalvingsPassed);
     const projectedValue = initialBTC * projectedPrice;
 
     table.push({

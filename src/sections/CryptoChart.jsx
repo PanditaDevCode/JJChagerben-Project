@@ -35,11 +35,9 @@ const CryptoChart = () => {
   }, []);
 
   return (
-    <section
-      id="tradingview-chart"
-      className="pt-[55px] mb-[100px] bg-[#141418] w-full h-[610px] max-w-[100%] "
-    >
+    <section className="pt-[55px] mb-[100px] bg-[#141418] w-full h-[610px] max-w-[100%] ">
       <div
+        id="tradingview-chart"
         className="tradingview-widget-container w-full h-full "
         style={{ height: "100%", width: "100%" }}
       >

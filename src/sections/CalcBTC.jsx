@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { BTCPriceDisplay } from "../components/BTCPriceDisplay";
-import { HalvingInfo } from "../components/HalvingInfo";
-import { InvestmentInputs } from "../components/InvestmentInputs";
-import { ProjectionTable } from "../components/ProjectionTable";
+import { BTCPriceDisplay } from "../components/common/BTCPriceDisplay";
+import { HalvingInfo } from "../components/common/HalvingInfo";
+import { InvestmentInputs } from "../components/common/InvestmentInputs";
+import { ProjectionTable } from "../components/common/ProjectionTable";
 import { Info } from "lucide-react";
 import {
   getCurrentHalvingInfo,
@@ -59,7 +59,7 @@ const Index = () => {
   }, [investment, btcPrice]);
 
   return (
-    <div className="min-h-screen mt-1 mb-5 bg-[#141418] p-4 md:p-8">
+    <div id="calcBTC" className="min-h-screen mt-1 mb-5 bg-[#141418] p-4 md:p-8">
       <div className="mx-auto max-w-7xl">
         <h1 className="calc-text mb-8 text-center text-3xl font-bold text-white">
           Calculadora de Inversión en Bitcoin
@@ -81,11 +81,11 @@ const Index = () => {
 
             {isDialogOpen && (
               <div
-                className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+                className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-9999"
                 onKeyDown={(e) => e.key === "Escape" && setIsDialogOpen(false)}
                 tabIndex={0}
               >
-                <div className="calc-content calc-text backdrop-blur-[15px] p-6 rounded-lg flex flex-col items-center text-center w-[50em] h-[30em] mt-8 max-h-screen overflow-hidden">
+                <div className="calc-content calc-text backdrop-blur-[15px] p-6 rounded-lg flex flex-col items-center text-center w-[50em] h-[30em] max-h-screen overflow-hidden">
                   <h2 className="text-2xl text-black font-bold mb-4">
                     Nomenclatura
                   </h2>
@@ -112,7 +112,9 @@ const Index = () => {
                     <p className="italic text-lg text-white">
                       "No importa cuando leas esto, Bitcoin siempre será barato"
                     </p>
-                    <p className=" text-black -mt-6 font-extrabold">- JJ CHAGERBEN -</p>
+                    <p className=" text-black -mt-6 font-extrabold">
+                      - JJ CHAGERBEN -
+                    </p>
                   </div>
                   <button
                     onClick={() => setIsDialogOpen(false)}

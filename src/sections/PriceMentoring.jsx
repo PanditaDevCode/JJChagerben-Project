@@ -1,5 +1,5 @@
 import React from "react";
-import PriceMentoring from "../components/PriceItems";
+import PriceMentoring from "../components/common/PriceItems";
 
 const PriceContent = () => {
   const services = [

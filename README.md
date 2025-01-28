@@ -6,6 +6,8 @@ JJChagerben Project - Actualizacion y Migracion de Web🚀
 
 🎨 Tailwind CSS – Para un diseño moderno y responsivo.
 
+🚂 Locomotion Scroll - Para la implementación de scroll suave
+
 📦 Instalación
 
 Si deseas ejecutar este proyecto en tu entorno local, sigue estos pasos:

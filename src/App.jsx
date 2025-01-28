@@ -1,31 +1,26 @@
-import React, { useEffect } from "react";
-import LocomotiveScroll from "locomotive-scroll"; // Importa la librería Locomotive Scroll
-import GoTopButton from "./components/GoTopButton";
-import TrilemaContent from "./components/TrilemaContent";
-import MenuNav from "./components/NavMenu";
-import SocialMediaContent from "./components/SocialMediaContent";
+import React from "react";
 import MerchContent from "./sections/MerchContent";
+import Header from "./sections/Header";
 import PriceMentoring from "./sections/PriceMentoring";
 import CryptoContent from "./sections/CryptoContent";
+import CalcBTC from "./sections/CalcBTC";
 import CryptoChart from "./sections/CryptoChart";
 import AboutJJChagerben from "./sections/AboutJJChagerben";
-import CalcBTC from "./sections/CalcBTC";
 import LivesContent from "./sections/LivesContent";
-import Header from "./sections/Header";
 import WorkWithMeContent from "./sections/WorkWithMe";
-import NavBlur from "./utils/NavBlur";
-import PointerEffect from "./utils/PointerEfects";
+import MenuNav from "./components/layout/NavMenu";
+import SocialMediaContent from "./components/common/SocialMediaContent";
+import TrilemaContent from "./components/layout/TrilemaContent";
 import SmoothScroll from "./utils/SmootScroll";
+import PointerEffect from "./utils/PointerEfects";
 
 const App = () => {
   return (
     <div>
       <MenuNav />
       <PointerEffect />
-      <NavBlur />
       <SmoothScroll />
-      <GoTopButton />
-      <div data-scroll-section>
+      <div id="main-content" data-scroll-section>
         <Header />
         <TrilemaContent />
         <CryptoContent />

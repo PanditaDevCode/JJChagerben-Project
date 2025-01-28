@@ -1,4 +1,4 @@
-import { calculateBTCAmount } from "../utils/bitcoinCalculations";
+import { calculateBTCAmount } from "../../utils/bitcoinCalculations";
 
 export const InvestmentInputs = ({ usdAmount, btcPrice, onUsdChange }) => {
   const handleUsdChange = (e) => {

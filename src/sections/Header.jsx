@@ -57,7 +57,7 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="header  flex items-center min-h-[120vh] pt-[200px] pb-[200px] pl-0 pr-0 relative w-full
+      className="header flex items-center min-h-[120vh] pt-[200px] pb-[200px] pl-0 pr-0 relative w-full
                                         xxs:shadow-BX1 xxs:bg-BGHeader xxs:bg-no-repeat xxs:min-h-0 xxs:pb-[200px] xxs:bg-cover
                                         md:pt-1 md:pb-10 
                                         mx:pb-[10em]"

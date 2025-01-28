@@ -1,5 +1,5 @@
 import React from "react";
-import MerchItems from "../components/MerchItems";
+import MerchItems from "../components/common/MerchItems";
 import BtcSaveMyLife from "../assets/images/btc-save-my-life.webp";
 import TimeForPlan from "../assets/images/its-time-for-plan.webp";
 
