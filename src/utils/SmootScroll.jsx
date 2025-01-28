@@ -45,9 +45,9 @@ const SmoothScroll = () => {
         }, 1200);
       }
 
-      const menu = document.querySelector(".menu"); 
+      const menu = document.querySelector(".menu");
       if (menu) {
-        menu.classList.remove("is-open"); 
+        menu.classList.remove("is-open");
       }
     };
 
@@ -61,6 +61,21 @@ const SmoothScroll = () => {
       scroll.destroy();
     };
   }, []);
+
+  const disableSmoothScroll = () => {
+    if (scrollInstance) {
+      scrollInstance.stop();
+    }
+  };
+
+  const enableSmoothScroll = () => {
+    if (scrollInstance) {
+      scrollInstance.start();
+    }
+  };
+
+  window.disableSmoothScroll = disableSmoothScroll;
+  window.enableSmoothScroll = enableSmoothScroll;
 
   return (
     <>

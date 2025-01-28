@@ -3,27 +3,13 @@ import { BTCPriceDisplay } from "../components/common/BTCPriceDisplay";
 import { HalvingInfo } from "../components/common/HalvingInfo";
 import { InvestmentInputs } from "../components/common/InvestmentInputs";
 import { ProjectionTable } from "../components/common/ProjectionTable";
+import Modal from "../components/common/Modal";
 import { Info } from "lucide-react";
 import {
   getCurrentHalvingInfo,
   calculateRetirementHalving,
   generateHalvingTable,
 } from "../utils/bitcoinCalculations";
-
-const Dialog = ({ isOpen, onClose, children }) => {
-  if (!isOpen) return null;
-
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
-      <div className="bg-white rounded-lg p-6 shadow-lg">
-        <button onClick={onClose} className="absolute top-4 right-4">
-          X
-        </button>
-        {children}
-      </div>
-    </div>
-  );
-};
 
 const Index = () => {
   const [btcPrice, setBtcPrice] = useState(0);
@@ -59,7 +45,10 @@ const Index = () => {
   }, [investment, btcPrice]);
 
   return (
-    <div id="calcBTC" className="min-h-screen mt-1 mb-5 bg-[#141418] p-4 md:p-8">
+    <div
+      id="calcBTC"
+      className="min-h-screen mt-1 mb-5 bg-[#141418] p-4 md:p-8"
+    >
       <div className="mx-auto max-w-7xl">
         <h1 className="calc-text mb-8 text-center text-3xl font-bold text-white">
           Calculadora de Inversión en Bitcoin
@@ -79,52 +68,10 @@ const Index = () => {
               </button>
             </div>
 
-            {isDialogOpen && (
-              <div
-                className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-9999"
-                onKeyDown={(e) => e.key === "Escape" && setIsDialogOpen(false)}
-                tabIndex={0}
-              >
-                <div className="calc-content calc-text backdrop-blur-[15px] p-6 rounded-lg flex flex-col items-center text-center w-[50em] h-[30em] max-h-screen overflow-hidden">
-                  <h2 className="text-2xl text-black font-bold mb-4">
-                    Nomenclatura
-                  </h2>
-                  <div className="flex flex-col items-center space-y-6">
-                    <div className="flex items-center text-xl mt-1 -mb-5 text-white">
-                      <span className="font-bold mr-2">PBTC =</span>
-                      <div className="flex flex-col items-center">
-                        <div className="mb-1">
-                          (RI * CP) * 2<sup>NH</sup>
-                        </div>
-                        <div className="w-full border-t border-white"></div>
-                        <div className="mt-1">RF</div>
-                      </div>
-                    </div>
-                    <div className="text-lg space-y-1 text-white">
-                      <p className="-mb-1">RI = Recompensa Inicial</p>
-                      <p>RF = Recompensa Final</p>
-                      <p>NH = Número de Halvings</p>
-                      <p>CP = Costo de Producción</p>
-                      <p>PBTC = Precio de Bitcoin</p>
-                    </div>
-                  </div>
-                  <div className="mt-6 border-t border-gray-600 pt-4">
-                    <p className="italic text-lg text-white">
-                      "No importa cuando leas esto, Bitcoin siempre será barato"
-                    </p>
-                    <p className=" text-black -mt-6 font-extrabold">
-                      - JJ CHAGERBEN -
-                    </p>
-                  </div>
-                  <button
-                    onClick={() => setIsDialogOpen(false)}
-                    className="btn-1 font-extrabold -mt-5 px-4 py-2 text-white rounded-lg pt-[11px] pb-[11px] pl-[35px] pr-[35px]"
-                  >
-                    Cerrar
-                  </button>
-                </div>
-              </div>
-            )}
+            <Modal
+              isDialogOpen={isDialogOpen}
+              setIsDialogOpen={setIsDialogOpen}
+            />
 
             <BTCPriceDisplay />
 
