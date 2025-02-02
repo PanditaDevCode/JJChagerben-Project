@@ -35,7 +35,7 @@ const MerchItems = ({
             <img
               src={ImageSrc1}
               alt={Title1}
-              className="absolute items-center justify-center top-[27%] left-[15%] w-[240px] xxs:ml-[-1.5em] "
+              className="absolute items-center justify-center top-[27%] left-[15%] lg:-ml-3 w-[240px] xxs:ml-[-1.5em] "
             />
           </div>
           <div className="merch-content absolute bottom-0 w-full h-[100px] text-center z-90 ">
@@ -66,7 +66,7 @@ const MerchItems = ({
                 href={Link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-1 bg-[#12121cd2] text-[#fdfeff] pt-[11px] pb-[11px] pl-[35px] pr-[35px] z-10 font-extrabold rounded-[5px] mt-[15px] inline-block transition-transform duration-300"
+                className="btn-1 bg-[#12121cd2] text-[#fdfeff] pt-[11px] pb-[11px] pl-[35px] pr-[35px] z-10 font-extrabold rounded-[5px] mt-[15px] inline-block transition-transform duration-300 xxs:-mt-0.5"
               >
                 {Order}
               </a>
@@ -79,7 +79,7 @@ const MerchItems = ({
             <img
               src={ImageSrc2}
               alt={Title2}
-              className="absolute items-center justify-center top-[27%] left-[15%] w-[240px] xxs:ml-[-1.3em] "
+              className="absolute items-center justify-center top-[27%] left-[15%] lg:-ml-1 w-[240px] xxs:ml-[-1.3em] "
             />
           </div>
           <div className="merch-content absolute bottom-0 w-full h-[100px] text-center z-90 ">

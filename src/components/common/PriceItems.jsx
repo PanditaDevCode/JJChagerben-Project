@@ -20,23 +20,23 @@ const PriceMentoring = ({ services }) => {
       <div
         className="price-content flex justify-between mt-[45px]
                 xxs:flex-col xxs:w-[18em] xxs:gap-10 xxs:mt-[-3em]
-                xx:ml-10
-                xs:ml-[3em] xs:mt-[-5em]
+                xx:ml-10 xxm:ml-5
+                xs:ml-[3em] xs:mt-[-5em] xsl:ml-16
                 sx:ml-[6em]
-                s:ml-[7em]
+                s:ml-[7em] ss:ml-36 ssl:ml-48 sxl:ml-20 slx:ml-32 s2:ml-48 s3:ml-56
+                sl:ml-[16em]
                 sm:ml-[10em]
                 md:ml-[14em]
                 x:ml-[16.5em]
                 mx:flex-row mx:ml-[4em] mx:justify-between mx:mt-[1em] mx:gap-6
                 lg:ml-[6em] lg:gap-[3em]
                 m:ml-[11em]
-                xl:ml-[-4em] "
+                xl:ml-[-4em] mxl:ml-24"
       >
         {services.map((service, index) => (
           <div
-            className={`price-1 ${
-              index % 2 === 1 ? "bg-pack mt-[-50px] mx:mt-[-50px]" : ""
-            } 
+            className={`price-1 ${index % 2 === 1 ? "bg-pack mt-[-50px] mx:mt-[-50px]" : ""
+              } 
                         p-[40px] rounded-[15px] bg-[#222222] hover:cursor-pointer hover:scale-[1.03]
                         xxs:mt-1 xxs:mr-[-1em] xxs:ml-[1em] 
                         mx:flex-1 mx:min-w-[15em]

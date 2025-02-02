@@ -15,10 +15,12 @@
 html,
 body {
   overflow: hidden;
+  font-display: swap;
   height: 100%;
   font-family: "Poppins", sans-serif;
   background-color: #141418;
   width: 100%;
+  scroll-behavior: initial;
 }
 
 #main-content {
@@ -320,7 +322,7 @@ p {
   transform: scale(1.03);
 }
 
-.information-1 h3 {
+.information-1 h1 {
   text-shadow: 0 0 5px rgba(190, 190, 190, 0.8),
     0 0 10px rgba(131, 131, 131, 0.6), 0 0 15px rgba(102, 102, 102, 0.4),
     0 0 20px rgba(94, 94, 94, 0.4);

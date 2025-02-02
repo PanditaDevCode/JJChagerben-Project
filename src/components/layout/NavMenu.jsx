@@ -34,9 +34,8 @@ const MenuNav = () => {
         </div>
       </label>
       <nav
-        className={`navbar absolute top-full left-[-88px] right-0 w-full ${
-          isOpen ? "block" : "hidden"
-        } z-9999 p-0 m-0
+        className={`navbar absolute top-full left-[-88px] right-0 w-full ${isOpen ? "block" : "hidden"
+          } z-9999 p-0 m-0
                     xxs:mt-0 xxs:absolute xxs:left-0 xxs:w-full xxs:bg-RGBA1 xxs:backdrop-blur-[5px] 
                     lg:bg-transparent lg:backdrop-blur-0 lg:mt-[-.5em] lg:ml-[-15em]
                     m:ml-[-4em]
@@ -45,20 +44,20 @@ const MenuNav = () => {
         <ul className="xxs:list-none xxs:m-0 xxs:p-0 xxs:w-full xxs:text-[17px] xxs:font-bold xxs:flex xxs:flex-col xxs:content-center xxs:items-center xxs:whitespace-nowrap xl:space-x-1">
           <li className="xxs:w-full xxs:text-center xxs:pt-[15px] xxs:pb-[15px] xxs:p-0 lg:mr-[-1em]">
             <a
-              href="#tradingview-chart"
-              className="block w-full px-4 py-2 text-white"
-              onClick={closeMenu}
-            >
-              Gráfico
-            </a>
-          </li>
-          <li className="xxs:w-full xxs:text-center xxs:pt-[15px] xxs:pb-[15px] xxs:p-0 lg:mr-[-1.5em]">
-            <a
               href="#calcBTC"
               className="block w-full px-4 py-2 text-white"
               onClick={closeMenu}
             >
               Calculadora
+            </a>
+          </li>
+          <li className="xxs:w-full xxs:text-center xxs:pt-[15px] xxs:pb-[15px] xxs:p-0 lg:mr-[-1.5em]">
+            <a
+              href="#tradingview-chart"
+              className="block w-full px-4 py-2 text-white"
+              onClick={closeMenu}
+            >
+              Gráfico
             </a>
           </li>
           <li className="xxs:w-full xxs:text-center xxs:pt-[15px] xxs:pb-[15px] xxs:p-0 lg:mr-[-1.5em]">

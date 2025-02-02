@@ -41,7 +41,7 @@ const Header = () => {
   const secDotRef = useRef(null);
 
   useEffect(() => {
-    const endDate = "04/17/2028 00:00:00";
+    const endDate = "04/14/2028 00:00:00";
     startCountdown(endDate, setTimeData, {
       daysRef,
       hoursRef,
@@ -64,17 +64,19 @@ const Header = () => {
     >
       <section
         className="time-container absolute z-10
-                                xxs:p-[10] xxs:text-center xxs:flex xxs:items-center xxs:content-center xxs:z-9999 
+                                xxs:p-[10] xxs:text-center xxs:flex xxs:items-center xxs:content-center xxs:z-9999 xxs:mb-20 
+                                xxm:ml-5
                                 xx:ml-9
-                                xs:ml-[3.1em] xs:mt-[2em] s:ml-[7em] 
-                                sx:ml-[6em] sx:mt-[6em]
-                                s:mt-[10em]
+                                xs:ml-[3.1em] xs:mt-[2em] xsl:ml-[4em] s:ml-[7em] 
+                                sx:ml-[6em] sx:mt-[6em] sxl:ml-20
+                                s:mt-[10em] ss:ml-[9em] ssl:ml-[12em] slx:ml-28 s2:ml-44 s3:ml-52
+                                sl:ml-10 sl:-mb-10
                                 sm:ml-[10em]
                                 md:ml-[1em] md:mt-[8em]     
-                                x:ml-[3.5em] x:mt-[12em]
+                                x:ml-[3.5em] x:mt-30
                                 mx:ml-[5.5em] mx:mt-[10em]
-                                lg:ml-[8.8em] lg:mt-[14em]
-                                m:ml-[15em]
+                                lg:ml-[8.8em] lg:mt-34
+                                m:ml-[15em] mxl:ml-32
                                 xl:ml-[19em]
                                 2xl:ml-[26%]"
       >
@@ -124,8 +126,8 @@ const Header = () => {
                                     md:mt-[8em] "
         >
           <h1
-            className="relative z-2 text-6xl/[55px] leading-[1] text-[#FFFFFF] mt-[200px] mb-[25px] 
-                                xxs:text-[50px] xxs:pt-[10px] xxs:ml-[30px]"
+            className="relative z-20 text-6xl leading-tight text-white mt-[100px] mb-[25px] 
+             xxs:text-[50px] xxs:pt-[10px] xxs:ml-[30px] xxs:mt-56"
           >
             Bitcoin es{" "}
             <span className="text-slate-900 font-medium">SACARSE</span> la{" "}
@@ -133,6 +135,7 @@ const Header = () => {
             <br />
             en cámara <span className="text-slate-900 font-medium">Lenta.</span>
           </h1>
+
           <p className="relative z-2 p-[10px] xxs:ml-[30px] xxs:p-[10px]">
             No importa el día ni el momento en que lo leas, BITCOIN siempre será
             barato sin importar en qué precio esté.

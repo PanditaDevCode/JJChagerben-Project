@@ -63,6 +63,7 @@ const Index = () => {
               <button
                 onClick={() => setIsDialogOpen(true)}
                 className="calc-content border p-2 rounded transition-transform duration-300 ease-in-out hover:scale-[1.05]"
+                aria-label="Abrir información sobre la calculadora"
               >
                 <Info className="h-4 w-4 text-white" />
               </button>

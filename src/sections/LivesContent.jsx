@@ -13,7 +13,7 @@ const LivesItems = ({ TitleH1, TitleH2, Link1, Link2, Link3, ImageSrc }) => {
         <div
           className="lives-txt basis-[55%] m-0 text-[18px]
                                 xxs:content-center xxs:text-center xxs:items-center xxs:mt-[30px] xxs:mb-[30px] xxs:ml-[-20px]
-                                xl:text-left xl:mr-6 xl:ml-[-3em]"
+                                xl:text-left xl:mr-6 xl:ml-[-3em] slx:-ml-3 "
         >
           <div className="live-txt1 ml-[50px] xxs:content-center xxs:mr-[30px] ">
             <h1>
@@ -80,7 +80,7 @@ const LivesItems = ({ TitleH1, TitleH2, Link1, Link2, Link3, ImageSrc }) => {
                                 xs:ml-[4.5em] s:ml-[3.5em]
                                 md:ml-[4em] 
                                 mx:w-[70%]
-                                xl:ml-[0] xl:mt-0 xl:order-2"
+                                xl:ml-[0] xl:mt-0 xl:order-2 slx:ml-16"
         >
           <img
             src={ImageSrc}
@@ -88,8 +88,8 @@ const LivesItems = ({ TitleH1, TitleH2, Link1, Link2, Link3, ImageSrc }) => {
             className="w-[500px] rounded-[20px] 
                     xxs:items-center xxs:content-center xxs:w-[280px] 
                     xx:max-w-[120vw] xx:ml-[-1.5em] xx:w-[21em] xx:h-[13em] 
-                    xs:h-[14em] xs:w-[23.5em] xs:ml-[-.5em]
-                    s:h-[16em] s:ml-0 s:w-[100%] 
+                    xs:h-[14em] xs:w-[23.5em] xs:ml-[-.5em] xsl:mr-16
+                    s:h-[16em] s:ml-0 s:w-[100%] ssl:ml-9
                     sm:ml-5 sm:w-[90%]
                     md:w-[32em] md:h-[18em] md:ml-[-.5em]
                     xl:w-[38em] xl:h-[20em] xl:ml-10 xl:mt-0 xl:max-w-110vh"

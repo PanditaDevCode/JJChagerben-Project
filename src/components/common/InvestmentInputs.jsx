@@ -11,10 +11,14 @@ export const InvestmentInputs = ({ usdAmount, btcPrice, onUsdChange }) => {
   return (
     <div className="flex flex-col gap-4">
       <div className="relative">
+        <label htmlFor="usd-input" className="sr-only">
+          Cantidad en USD
+        </label>
         <span className="calc-text z-10 text-white absolute left-3 top-1/2 -translate-y-1/2">
           $
         </span>
         <input
+          id="usd-input"
           type="number"
           value={usdAmount || ""}
           onChange={handleUsdChange}
@@ -23,10 +27,14 @@ export const InvestmentInputs = ({ usdAmount, btcPrice, onUsdChange }) => {
         />
       </div>
       <div className="relative">
+        <label htmlFor="btc-input" className="sr-only">
+          Cantidad en BTC
+        </label>
         <span className="calc-text text-white z-10 absolute left-3 top-1/2 -translate-y-1/2">
           ₿
         </span>
         <input
+          id="btc-input"
           type="text"
           value={btcAmount.toFixed(8)}
           readOnly

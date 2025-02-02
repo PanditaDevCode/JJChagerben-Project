@@ -23,7 +23,7 @@ const WorkWithMeItems = ({ ImageSrc, TitleH1, TitleH2, SpanH1, Link }) => {
                                 xxs:w-[50em] xxs:h-[10em] xxs:mt-5 xxs:ml-1
                                 xx:h-[14em]
                                 xs:h-[15em] xs:w-[23.5em] xs:ml-1   
-                                s:h-[17em] s:w-[85%] s:ml-10
+                                s:h-[17em] s:w-[85%] s:ml-10 sxl:ml-2 slx:ml-15 s2:ml-10
                                 md:w-[30em] md:h-[18em] md:mr-10
                                 xl:w-[35em] xl:h-[20em] xl:ml-10 xl:mt-0 xl:max-w-110vh "
         />
@@ -33,12 +33,13 @@ const WorkWithMeItems = ({ ImageSrc, TitleH1, TitleH2, SpanH1, Link }) => {
           className="work-with-me-txt flex-basis-[50%] text-[18px]
                                 xxs:items-center xxs:content-center xxs:text-center xxs:mb-[30px] xxs:mt-[-20] xxs:ml-[-2em] xxs:mr-[-2em] xxs:text-[0.9em]
                                 s:ml-1
+                                sl:ml-24 ssl:ml-8 slx:-ml-5 s2:ml-6
                                 md:ml-[4em]
                                 lg:ml-[13em]
                                 m:ml-[25%]
                                 x:ml-[7em]
                                 mx:ml-[9em]
-                                xl:ml-[50%] xl:text-left"
+                                xl:ml-[50%] xl:text-left mxl:ml-40"
         >
           <h1>
             <span>{TitleH1}</span>

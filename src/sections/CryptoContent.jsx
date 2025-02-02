@@ -11,11 +11,12 @@ const CryptoItem = ({ ImageSrc, Title }) => {
       <div
         className="crypto-img xxs:ml-[-5px] xxs:mt-[-2em] xxs:order-1 xxs:mr-[25px]
                             s:w-[80%]
+                            sl:ml-36 ssl:ml-10
                             md:ml-[5em]
-                            x:ml-[9em]
+                            x:ml-[9em] 
                             lg:ml-[28%]
                             m:ml-[35%]
-                            xl:basis-[70%] xl:mt-[5em] xl:mb-0 xl:mr-[5em] xl:ml-[2em] "
+                            xl:basis-[70%] xl:mt-[5em] xl:mb-0 xl:mr-[5em] xl:ml-[2em] mxl:ml-60 "
       >
         <img
           src={ImageSrc}
@@ -26,7 +27,7 @@ const CryptoItem = ({ ImageSrc, Title }) => {
       <div
         className="crypto-txt xxs:content-center xxs:flex-wrap xxs:items-center xxs:text-center xxs:max-w-[300px] xxs:mb-[30px] xxs:mr-[30px]
                             s:w-[80%] s:max-w-[50em]
-                            mx:mt-[10em] mx:mb-[3em] mx:mr-[4em] mx:w-[80%] xl:text-left "
+                            mx:mt-[10em] mx:mb-[3em] mx:mr-[4em] mx:w-[80%] xl:text-left mxl:ml-10 "
       >
         <span className="neonspan text-black font-extrabold ">
           Introducción a las Criptomonedas
